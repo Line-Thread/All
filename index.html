@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>line & thread — media buying</title>
+<link rel="icon" type="image/png" href="Favicon%20(monogram)%20/Monoram%20Dark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -68,14 +69,15 @@
     mix-blend-mode: multiply;
   }
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: var(--navy);
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
   }
-  .nav-logo em { font-style: italic; color: var(--tan); }
+  .nav-logo img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
   .nav-links {
     display: flex;
     gap: 36px;
@@ -457,13 +459,11 @@
     justify-content: space-between;
     align-items: center;
   }
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
+  .footer-logo img {
+    height: 24px;
+    width: auto;
+    display: block;
   }
-  .footer-logo em { font-style: italic; color: var(--tan); }
   .footer-copy {
     font-size: 11px;
     font-weight: 300;
@@ -553,7 +553,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">line <em>&</em> thread</a>
+  <a href="#" class="nav-logo"><img src="Logo/Logo%20Dark%20no%20Background.png" alt="line & thread"></a>
   <ul class="nav-links">
     <li><a href="#diensten">Diensten</a></li>
     <li><a href="#aanpak">Aanpak</a></li>
@@ -707,7 +707,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">line <em>&</em> thread</div>
+  <div class="footer-logo"><img src="Logo/Logo%20Light%20no%20Background.png" alt="line & thread"></div>
   <div class="footer-copy">KvK 86398547 — Amsterdam</div>
   <ul class="footer-links">
     <li><a href="#">LinkedIn</a></li>
