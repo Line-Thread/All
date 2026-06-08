@@ -79,7 +79,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    mix-blend-mode: multiply;
+    transition: color 0.3s;
   }
   .nav-logo {
     text-decoration: none;
@@ -107,6 +107,7 @@
     transition: opacity 0.2s;
   }
   .nav-links a:hover { opacity: 1; }
+  nav.nav--light .nav-links a { color: var(--cream); }
 
   /* HERO */
   .hero {
@@ -729,6 +730,23 @@
 </footer>
 
 <script>
+  // Nav kleur op donkere secties
+  const nav = document.querySelector('nav');
+  const darkSections = document.querySelectorAll('.aanpak, footer');
+
+  function updateNavColor() {
+    const navY = 80;
+    let onDark = false;
+    darkSections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= navY && rect.bottom >= navY) onDark = true;
+    });
+    nav.classList.toggle('nav--light', onDark);
+  }
+
+  window.addEventListener('scroll', updateNavColor, { passive: true });
+  updateNavColor();
+
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
