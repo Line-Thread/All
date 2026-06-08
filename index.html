@@ -681,25 +681,25 @@
   <div class="section-label" style="text-align:center">Contact</div>
   <h2>Klaar om te kijken<br>of het <em>past?</em></h2>
   <p>Stuur een bericht. Ik kom erop terug binnen één werkdag.</p>
-  <div class="contact-form reveal">
+  <form class="contact-form reveal" action="https://formspree.io/f/xpqedoyo" method="POST">
     <div class="form-row">
       <label>Naam</label>
-      <input type="text" placeholder="Jouw naam">
+      <input type="text" name="naam" placeholder="Jouw naam" required>
     </div>
     <div class="form-row">
       <label>Bedrijf</label>
-      <input type="text" placeholder="Merknaam of bedrijf">
+      <input type="text" name="bedrijf" placeholder="Merknaam of bedrijf">
     </div>
     <div class="form-row">
       <label>E-mail</label>
-      <input type="email" placeholder="jouw@email.nl">
+      <input type="email" name="email" placeholder="jouw@email.nl" required>
     </div>
     <div class="form-row">
       <label>Bericht</label>
-      <textarea rows="4" placeholder="Vertel kort wat je doet en wat je zoekt"></textarea>
+      <textarea rows="4" name="bericht" placeholder="Vertel kort wat je doet en wat je zoekt" required></textarea>
     </div>
-    <button class="form-submit">Verstuur bericht</button>
-  </div>
+    <button type="submit" class="form-submit">Verstuur bericht</button>
+  </form>
 </section>
 
 <!-- FOOTER -->
@@ -725,13 +725,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Form submit (placeholder)
-  document.querySelector('.form-submit').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.textContent = 'Verstuurd ✓';
-    this.style.background = 'var(--sage)';
-    this.style.color = 'white';
-  });
+
 </script>
 
 </body>
