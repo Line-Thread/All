@@ -109,6 +109,60 @@
   .nav-links a:hover { opacity: 1; }
   nav.nav--light .nav-links a { color: var(--cream); }
 
+  /* HAMBURGER */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 201;
+  }
+  .nav-hamburger span {
+    display: block;
+    height: 1.5px;
+    background: var(--navy);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  nav.nav--light .nav-hamburger span { background: var(--cream); }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* MOBILE MENU OVERLAY */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--navy);
+    z-index: 200;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .nav-overlay.open {
+    opacity: 1;
+  }
+  .nav-overlay a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .nav-overlay a:hover { opacity: 1; }
+
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -514,6 +568,9 @@
 
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-logo img { height: 48px; }
     .hero { padding: 0 24px 64px; }
     section { padding: 80px 24px; }
     .services { grid-template-columns: 1fr; gap: 60px; }
@@ -565,6 +622,14 @@
   </div>
 </div>
 
+<!-- MOBILE MENU OVERLAY -->
+<div class="nav-overlay" id="navOverlay">
+  <a href="#diensten" onclick="closeMenu()">Diensten</a>
+  <a href="#aanpak" onclick="closeMenu()">Aanpak</a>
+  <a href="#over" onclick="closeMenu()">Over</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo"><img src="Logo/Logo%20Dark%20no%20Background.png" alt="Line & Thread"></a>
@@ -574,6 +639,9 @@
     <li><a href="#over">Over</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -730,6 +798,29 @@
 </footer>
 
 <script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    navOverlay.style.display = 'none';
+    navOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      hamburger.classList.add('open');
+      navOverlay.style.display = 'flex';
+      requestAnimationFrame(() => navOverlay.classList.add('open'));
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
   // Nav kleur op donkere secties
   const nav = document.querySelector('nav');
   const darkSections = document.querySelectorAll('.aanpak, footer');
