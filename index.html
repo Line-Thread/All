@@ -123,6 +123,11 @@
   nav.nav--light .nav-logo img.logo-dark { opacity: 0; }
   nav.nav--light .nav-logo img.logo-light { opacity: 1; pointer-events: auto; }
 
+  /* Logo halftransparant wanneer over content */
+  nav.nav--scrolled .nav-logo img.logo-dark { opacity: 0.5; }
+  nav.nav--scrolled.nav--light .nav-logo img.logo-dark { opacity: 0; }
+  nav.nav--scrolled.nav--light .nav-logo img.logo-light { opacity: 0.5; }
+
   /* HAMBURGER */
   .nav-hamburger {
     display: none;
@@ -918,6 +923,10 @@
       if (rect.top <= navY && rect.bottom >= navY) onDark = true;
     });
     nav.classList.toggle('nav--light', onDark);
+
+    const hero = document.querySelector('.hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    nav.classList.toggle('nav--scrolled', heroBottom < 130);
   }
 
   window.addEventListener('scroll', updateNavColor, { passive: true });
