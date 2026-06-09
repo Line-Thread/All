@@ -171,7 +171,7 @@
   .nav-overlay.open {
     opacity: 1;
   }
-  .nav-overlay a {
+  .nav-overlay a:not(.overlay-logo-link) {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     font-weight: 300;
@@ -181,15 +181,37 @@
     opacity: 0.7;
     transition: opacity 0.2s;
   }
-  .nav-overlay a:hover { opacity: 1; }
-  .nav-overlay-monogram {
+  .nav-overlay a:not(.overlay-logo-link):hover { opacity: 1; }
+  .overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.5;
+    padding: 8px;
+    transition: opacity 0.2s;
+  }
+  .overlay-close:hover { opacity: 1; }
+  .overlay-logo-link {
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    font-size: 0;
+    line-height: 0;
+  }
+  .overlay-logo-link:hover { opacity: 0.9 !important; }
+  .nav-overlay-monogram {
     height: 80px;
     width: auto;
-    opacity: 0.5;
+    display: block;
   }
 
   /* HERO */
@@ -699,11 +721,14 @@
 
 <!-- MOBILE MENU OVERLAY -->
 <div class="nav-overlay" id="navOverlay">
+  <button class="overlay-close" onclick="closeMenu()" aria-label="Menu sluiten">&#x2715;</button>
   <a href="#diensten" onclick="closeMenu()">Diensten</a>
   <a href="#aanpak" onclick="closeMenu()">Aanpak</a>
   <a href="#over" onclick="closeMenu()">Over</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
-  <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Line & Thread" class="nav-overlay-monogram">
+  <a href="/" onclick="closeMenu()" class="overlay-logo-link" aria-label="Terug naar home">
+    <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Line & Thread" class="nav-overlay-monogram">
+  </a>
 </div>
 
 <!-- NAV -->
