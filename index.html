@@ -109,6 +109,9 @@
   }
   .nav-links a:hover { opacity: 1; }
   nav.nav--light .nav-links a { color: var(--cream); }
+  .logo-light { display: none; }
+  nav.nav--light .logo-dark { display: none; }
+  nav.nav--light .logo-light { display: block; }
 
   /* HAMBURGER */
   .nav-hamburger {
@@ -690,7 +693,10 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"><img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Line & Thread"></a>
+  <a href="#" class="nav-logo">
+    <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Line & Thread" class="logo-dark">
+    <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Line & Thread" class="logo-light">
+  </a>
   <ul class="nav-links">
     <li><a href="#diensten">Diensten</a></li>
     <li><a href="#aanpak">Aanpak</a></li>
