@@ -85,12 +85,22 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    position: relative;
   }
   .nav-logo img {
     height: 78px;
     width: auto;
     display: block;
     margin-left: -16px;
+    transition: opacity 0.4s ease;
+  }
+  .nav-logo img.logo-light {
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
   }
   .nav-links {
     display: flex;
@@ -109,9 +119,8 @@
   }
   .nav-links a:hover { opacity: 1; }
   nav.nav--light .nav-links a { color: var(--cream); }
-  .nav-logo img.logo-light { display: none; }
-  nav.nav--light .nav-logo img.logo-dark { display: none; }
-  nav.nav--light .nav-logo img.logo-light { display: block; }
+  nav.nav--light .nav-logo img.logo-dark { opacity: 0; }
+  nav.nav--light .nav-logo img.logo-light { opacity: 1; pointer-events: auto; }
 
   /* HAMBURGER */
   .nav-hamburger {
@@ -901,7 +910,7 @@
   const darkSections = document.querySelectorAll('.aanpak, footer');
 
   function updateNavColor() {
-    const navY = 80;
+    const navY = 120;
     let onDark = false;
     darkSections.forEach(section => {
       const rect = section.getBoundingClientRect();
