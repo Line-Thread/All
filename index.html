@@ -925,8 +925,11 @@
     nav.classList.toggle('nav--light', onDark);
 
     const hero = document.querySelector('.hero');
+    const contact = document.getElementById('contact');
     const heroBottom = hero.getBoundingClientRect().bottom;
-    nav.classList.toggle('nav--scrolled', heroBottom < 130);
+    const contactRect = contact.getBoundingClientRect();
+    const overContact = contactRect.top <= 130 && contactRect.bottom >= 130;
+    nav.classList.toggle('nav--scrolled', heroBottom < 130 && !overContact);
   }
 
   window.addEventListener('scroll', updateNavColor, { passive: true });
