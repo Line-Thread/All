@@ -504,6 +504,15 @@
     text-transform: uppercase;
     color: var(--tan);
   }
+  .arthur-card-text { text-align: left; }
+  .over-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .over-cta-row .arthur-card { margin-bottom: 0; }
 
   .over-visual {
     display: grid;
@@ -716,6 +725,7 @@
       color: var(--tan);
       line-height: 1.3;
     }
+    .over-cta-row { justify-content: center; }
     footer { flex-direction: column; gap: 20px; text-align: center; }
     .hero { padding: 120px 24px 260px; }
     .hero-title { font-size: clamp(36px, 9vw, 60px); }
@@ -894,14 +904,16 @@
         <div class="stat-item"><span class="stat-num">€350k+</span><span class="stat-label">Beheerd budget</span></div>
         <div class="stat-item"><span class="stat-num">Flexibel</span><span class="stat-label">Start­up → Corporate</span></div>
       </div>
-      <div class="arthur-card">
-        <img src="foto%20arthur.png" alt="Arthur Heusdens" class="arthur-card-photo">
-        <div>
-          <div class="arthur-card-name">Arthur Heusdens</div>
-          <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
+      <div class="over-cta-row">
+        <div class="arthur-card">
+          <img src="foto%20arthur.png" alt="Arthur Heusdens" class="arthur-card-photo">
+          <div class="arthur-card-text">
+            <div class="arthur-card-name">Arthur Heusdens</div>
+            <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
+          </div>
         </div>
+        <a href="#contact" class="hero-cta">Neem contact op <span class="hero-cta-arrow">→</span></a>
       </div>
-      <a href="#contact" class="hero-cta">Neem contact op <span class="hero-cta-arrow">→</span></a>
     </div>
     <div class="over-visual reveal">
       <div class="over-card">
