@@ -19,6 +19,7 @@
 <meta property="og:site_name" content="Line & Thread">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -637,7 +638,6 @@
     .nav-logo img { height: 60px; }
     .ticker-track { font-size: 8px; letter-spacing: 0.12em; }
     .ticker-track span { margin: 0 24px; }
-    .hero { padding: 0 24px 64px; }
     section { padding: 80px 24px; }
     .services { grid-template-columns: 1fr; gap: 60px; }
     .services-intro { padding-right: 0; }
@@ -734,7 +734,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Line & Thread" class="logo-dark">
     <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Line & Thread" class="logo-light">
   </a>
@@ -814,7 +814,7 @@
 <!-- AANPAK -->
 <section class="aanpak" id="aanpak">
   <div class="section-label">Hoe ik werk</div>
-  <h2 reveal>Geen onboarding van zes weken.<br><em>Snel scherp, dan doorpakken.</em></h2>
+  <h2 class="reveal">Geen onboarding van zes weken.<br><em>Snel scherp, dan doorpakken.</em></h2>
   <div class="steps">
     <div class="step reveal">
       <div class="step-num">01</div>
@@ -864,7 +864,7 @@
         <div class="over-card-label">Jaar ervaring in Paid Media (B2B+B2C, Branding & Growth Marketing)</div>
       </div>
       <div class="over-card">
-        <div class="over-card-num">€350k</div>
+        <div class="over-card-num">€350k+</div>
         <div class="over-card-label">Advertentiebudget succesvol beheerd</div>
       </div>
       <div class="over-card">
@@ -884,20 +884,20 @@
   <p>Stuur een bericht. Ik kom erop terug binnen één werkdag.</p>
   <form class="contact-form reveal" action="https://formspree.io/f/xpqedoyo" method="POST">
     <div class="form-row">
-      <label>Naam</label>
-      <input type="text" name="naam" placeholder="Jouw naam" required>
+      <label for="naam">Naam</label>
+      <input type="text" id="naam" name="naam" placeholder="Jouw naam" autocomplete="name" required>
     </div>
     <div class="form-row">
-      <label>Bedrijf</label>
-      <input type="text" name="bedrijf" placeholder="Merknaam of bedrijf">
+      <label for="bedrijf">Bedrijf</label>
+      <input type="text" id="bedrijf" name="bedrijf" placeholder="Merknaam of bedrijf" autocomplete="organization">
     </div>
     <div class="form-row">
-      <label>E-mail</label>
-      <input type="email" name="email" placeholder="jouw@email.nl" required>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="jouw@email.nl" autocomplete="email" required>
     </div>
     <div class="form-row">
-      <label>Bericht</label>
-      <textarea rows="4" name="bericht" placeholder="Vertel kort wat je doet en wat je zoekt" required></textarea>
+      <label for="bericht">Bericht</label>
+      <textarea rows="4" id="bericht" name="bericht" placeholder="Vertel kort wat je doet en wat je zoekt" required></textarea>
     </div>
     <button type="submit" class="form-submit">Verstuur bericht</button>
   </form>
