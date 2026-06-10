@@ -886,9 +886,18 @@
     width: auto;
     display: block;
   }
+  .footer-badges {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 14px;
+  }
   .footer-logo img.footer-meta-badge {
     height: 30px;
-    margin-top: 14px;
+    opacity: 0.8;
+  }
+  .footer-logo img.footer-google-badge {
+    height: 36px;
     opacity: 0.8;
   }
   .footer-copy {
@@ -1381,7 +1390,10 @@
 <footer>
   <div class="footer-logo">
     <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Line & Thread">
-    <img src="Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge">
+    <div class="footer-badges">
+      <img src="Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge">
+      <img src="Google-Partner.png" alt="Google Partner" class="footer-google-badge">
+    </div>
   </div>
   <div class="footer-copy">Line & Thread - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
   <ul class="footer-links">
