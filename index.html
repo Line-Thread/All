@@ -548,6 +548,100 @@
     opacity: 0.65;
   }
 
+  /* CASES */
+  .cases-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 64px;
+  }
+  .cases-section h2 em { font-style: italic; color: var(--tan); }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(196,168,130,0.2);
+  }
+  .case-card {
+    background: var(--cream);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    color: var(--navy);
+  }
+  .case-card:nth-child(2) { background: var(--navy); color: var(--cream); }
+  .case-card:nth-child(3) { background: var(--cream-dark); }
+  .case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 36px;
+  }
+  .case-sector {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tan);
+  }
+  .case-duration {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+  .case-numbers {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    align-items: flex-end;
+  }
+  .case-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .case-num--text { font-size: 22px; font-style: italic; }
+  .case-num-label {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.45;
+  }
+  .case-divider {
+    height: 1px;
+    background: currentColor;
+    opacity: 0.1;
+    margin-bottom: 28px;
+  }
+  .case-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+  }
+  .case-detail-label {
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 6px;
+  }
+  .case-detail-value {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.55;
+    opacity: 0.75;
+  }
+
   /* MOBIELE STATS BALK */
   .over-stats-mobile { display: none; }
 
@@ -725,6 +819,8 @@
       color: var(--tan);
       line-height: 1.3;
     }
+    .cases-grid { grid-template-columns: 1fr; }
+    .cases-section { padding: 80px 24px !important; }
     .over-cta-row { justify-content: center; }
     footer { flex-direction: column; gap: 20px; text-align: center; }
     .hero { padding: 120px 24px 260px; }
@@ -777,6 +873,7 @@
   <button class="overlay-close" onclick="closeMenu()" aria-label="Menu sluiten">&#x2715;</button>
   <a href="#diensten" onclick="closeMenu()">Diensten</a>
   <a href="#aanpak" onclick="closeMenu()">Aanpak</a>
+  <a href="#cases" onclick="closeMenu()">Cases</a>
   <a href="#over" onclick="closeMenu()">Over</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="/" onclick="closeMenu()" class="overlay-logo-link" aria-label="Terug naar home">
@@ -793,6 +890,7 @@
   <ul class="nav-links">
     <li><a href="#diensten">Diensten</a></li>
     <li><a href="#aanpak">Aanpak</a></li>
+    <li><a href="#cases">Cases</a></li>
     <li><a href="#over">Over</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -885,6 +983,101 @@
     </div>
   </div>
 </section>
+
+<!-- CASES -->
+<section class="cases-section" id="cases" style="padding: 120px 60px;">
+  <div class="section-label">Resultaten</div>
+  <h2>Wat het oplevert<br><em>in de praktijk.</em></h2>
+  <div class="cases-grid reveal">
+
+    <div class="case-card">
+      <div class="case-header">
+        <span class="case-sector">Fashion / Luxe</span>
+        <span class="case-duration">36 maanden</span>
+      </div>
+      <div class="case-numbers">
+        <div>
+          <div class="case-num">+170%</div>
+          <div class="case-num-label">ROAS</div>
+        </div>
+        <div>
+          <div class="case-num">-41%</div>
+          <div class="case-num-label">CPA</div>
+        </div>
+      </div>
+      <div class="case-divider"></div>
+      <div class="case-details">
+        <div>
+          <div class="case-detail-label">Budget</div>
+          <div class="case-detail-value">€25.000 / mnd</div>
+        </div>
+        <div>
+          <div class="case-detail-label">Aanpak</div>
+          <div class="case-detail-value">Creative concepts per product/persona</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <span class="case-sector">Recruitment</span>
+        <span class="case-duration">8 maanden</span>
+      </div>
+      <div class="case-numbers">
+        <div>
+          <div class="case-num">-65%</div>
+          <div class="case-num-label">CPL</div>
+        </div>
+        <div>
+          <div class="case-num case-num--text">Alle vacatures vervuld</div>
+          <div class="case-num-label">Resultaat</div>
+        </div>
+      </div>
+      <div class="case-divider"></div>
+      <div class="case-details">
+        <div>
+          <div class="case-detail-label">Budget</div>
+          <div class="case-detail-value">€5.000 / mnd</div>
+        </div>
+        <div>
+          <div class="case-detail-label">Aanpak</div>
+          <div class="case-detail-value">Targeting via persona's verwerkt in creatives</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <span class="case-sector">Interieur</span>
+        <span class="case-duration">8 maanden</span>
+      </div>
+      <div class="case-numbers">
+        <div>
+          <div class="case-num">-35%</div>
+          <div class="case-num-label">CPA</div>
+        </div>
+        <div>
+          <div class="case-num">+40%</div>
+          <div class="case-num-label">Omzet</div>
+        </div>
+      </div>
+      <div class="case-divider"></div>
+      <div class="case-details">
+        <div>
+          <div class="case-detail-label">Budget</div>
+          <div class="case-detail-value">€7.000 / mnd</div>
+        </div>
+        <div>
+          <div class="case-detail-label">Aanpak</div>
+          <div class="case-detail-value">Campagnestructuren bundelen voor maximale impact</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
 
 <!-- OVER -->
 <section id="over">
