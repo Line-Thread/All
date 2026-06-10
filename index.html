@@ -567,10 +567,12 @@
   }
   .case-card {
     background: var(--cream);
-    padding: 40px 36px;
+    padding: 36px 32px;
     display: flex;
     flex-direction: column;
     color: var(--navy);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
   }
   .case-card:nth-child(2) { background: var(--navy); color: var(--cream); }
   .case-card:nth-child(3) { background: var(--cream-dark); }
@@ -578,7 +580,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
   .case-sector {
     font-size: 10px;
@@ -829,6 +831,7 @@
     }
     .cases-grid { grid-template-columns: 1fr; }
     .cases-section { padding: 80px 24px !important; }
+    .case-card { padding: 28px 24px; }
     .over-cta-row { justify-content: center; }
     footer { flex-direction: column; gap: 20px; text-align: center; }
     .hero { padding: 120px 24px 260px; }
