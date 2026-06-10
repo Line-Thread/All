@@ -463,66 +463,54 @@
     margin-bottom: 16px;
   }
   .over-text p:last-of-type { margin-bottom: 40px; }
-  .over-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    background: rgba(196,168,130,0.2);
+  /* ARTHUR CARD */
+  .arthur-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid rgba(196,168,130,0.4);
+    border-radius: 100px;
+    padding: 8px 24px 8px 8px;
+    margin-bottom: 36px;
+    background: var(--cream);
   }
-  .over-photo-card {
-    overflow: hidden;
+  .arthur-card--center {
     display: flex;
-    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .over-photo-img {
-    width: 100%;
-    height: 280px;
+  .arthur-card-photo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center top;
     display: block;
+    flex-shrink: 0;
   }
-  .over-photo-info {
-    background: var(--navy);
-    color: var(--cream);
-    padding: 28px 32px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .over-photo-name {
+  .arthur-card-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 3px;
   }
-  .over-photo-role {
+  .arthur-card-role {
     font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--tan);
-    margin-top: -8px;
-  }
-  .over-photo-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 11px;
     font-weight: 400;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--cream);
-    text-decoration: none;
-    border-bottom: 1px solid var(--tan);
-    padding-bottom: 4px;
-    width: fit-content;
-    transition: gap 0.25s, color 0.25s;
+    color: var(--tan);
   }
-  .over-photo-cta:hover { gap: 18px; color: var(--tan); }
+
   .over-visual {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px;
+    background: rgba(196,168,130,0.2);
+    align-self: stretch;
   }
   .over-card {
     background: var(--navy);
@@ -906,34 +894,31 @@
         <div class="stat-item"><span class="stat-num">€350k+</span><span class="stat-label">Beheerd budget</span></div>
         <div class="stat-item"><span class="stat-num">Flexibel</span><span class="stat-label">Start­up → Corporate</span></div>
       </div>
-      <a href="#contact" class="hero-cta">Neem contact op <span class="hero-cta-arrow">→</span></a>
-    </div>
-    <div class="over-right reveal">
-      <div class="over-photo-card">
-        <img src="foto%20arthur.png" alt="Arthur Heusdens" class="over-photo-img">
-        <div class="over-photo-info">
-          <div class="over-photo-name">Arthur Heusdens</div>
-          <div class="over-photo-role">Ads Specialist &amp; Eigenaar</div>
-          <a href="#contact" class="over-photo-cta">Maak kennis <span>→</span></a>
+      <div class="arthur-card">
+        <img src="foto%20arthur.png" alt="Arthur Heusdens" class="arthur-card-photo">
+        <div>
+          <div class="arthur-card-name">Arthur Heusdens</div>
+          <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
         </div>
       </div>
-      <div class="over-visual">
-        <div class="over-card">
-          <div class="over-card-num">360%</div>
-          <div class="over-card-label">Blended ROAS eigen merk over de afgelopen 12 maanden</div>
-        </div>
-        <div class="over-card">
-          <div class="over-card-num">4+</div>
-          <div class="over-card-label">Jaar ervaring in Paid Media (B2B+B2C, Branding & Growth Marketing)</div>
-        </div>
-        <div class="over-card">
-          <div class="over-card-num">€350k+</div>
-          <div class="over-card-label">Advertentiebudget succesvol beheerd</div>
-        </div>
-        <div class="over-card">
-          <div class="over-card-num over-card-num--sm">Flexibel</div>
-          <div class="over-card-label">Van kleine startups tot grote corporates</div>
-        </div>
+      <a href="#contact" class="hero-cta">Neem contact op <span class="hero-cta-arrow">→</span></a>
+    </div>
+    <div class="over-visual reveal">
+      <div class="over-card">
+        <div class="over-card-num">360%</div>
+        <div class="over-card-label">Blended ROAS eigen merk over de afgelopen 12 maanden</div>
+      </div>
+      <div class="over-card">
+        <div class="over-card-num">4+</div>
+        <div class="over-card-label">Jaar ervaring in Paid Media (B2B+B2C, Branding & Growth Marketing)</div>
+      </div>
+      <div class="over-card">
+        <div class="over-card-num">€350k+</div>
+        <div class="over-card-label">Advertentiebudget succesvol beheerd</div>
+      </div>
+      <div class="over-card">
+        <div class="over-card-num over-card-num--sm">Flexibel</div>
+        <div class="over-card-label">Van kleine startups tot grote corporates</div>
       </div>
     </div>
   </div>
@@ -946,6 +931,13 @@
   <div class="section-label" style="text-align:center">Contact</div>
   <h2>Klaar om te kijken<br>of het <em>past?</em></h2>
   <p>Stuur een bericht. Ik kom erop terug binnen één werkdag.</p>
+  <div class="arthur-card arthur-card--center">
+    <img src="foto%20arthur.png" alt="Arthur Heusdens" class="arthur-card-photo">
+    <div>
+      <div class="arthur-card-name">Arthur Heusdens</div>
+      <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
+    </div>
+  </div>
   <form class="contact-form reveal" action="https://formspree.io/f/xpqedoyo" method="POST">
     <div class="form-row">
       <label for="naam">Naam</label>
