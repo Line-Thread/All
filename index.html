@@ -3,20 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Line & Thread - Boutique Media Buying</title>
+<title>Line & Thread — Media Buying Bureau | Meta Ads & Google Ads Specialist</title>
 <link rel="icon" type="image/png" href="Favicon%20(monogram)%20/Monoram%20Dark%20big_.png">
 
 <!-- SEO -->
-<meta name="description" content="Geen agency overhead. Eén specialist die jouw account kent, de marge begrijpt en verantwoording neemt over resultaat. Meta Ads & Google Ads voor D2C merken.">
+<meta name="description" content="Boutique media buying bureau in Amersfoort. Meta Ads & Google Ads uitbesteden aan één specialist die stuurt op marge. Plan een vrijblijvende accountanalyse.">
+<link rel="canonical" href="https://www.line-thread.com/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.line-thread.com/">
-<meta property="og:title" content="Line & Thread — Boutique Media Buying">
-<meta property="og:description" content="Geen agency overhead. Eén specialist die jouw account kent, de marge begrijpt en verantwoording neemt over resultaat. Meta Ads & Google Ads voor D2C merken.">
+<meta property="og:title" content="Line & Thread — Media Buying Bureau | Meta Ads & Google Ads Specialist">
+<meta property="og:description" content="Boutique media buying bureau in Amersfoort. Meta Ads & Google Ads uitbesteden aan één specialist die stuurt op marge. Plan een vrijblijvende accountanalyse.">
 <meta property="og:image" content="https://www.line-thread.com/Logo/Logo%20Dark%20no%20Background.png">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Line & Thread">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Line & Thread",
+  "description": "Boutique media buying bureau. Meta Ads & Google Ads voor e-commerce, B2B en recruitment — gestuurd op marge.",
+  "url": "https://www.line-thread.com",
+  "logo": "https://www.line-thread.com/Logo/Logo%20Dark%20no%20Background.png",
+  "image": "https://www.line-thread.com/Logo/Logo%20Dark%20no%20Background.png",
+  "telephone": "+31646194022",
+  "email": "arthur@line-thread.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Havenweg 21T",
+    "addressLocality": "Amersfoort",
+    "addressCountry": "NL"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "areaServed": "NL",
+  "founder": {
+    "@type": "Person",
+    "name": "Arthur Heusdens",
+    "jobTitle": "Ads Specialist & Eigenaar",
+    "sameAs": ["https://www.linkedin.com/in/arthurheusdens/"]
+  },
+  "sameAs": ["https://www.linkedin.com/in/arthurheusdens/"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wat is een vrijblijvende accountanalyse?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ik kijk mee in je advertentieaccount en je krijgt concrete verbeterpunten: wat goed staat, waar geld weglekt en waar de kansen zitten. Daarna beslis je zelf of je er iets mee doet — de analyse kost niets en verplicht tot niets." }
+    },
+    {
+      "@type": "Question",
+      "name": "Zit ik vast aan een lang contract?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nee. Samenwerkingen starten met een proeftijd van twee weken waarin beide kanten zonder opgave van reden kunnen stoppen. Daarna geldt een opzegtermijn van één kalendermaand. Geen jaarcontracten." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat kost advertentiebeheer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dat hangt af van de omvang van je account en wat er nodig is: een vast maandbedrag, uurtarief of projectprijs. In het eerste gesprek krijg je een eerlijke inschatting — inclusief wat het moet opleveren om de investering waard te zijn." }
+    },
+    {
+      "@type": "Question",
+      "name": "Hoe snel zie ik resultaat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "De eerste 30 dagen staan in het teken van inrichting en leren. Daarna wordt per 30 dagen bijgestuurd op concrete cijfers. Structurele verbetering zie je doorgaans binnen twee tot drie maanden." }
+    },
+    {
+      "@type": "Question",
+      "name": "Werkt het ook met een kleiner budget?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, mits de marges kloppen. Juist bij kleinere budgetten moet elke euro werken. In de accountanalyse hoor je eerlijk of adverteren voor jouw situatie zinvol is — en zo niet, dan hoor je dat ook." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wat heb je van mij nodig om te starten?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Toegang tot je advertentieaccounts, inzicht in je marges en doelen, en iemand die beslissingen kan nemen. De rest wordt geregeld — geen lange onboardingstrajecten." }
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -451,6 +520,43 @@
     opacity: 0.6;
   }
 
+  /* VOOR WIE */
+  .voorwie h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 64px;
+  }
+  .voorwie h2 em { font-style: italic; color: var(--tan); }
+  .voorwie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(196,168,130,0.2);
+    border: 1px solid rgba(196,168,130,0.2);
+  }
+  .voorwie-item {
+    background: var(--cream);
+    padding: 44px 40px;
+  }
+  .voorwie-item h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .voorwie-item p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.7;
+    opacity: 0.6;
+  }
+
   /* AANPAK */
   .aanpak { background: var(--navy); color: var(--cream); }
   .aanpak .section-label { color: var(--tan); }
@@ -701,6 +807,13 @@
     text-transform: uppercase;
     color: var(--tan);
   }
+  .case-story {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.65;
+    opacity: 0.6;
+    font-style: italic;
+  }
   .case-duration {
     font-size: 10px;
     font-weight: 300;
@@ -753,6 +866,28 @@
     line-height: 1.55;
     opacity: 0.75;
   }
+  .quotes-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 64px;
+    max-width: 1000px;
+  }
+  .quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .quote figcaption {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tan);
+  }
   .cases-cta-row {
     display: flex;
     align-items: center;
@@ -765,11 +900,62 @@
   /* MOBIELE STATS BALK */
   .over-stats-mobile { display: none; }
 
+  /* FAQ */
+  .faq-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 56px;
+  }
+  .faq-section h2 em { font-style: italic; color: var(--tan); }
+  .faq {
+    max-width: 760px;
+  }
+  .faq-item {
+    border-bottom: 1px solid rgba(13,14,28,0.1);
+  }
+  .faq-item summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--tan);
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p {
+    padding: 0 40px 24px 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    opacity: 0.7;
+    max-width: 640px;
+  }
+
   /* CONTACT */
   .contact {
     background: var(--cream-dark);
     text-align: center;
   }
+  .contact .section-label { text-align: center; }
   .contact h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(40px, 5vw, 72px);
@@ -866,6 +1052,26 @@
     background: var(--tan);
     color: var(--navy);
   }
+  .form-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  .form-success {
+    text-align: center;
+    padding: 48px 0;
+  }
+  .form-success-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 14px;
+  }
+  .form-success p {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 0;
+  }
+  .form-success a { color: var(--navy); }
 
   /* FOOTER */
   footer {
@@ -923,6 +1129,60 @@
     transition: opacity 0.2s;
   }
   .footer-links a:hover { opacity: 1; }
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-end;
+  }
+
+  /* SERVICE MEER-LINK */
+  .service-more {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tan);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196,168,130,0.4);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+  .service-more:hover { opacity: 0.7; }
+
+  /* MOBIELE STICKY CTA */
+  .mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    background: var(--navy);
+    color: var(--cream);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 24px calc(16px + env(safe-area-inset-bottom));
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  .mobile-cta.show { transform: translateY(0); }
+  .mobile-cta span { color: var(--tan); }
+
+  /* FOCUS */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--tan);
+    outline-offset: 3px;
+  }
 
   /* SCROLL REVEAL */
   .reveal {
@@ -983,14 +1243,27 @@
     .logo-item--caps { font-size: 13px; }
     .logo-item--serif { font-size: 20px; }
     .cases-grid { grid-template-columns: 1fr; }
-    .cases-section { padding: 80px 24px !important; }
     .case-card { padding: 28px 24px; }
+    .voorwie-grid { grid-template-columns: 1fr; }
+    .quotes-row { grid-template-columns: 1fr; gap: 40px; }
     .over-cta-row { justify-content: center; }
-    footer { flex-direction: column; gap: 20px; text-align: center; }
+    .mobile-cta { display: flex; }
+    footer { flex-direction: column; gap: 20px; text-align: center; padding-bottom: 80px; }
+    .footer-nav { align-items: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
     .hero { padding: 120px 24px 260px; }
     .hero-title { font-size: clamp(36px, 9vw, 60px); }
     .hero-sub br { display: none; }
     .hero-badge { font-size: 8px; padding: 6px 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker-track, .logos-track { animation: none; }
+    .hero-badge, .hero-title, .hero-cta { animation: none; opacity: 1; }
+    .hero-sub, .hero-proof { animation: none; opacity: 0.65; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .mobile-cta { transition: none; }
   }
 </style>
 </head>
@@ -1058,7 +1331,7 @@
     <li><a href="#over">Over</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="navOverlay">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -1073,7 +1346,7 @@
     Brede ervaring, korte lijntjes en een aanpak <br>die past bij jouw bedrijf.
   </p>
   <a href="#contact" class="hero-cta">
-    Maak kennis
+    Plan een vrijblijvende accountanalyse
     <span class="hero-cta-arrow">→</span>
   </a>
   <div class="hero-proof">
@@ -1121,6 +1394,7 @@
         <div class="service-content">
           <h3>Meta Ads</h3>
           <p>Campagnestrategie, creatieve structuur, bidding en schaallogica voor Facebook en Instagram. Gericht op winstgevende groei, niet op oppervlakkige ROAS.</p>
+          <a href="/meta-ads" class="service-more">Meta Ads uitbesteden →</a>
         </div>
       </div>
       <div class="service-item">
@@ -1128,6 +1402,7 @@
         <div class="service-content">
           <h3>Google Ads</h3>
           <p>Search, Shopping en Performance Max. Budget naar de producten en categorieën die onderaan de streep iets opleveren.</p>
+          <a href="/google-ads" class="service-more">Google Ads uitbesteden →</a>
         </div>
       </div>
       <div class="service-item">
@@ -1149,6 +1424,26 @@
 </section>
 
 <div class="divider"></div>
+
+<!-- VOOR WIE -->
+<section class="voorwie" id="voor-wie">
+  <div class="section-label">Voor wie</div>
+  <h2 class="reveal">Drie soorten klanten,<br><em>één manier van werken.</em></h2>
+  <div class="voorwie-grid">
+    <div class="voorwie-item reveal">
+      <h3>E-commerce &amp; D2C</h3>
+      <p>Webshops en merken die winstgevend willen schalen. Advertentiebeheer dat stuurt op marge per product — niet op platform-ROAS die er goed uitziet maar niets oplevert.</p>
+    </div>
+    <div class="voorwie-item reveal">
+      <h3>B2B &amp; Leadgeneratie</h3>
+      <p>Bedrijven die een voorspelbare stroom gekwalificeerde leads willen. Campagnes die de juiste beslissers bereiken, met boodschappen die aansluiten op hun overweging.</p>
+    </div>
+    <div class="voorwie-item reveal">
+      <h3>Recruitment</h3>
+      <p>Organisaties met vacatures die via jobboards niet vervuld raken. Doelgroepgericht adverteren op de plekken waar kandidaten écht zitten — met bewezen resultaat.</p>
+    </div>
+  </div>
+</section>
 
 <!-- AANPAK -->
 <section class="aanpak" id="aanpak">
@@ -1174,7 +1469,7 @@
 </section>
 
 <!-- CASES -->
-<section class="cases-section" id="cases" style="padding: 120px 60px;">
+<section class="cases-section" id="cases">
   <div class="section-label">Resultaten</div>
   <h2>Wat het oplevert<br><em>in de praktijk.</em></h2>
   <div class="cases-grid reveal">
@@ -1184,6 +1479,7 @@
         <span class="case-sector">Fashion / Luxe</span>
         <span class="case-duration">36 maanden</span>
       </div>
+      <p class="case-story">Luxemerk wilde schalen, maar elke budgetverhoging drukte de ROAS.</p>
       <div class="case-numbers">
         <div>
           <div class="case-num">+170%</div>
@@ -1212,6 +1508,7 @@
         <span class="case-sector">Recruitment</span>
         <span class="case-duration">8 maanden</span>
       </div>
+      <p class="case-story">Vacatures stonden maandenlang open; jobboards leverden te weinig op.</p>
       <div class="case-numbers">
         <div>
           <div class="case-num">-65%</div>
@@ -1240,6 +1537,7 @@
         <span class="case-sector">Interieur</span>
         <span class="case-duration">8 maanden</span>
       </div>
+      <p class="case-story">Losse campagnes beconcurreerden elkaar op dezelfde doelgroep.</p>
       <div class="case-numbers">
         <div>
           <div class="case-num">-35%</div>
@@ -1265,6 +1563,17 @@
 
   </div>
 
+  <div class="quotes-row">
+    <figure class="quote reveal">
+      <blockquote>"Arthur denkt mee als een ondernemer, niet als een uitvoerder. Hij snapt waar de marge zit en stuurt daar ook echt op."</blockquote>
+      <figcaption>— Eigenaar, D2C interieurmerk</figcaption>
+    </figure>
+    <figure class="quote reveal">
+      <blockquote>"Korte lijnen, eerlijke cijfers en vacatures die eindelijk vervuld raken. Precies waar we naar zochten."</blockquote>
+      <figcaption>— HR-manager, technisch recruitmentbureau</figcaption>
+    </figure>
+  </div>
+
   <div class="cases-cta-row">
     <div class="arthur-card">
       <img src="foto%20arthur.png" alt="Arthur Heusdens" class="arthur-card-photo">
@@ -1273,7 +1582,7 @@
         <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
       </div>
     </div>
-    <a href="#contact" class="hero-cta">Kennismaken? <span class="hero-cta-arrow">→</span></a>
+    <a href="#contact" class="hero-cta">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow">→</span></a>
   </div>
 </section>
 
@@ -1286,7 +1595,7 @@
       <div class="section-label">Over Line & Thread</div>
       <h2>Merk-denken<br><em>& Resultaat.</em></h2>
       <p>
-        Line & Thread is een boutique media buying bureau met brede ervaring - van startups tot corporates, van D2C tot recruitment. Geen groot team, geen bureau-laag. Directe samenwerking met iemand die de platforms kent én begrijpt hoe merken groeien.
+        Line & Thread is een boutique media buying bureau met brede ervaring - van startups tot corporates, van D2C tot recruitment. Geen groot team, geen bureau-laag. Directe samenwerking met iemand die de platforms kent én begrijpt hoe merken groeien. Vanuit Amersfoort, voor merken en bedrijven in heel Nederland.
       </p>
       <p>
         Goede advertenties beginnen niet met meer budget — maar met iemand die begrijpt hoe een merk denkt én hoe een klant koopt. Geen corporate-laag ertussen, geen tussenpersoon. Directe samenwerking, volledige verantwoording en een aanpak die past bij jouw bedrijf.
@@ -1305,7 +1614,7 @@
             <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
           </div>
         </div>
-        <a href="#contact" class="hero-cta">Neem contact op <span class="hero-cta-arrow">→</span></a>
+        <a href="#contact" class="hero-cta">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow">→</span></a>
       </div>
     </div>
     <div class="over-visual reveal">
@@ -1331,11 +1640,45 @@
 
 <div class="divider"></div>
 
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-label">Veelgestelde vragen</div>
+  <h2 class="reveal">Eerst nog wat vragen?<br><em>Heel logisch.</em></h2>
+  <div class="faq">
+    <details class="faq-item">
+      <summary>Wat is een vrijblijvende accountanalyse?</summary>
+      <p>Ik kijk mee in je advertentieaccount (of je huidige situatie als je nog niet adverteert) en je krijgt concrete verbeterpunten: wat goed staat, waar geld weglekt en waar de kansen zitten. Daarna beslis je zelf of je er iets mee doet — de analyse kost niets en verplicht tot niets.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Zit ik vast aan een lang contract?</summary>
+      <p>Nee. Samenwerkingen starten met een proeftijd van twee weken waarin beide kanten zonder opgave van reden kunnen stoppen. Daarna geldt een opzegtermijn van één kalendermaand. Geen jaarcontracten.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Wat kost advertentiebeheer?</summary>
+      <p>Dat hangt af van de omvang van je account en wat er nodig is: een vast maandbedrag (retainer), uurtarief of projectprijs. In het eerste gesprek krijg je een eerlijke inschatting — inclusief wat het je moet opleveren om de investering waard te zijn.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Hoe snel zie ik resultaat?</summary>
+      <p>De eerste 30 dagen staan in het teken van inrichting en leren: campagnes opbouwen, data verzamelen en de eerste bijsturing. Daarna wordt per 30 dagen bijgestuurd op concrete cijfers. Structurele verbetering zie je doorgaans binnen twee tot drie maanden.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Werkt het ook met een kleiner budget?</summary>
+      <p>Ja, mits de marges kloppen. Juist bij kleinere budgetten moet elke euro werken. In de accountanalyse hoor je eerlijk of adverteren voor jouw situatie zinvol is — en zo niet, dan hoor je dat ook.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Wat heb je van mij nodig om te starten?</summary>
+      <p>Toegang tot je advertentieaccount(s), inzicht in je marges en doelen, en iemand die beslissingen kan nemen. De rest regel ik — geen lange onboardingstrajecten.</p>
+    </details>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="section-label" style="text-align:center">Contact</div>
+  <div class="section-label">Contact</div>
   <h2>Klaar om te kijken<br>of het <em>past?</em></h2>
-  <p>Stuur een bericht. Ik kom erop terug binnen één werkdag.</p>
+  <p>Plan een vrijblijvende accountanalyse of stel je vraag — ik kom er binnen één werkdag op terug.</p>
   <div class="contact-meta">
     <div class="arthur-card">
       <img src="foto%20arthur.png" alt="Arthur Heusdens" class="arthur-card-photo">
@@ -1354,7 +1697,9 @@
       </span>
     </a>
   </div>
-  <form class="contact-form reveal" action="https://formspree.io/f/xpqedoyo" method="POST">
+  <form class="contact-form reveal" action="https://formspree.io/f/xpqedoyo" method="POST" id="contactForm">
+    <input type="hidden" name="_subject" value="Nieuwe aanvraag via line-thread.com">
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="form-row">
       <label for="naam">Naam</label>
       <input type="text" id="naam" name="naam" placeholder="Jouw naam" autocomplete="name" required>
@@ -1382,7 +1727,7 @@
       <label for="bericht">Bericht</label>
       <textarea rows="4" id="bericht" name="bericht" placeholder="Vertel kort wat je doet en wat je zoekt" required></textarea>
     </div>
-    <button type="submit" class="form-submit">Verstuur bericht</button>
+    <button type="submit" class="form-submit">Vraag vrijblijvende analyse aan</button>
   </form>
 </section>
 
@@ -1396,12 +1741,22 @@
     </div>
   </div>
   <div class="footer-copy">Line & Thread - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
-  <ul class="footer-links">
-    <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener">LinkedIn</a></li>
-    <li><a href="/privacy">Privacy</a></li>
-    <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
-  </ul>
+  <div class="footer-nav">
+    <ul class="footer-links">
+      <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
+      <li><a href="/google-ads">Google Ads specialist</a></li>
+      <li><a href="/#diensten">Advertentiebeheer</a></li>
+    </ul>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
+    </ul>
+  </div>
 </footer>
+
+<!-- MOBIELE STICKY CTA -->
+<a href="#contact" class="mobile-cta" id="mobileCta">Vrijblijvende accountanalyse <span>→</span></a>
 
 <script>
   // Hamburger menu
@@ -1410,6 +1765,7 @@
 
   function closeMenu() {
     hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
     navOverlay.style.display = 'none';
     navOverlay.classList.remove('open');
     document.body.style.overflow = '';
@@ -1421,6 +1777,7 @@
       closeMenu();
     } else {
       hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
       navOverlay.style.display = 'flex';
       requestAnimationFrame(() => navOverlay.classList.add('open'));
       document.body.style.overflow = 'hidden';
@@ -1446,6 +1803,13 @@
     const contactRect = contact.getBoundingClientRect();
     const overContact = contactRect.top <= 130 && contactRect.bottom >= 130;
     nav.classList.toggle('nav--scrolled', heroBottom < 130 && !overContact);
+
+    // Mobiele sticky CTA: tonen na de hero, verbergen zodra contact in beeld is
+    const mobileCta = document.getElementById('mobileCta');
+    if (mobileCta) {
+      const contactInView = contactRect.top < window.innerHeight && contactRect.bottom > 0;
+      mobileCta.classList.toggle('show', heroBottom < 0 && !contactInView);
+    }
   }
 
   window.addEventListener('scroll', updateNavColor, { passive: true });
@@ -1463,6 +1827,28 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
+  // Formulier: AJAX-verzending met nette bevestiging in huisstijl
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('.form-submit');
+    const btnText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Versturen…';
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error();
+      contactForm.innerHTML = '<div class="form-success"><div class="form-success-title">Bedankt voor je aanvraag!</div><p>Ik kom er binnen één werkdag op terug.<br>Liever direct schakelen? Bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p></div>';
+    } catch {
+      btn.disabled = false;
+      btn.textContent = btnText;
+      alert('Er ging iets mis bij het versturen. Mail je bericht naar arthur@line-thread.com of bel 06 46 19 40 22.');
+    }
+  });
 
 </script>
 

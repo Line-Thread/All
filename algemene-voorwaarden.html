@@ -6,6 +6,7 @@
 <title>Algemene Voorwaarden — Line & Thread</title>
 <link rel="icon" type="image/png" href="Favicon%20(monogram)%20/Monoram%20Dark%20big_.png">
 <meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.line-thread.com/algemene-voorwaarden">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -175,6 +176,11 @@
     transition: opacity 0.2s;
   }
   .footer-links a:hover { opacity: 1; }
+  .footer-nav { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
+  @media (max-width: 760px) {
+    .footer-nav { align-items: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
 
   @media (max-width: 760px) {
     .page-header { padding: 24px 24px; }
@@ -308,11 +314,18 @@
     </div>
   </div>
   <div class="footer-copy">Line & Thread - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
-  <ul class="footer-links">
-    <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener">LinkedIn</a></li>
-    <li><a href="/privacy">Privacy</a></li>
-    <li><a href="/algemene-voorwaarden" aria-current="page" style="opacity:1;">Algemene Voorwaarden</a></li>
-  </ul>
+  <div class="footer-nav">
+    <ul class="footer-links">
+      <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
+      <li><a href="/google-ads">Google Ads specialist</a></li>
+      <li><a href="/#diensten">Advertentiebeheer</a></li>
+    </ul>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/algemene-voorwaarden" aria-current="page" style="opacity:1;">Algemene Voorwaarden</a></li>
+    </ul>
+  </div>
 </footer>
 
 </body>
