@@ -90,6 +90,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Calendly -->
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <style>
   :root {
     --cream: #EDE8DC;
@@ -1345,7 +1349,7 @@
   <p class="hero-sub">
     Brede ervaring, korte lijntjes en een aanpak <br>die past bij jouw bedrijf.
   </p>
-  <a href="#contact" class="hero-cta">
+  <a href="#contact" class="hero-cta calendly-trigger">
     Plan een vrijblijvende accountanalyse
     <span class="hero-cta-arrow">→</span>
   </a>
@@ -1582,7 +1586,7 @@
         <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
       </div>
     </div>
-    <a href="#contact" class="hero-cta">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow">→</span></a>
+    <a href="#contact" class="hero-cta calendly-trigger">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow">→</span></a>
   </div>
 </section>
 
@@ -1614,7 +1618,7 @@
             <div class="arthur-card-role">Ads Specialist &amp; Eigenaar</div>
           </div>
         </div>
-        <a href="#contact" class="hero-cta">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow">→</span></a>
+        <a href="#contact" class="hero-cta calendly-trigger">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow">→</span></a>
       </div>
     </div>
     <div class="over-visual reveal">
@@ -1756,7 +1760,7 @@
 </footer>
 
 <!-- MOBIELE STICKY CTA -->
-<a href="#contact" class="mobile-cta" id="mobileCta">Vrijblijvende accountanalyse <span>→</span></a>
+<a href="#contact" class="mobile-cta calendly-trigger" id="mobileCta">Vrijblijvende accountanalyse <span>→</span></a>
 
 <script>
   // Hamburger menu
@@ -1826,6 +1830,22 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // Calendly popup op alle CTA-knoppen.
+  // VERVANG de regel hieronder door je echte Calendly-link, bijv.:
+  // const CALENDLY_URL = 'https://calendly.com/line-thread/accountanalyse';
+  // Zolang er 'VERVANG-MIJ' in staat, scrollen de knoppen gewoon naar het contactformulier.
+  const CALENDLY_URL = 'https://calendly.com/VERVANG-MIJ/accountanalyse';
+  const calendlyReady = !CALENDLY_URL.includes('VERVANG-MIJ');
+  document.querySelectorAll('.calendly-trigger').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (calendlyReady && window.Calendly) {
+        e.preventDefault();
+        window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      }
+      // anders: laat de href="#contact" gewoon zijn werk doen (fallback)
+    });
+  });
 
   // Formulier: AJAX-verzending met nette bevestiging in huisstijl
   const contactForm = document.getElementById('contactForm');
