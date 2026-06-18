@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina niet gevonden — Line & Thread</title>
+<link rel="icon" type="image/png" href="Favicon%20(monogram)%20/Monoram%20Dark%20big_.png">
+<meta name="robots" content="noindex, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #EDE8DC;
+    --navy: #0D0E1C;
+    --tan: #C4A882;
+    --cream-dark: #E0D9C8;
+    --navy-soft: #1a1b2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .page-header {
+    background: var(--navy);
+    padding: 32px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-header a.logo-link { text-decoration: none; display: inline-flex; align-items: center; }
+  .page-header img { height: 72px; width: auto; margin-left: -12px; }
+  .back-link {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* HERO 404 */
+  .nf {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .nf::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,168,130,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .nf-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 24px;
+  }
+  .nf-code {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 16vw, 180px);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .nf-code em { font-style: italic; color: var(--tan); }
+  .nf h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .nf p {
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0.65;
+    max-width: 440px;
+    margin-bottom: 40px;
+  }
+  .nf-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nf-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--tan);
+    padding-bottom: 4px;
+    transition: gap 0.25s, color 0.25s;
+  }
+  .nf-cta:hover { gap: 20px; color: var(--tan); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy { font-size: 11px; font-weight: 300; letter-spacing: 0.08em; opacity: 0.3; text-align: center; }
+  .footer-links { display: flex; gap: 28px; list-style: none; }
+  .footer-links a {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+  }
+  .footer-links a:hover { opacity: 1; }
+
+  a:focus-visible { outline: 2px solid var(--tan); outline-offset: 3px; }
+
+  @media (max-width: 760px) {
+    .page-header { padding: 24px 24px; }
+    .page-header img { height: 54px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <a href="/" class="logo-link">
+    <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Line & Thread">
+  </a>
+  <a href="/" class="back-link">← Terug naar home</a>
+</header>
+
+<main class="nf">
+  <div class="nf-label">Pagina niet gevonden</div>
+  <div class="nf-code">4<em>0</em>4</div>
+  <h1>Deze pagina hebben we<br>niet kunnen vinden.</h1>
+  <p>De link is mogelijk verouderd of verkeerd getypt. Geen zorgen — hieronder vind je snel je weg terug.</p>
+  <div class="nf-links">
+    <a href="/" class="nf-cta">Naar de homepage <span>→</span></a>
+    <a href="/#contact" class="nf-cta">Plan een accountanalyse <span>→</span></a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-copy">Line & Thread - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
+  <ul class="footer-links">
+    <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
+    <li><a href="/google-ads">Google Ads specialist</a></li>
+    <li><a href="/#diensten">Advertentiebeheer</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
