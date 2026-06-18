@@ -47,10 +47,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Calendly -->
-<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <style>
   :root {
     --cream: #EDE8DC;
@@ -354,7 +350,7 @@
   <div class="cta-block">
     <h2>Benieuwd wat er in<br><em>jouw account</em> zit?</h2>
     <p>Plan een vrijblijvende accountanalyse. Je krijgt concrete verbeterpunten — wat je ermee doet, bepaal je zelf.</p>
-    <a href="/#contact" class="cta-btn calendly-trigger">Plan een vrijblijvende accountanalyse</a>
+    <a href="/#contact" class="cta-btn">Plan een vrijblijvende accountanalyse</a>
     <span class="cta-phone">Of bel direct: <a href="tel:+31646194022">06 46 19 40 22</a> (tussen 9.00 - 17.00)</span>
   </div>
 
@@ -382,22 +378,6 @@
     </ul>
   </div>
 </footer>
-
-<script>
-  // Calendly popup op de CTA-knop.
-  // VERVANG de regel hieronder door je echte Calendly-link (zie ook index.html).
-  const CALENDLY_URL = 'https://calendly.com/VERVANG-MIJ/accountanalyse';
-  const calendlyReady = !CALENDLY_URL.includes('VERVANG-MIJ');
-  document.querySelectorAll('.calendly-trigger').forEach(el => {
-    el.addEventListener('click', (e) => {
-      if (calendlyReady && window.Calendly) {
-        e.preventDefault();
-        window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-      }
-      // anders: laat de href="/#contact" gewoon zijn werk doen (fallback)
-    });
-  });
-</script>
 
 </body>
 </html>
