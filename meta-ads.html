@@ -280,6 +280,50 @@
   }
   .footer-links a:hover { opacity: 1; }
 
+  /* SEGUE + CONTACT CARD */
+  .segue-card { margin-top: 48px; }
+  .segue-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 300;
+    font-style: italic;
+    opacity: 1;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  .contact-card {
+    background: var(--navy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 32px;
+    flex-wrap: wrap;
+  }
+  .card-photo {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+  }
+  .card-body { flex: 1; min-width: 180px; }
+  .card-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 5px;
+  }
+  .card-meta {
+    font-size: 12px;
+    opacity: 0.5;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .card-meta a { color: var(--cream); }
+  .contact-card .cta-btn { flex-shrink: 0; white-space: nowrap; }
+
   a:focus-visible, button:focus-visible, summary:focus-visible {
     outline: 2px solid var(--tan);
     outline-offset: 3px;
@@ -294,6 +338,8 @@
     footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 24px; }
     .footer-nav { align-items: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
+    .contact-card { flex-direction: column; align-items: flex-start; padding: 24px; gap: 20px; }
+    .contact-card .cta-btn { width: 100%; text-align: center; }
   }
 </style>
 </head>
@@ -319,6 +365,29 @@
   <h2>Facebook Ads & Instagram Ads uitbesteden</h2>
   <p>Meta Ads is de overkoepelende naam voor advertenties op de platforms van Meta: Facebook, Instagram en Threads. Facebook Ads verschijnen in de Facebook Feed, Stories en Marketplace. Instagram Ads in de Instagram Feed, Stories, Reels en Explore. Alles wordt beheerd vanuit één platform: de Meta Ads Manager.</p>
   <p>Of je nu zoekt naar Facebook advertenties uitbesteden of Instagram advertenties uitbesteden: de aanpak en het platform zijn hetzelfde. Het verschil zit in de plaatsing en de creative — en in hoe je de platforms combineert voor maximale dekking van je doelgroep zonder dat de kosten per resultaat oplopen.</p>
+
+  <h2>Soorten Facebook & Instagram advertenties</h2>
+  <p>Meta Ads kent meerdere advertentieformaten, elk met eigen sterktes. Een goede campagnestructuur combineert ze — afgestemd op waar iemand zich in zijn aankoopproces bevindt.</p>
+  <ul class="check-list">
+    <li><strong>Beeldadvertenties:</strong> foto met onderschrift. Snel in te zetten, sterk voor retargeting en merkbekendheid.</li>
+    <li><strong>Video- & Stories-advertenties:</strong> hogere aandachtswaarde dan beeld. Effectief bovenin de funnel en voor productdemonstraties.</li>
+    <li><strong>Carrouseladvertenties:</strong> meerdere beelden of producten in één advertentie. Sterk voor e-commerce, collecties en functie-uitleg.</li>
+    <li><strong>Dynamische productadvertenties:</strong> automatisch gegenereerd vanuit je productcatalogus. Retargeting op schaal: iemand ziet precies het product dat hij eerder bekeek.</li>
+  </ul>
+  <p>De kosten worden berekend als CPM (per 1.000 vertoningen) of CPC (per klik). Welk model gunstiger uitvalt, hangt af van je campagnedoelstelling, de omvang van je doelgroep en de kwaliteit van de creative — en verschilt per fase in de funnel.</p>
+
+  <div class="segue-card">
+    <p class="segue-heading">Liever uitbesteden dan bijlezen?</p>
+    <div class="contact-card">
+      <img src="/foto%20arthur.png" alt="Arthur Heusdens" class="card-photo">
+      <div class="card-body">
+        <div class="card-name">Arthur Heusdens</div>
+        <div class="card-meta">Meta Certified Media Buying Professional · Line & Thread</div>
+        <div class="card-meta">Havenweg 21T, Amersfoort · <a href="tel:+31646194022">06 46 19 40 22</a></div>
+      </div>
+      <a href="/#contact" class="cta-btn">Plan een gratis accountanalyse</a>
+    </div>
+  </div>
 
   <h2>Wat je krijgt</h2>
   <ul class="check-list">
