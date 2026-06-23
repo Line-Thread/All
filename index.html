@@ -1310,7 +1310,7 @@
     Zonder Strategie is elk<br>advertentiebudget <em>te groot.</em>
   </h1>
   <p class="hero-sub">
-    Brede ervaring, korte lijntjes en een aanpak <br>die past bij jouw bedrijf.
+    Korte lijntjes, directe aanpak en campagnes<br>die sturen op resultaat — niet op platform-cijfers.
   </p>
   <a href="#contact" class="hero-cta">
     Plan een vrijblijvende accountanalyse
@@ -1546,7 +1546,7 @@
         Goede advertenties beginnen niet met meer budget — maar met iemand die begrijpt hoe een merk denkt én hoe een klant koopt. Geen corporate-laag ertussen, geen tussenpersoon. Directe samenwerking, volledige verantwoording en een aanpak die past bij jouw bedrijf.
       </p>
       <div class="over-stats-mobile">
-        <div class="stat-item"><span class="stat-num">360%</span><span class="stat-label">Blended ROAS</span></div>
+        <div class="stat-item"><span class="stat-num">360%</span><span class="stat-label">Blended ROAS (Tête de Mule)</span></div>
         <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Jaar ervaring</span></div>
         <div class="stat-item"><span class="stat-num">€350k+</span><span class="stat-label">Beheerd budget</span></div>
         <div class="stat-item"><span class="stat-num">Flexibel</span><span class="stat-label">Start­up → Corporate</span></div>
@@ -1600,7 +1600,7 @@
     </details>
     <details class="faq-item">
       <summary>Wat kost advertentiebeheer?</summary>
-      <p>Dat hangt af van de omvang van je account en wat er nodig is: een vast maandbedrag (retainer), uurtarief of projectprijs. In het eerste gesprek krijg je een eerlijke inschatting — inclusief wat het je moet opleveren om de investering waard te zijn.</p>
+      <p>Dat hangt af van de omvang van je account en wat er nodig is: een vast maandbedrag (retainer), uurtarief of projectprijs. In het eerste gesprek krijg je een eerlijke inschatting — inclusief wat het je moet opleveren om de investering waard te zijn. <a href="/pricing" style="color:inherit;border-bottom:1px solid rgba(13,14,28,0.3);">Lees meer over de tariefstructuur →</a></p>
     </details>
     <details class="faq-item">
       <summary>Hoe snel zie ik resultaat?</summary>
@@ -1691,7 +1691,7 @@
       <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
       <li><a href="/google-ads">Google Ads specialist</a></li>
       <li><a href="/threads-ads">Threads Ads specialist</a></li>
-      <li><a href="/#diensten">Advertentiebeheer</a></li>
+      <li><a href="/pricing">Tarieven</a></li>
     </ul>
     <ul class="footer-links">
       <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -1788,6 +1788,7 @@
         headers: { 'Accept': 'application/json' }
       });
       if (!res.ok) throw new Error();
+      gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'homepage_form' });
       contactForm.innerHTML = '<div class="form-success"><div class="form-success-title">Bedankt voor je aanvraag!</div><p>Ik kom er binnen één werkdag op terug.<br>Liever direct schakelen? Bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p></div>';
     } catch {
       btn.disabled = false;
