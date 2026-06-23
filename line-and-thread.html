@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0245MEXB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F0245MEXB6');
+</script>
+<title>line & thread — media buying</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #EDE8DC;
+    --navy: #0D0E1C;
+    --tan: #C4A882;
+    --sage: #7AA592;
+    --cream-dark: #E0D9C8;
+    --navy-soft: #1a1b2e;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* TICKER */
+  .ticker-wrap {
+    background: var(--navy);
+    color: var(--tan);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-track {
+    display: inline-block;
+    animation: ticker 28s linear infinite;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .ticker-track span { margin: 0 40px; }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 32px;
+    left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    mix-blend-mode: multiply;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .nav-logo em { font-style: italic; color: var(--tan); }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  .nav-links a:hover { opacity: 1; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,168,130,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 110px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    max-width: 900px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--tan);
+  }
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 60px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.7s forwards;
+  }
+  .hero-sub {
+    max-width: 420px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--navy);
+    opacity: 0.7;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--tan);
+    padding-bottom: 4px;
+    transition: gap 0.25s, color 0.25s;
+  }
+  .hero-cta:hover { gap: 20px; color: var(--tan); }
+  .hero-cta-arrow { font-size: 16px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--tan), transparent);
+    margin: 0 60px;
+    opacity: 0.35;
+  }
+
+  /* SECTION BASE */
+  section { padding: 120px 60px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 40px;
+  }
+
+  /* WAT IK DOE */
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .services-intro {
+    padding-right: 80px;
+  }
+  .services-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+  .services-intro h2 em { font-style: italic; color: var(--tan); }
+  .services-intro p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    opacity: 0.7;
+    max-width: 380px;
+  }
+  .services-list {
+    border-left: 1px solid rgba(196,168,130,0.25);
+    padding-left: 60px;
+  }
+  .service-item {
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(13,14,28,0.08);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .service-item:first-child { padding-top: 0; }
+  .service-item:last-child { border-bottom: none; }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--tan);
+    letter-spacing: 0.08em;
+    min-width: 28px;
+    margin-top: 3px;
+  }
+  .service-content h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+  .service-content p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+    opacity: 0.6;
+  }
+
+  /* AANPAK */
+  .aanpak { background: var(--navy); color: var(--cream); }
+  .aanpak .section-label { color: var(--tan); }
+  .aanpak h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 80px;
+  }
+  .aanpak h2 em { font-style: italic; color: var(--tan); }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(196,168,130,0.12);
+    border: 1px solid rgba(196,168,130,0.12);
+  }
+  .step {
+    background: var(--navy);
+    padding: 48px 40px;
+    transition: background 0.25s;
+  }
+  .step:hover { background: var(--navy-soft); }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(196,168,130,0.2);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+  .step h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+  .step p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(237,232,220,0.55);
+  }
+
+  /* OVER */
+  .over {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+  .over-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+  .over-text h2 em { font-style: italic; color: var(--tan); }
+  .over-text p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .over-text p:last-of-type { margin-bottom: 40px; }
+  .over-visual {
+    position: relative;
+    height: 480px;
+  }
+  .over-card {
+    position: absolute;
+    background: var(--navy);
+    color: var(--cream);
+    padding: 40px;
+    width: 280px;
+  }
+  .over-card:first-child {
+    top: 0; left: 0;
+  }
+  .over-card:last-child {
+    bottom: 0; right: 0;
+    background: var(--tan);
+    color: var(--navy);
+  }
+  .over-card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .over-card-label {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    opacity: 0.65;
+  }
+
+  /* CONTACT */
+  .contact {
+    background: var(--cream-dark);
+    text-align: center;
+  }
+  .contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+    margin: 0 auto 16px;
+  }
+  .contact h2 em { font-style: italic; color: var(--tan); }
+  .contact p {
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-bottom: 48px;
+  }
+  .contact-form {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .form-row {
+    margin-bottom: 20px;
+  }
+  .form-row label {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.5;
+    margin-bottom: 8px;
+  }
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(13,14,28,0.2);
+    padding: 10px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--navy);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+  }
+  .form-row input:focus,
+  .form-row textarea:focus {
+    border-bottom-color: var(--tan);
+  }
+  .form-row input::placeholder,
+  .form-row textarea::placeholder {
+    opacity: 0.3;
+  }
+  .form-submit {
+    margin-top: 36px;
+    width: 100%;
+    background: var(--navy);
+    color: var(--cream);
+    border: none;
+    padding: 18px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .form-submit:hover {
+    background: var(--tan);
+    color: var(--navy);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 48px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  .footer-logo em { font-style: italic; color: var(--tan); }
+  .footer-copy {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    opacity: 0.3;
+  }
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .footer-links a {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+  }
+  .footer-links a:hover { opacity: 1; }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .hero { padding: 0 24px 64px; }
+    section { padding: 80px 24px; }
+    .services { grid-template-columns: 1fr; gap: 60px; }
+    .services-intro { padding-right: 0; }
+    .services-list { border-left: none; padding-left: 0; border-top: 1px solid rgba(196,168,130,0.25); padding-top: 40px; }
+    .steps { grid-template-columns: 1fr; }
+    .over { grid-template-columns: 1fr; gap: 60px; }
+    .over-visual { display: none; }
+    footer { flex-direction: column; gap: 20px; text-align: center; }
+    .hero-bottom { flex-direction: column; align-items: flex-start; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>Media Buying</span>
+    <span>✦</span>
+    <span>Meta Ads</span>
+    <span>✦</span>
+    <span>Google Ads</span>
+    <span>✦</span>
+    <span>Betaald op resultaat</span>
+    <span>✦</span>
+    <span>D2C & e-commerce</span>
+    <span>✦</span>
+    <span>Media Buying</span>
+    <span>✦</span>
+    <span>Meta Ads</span>
+    <span>✦</span>
+    <span>Google Ads</span>
+    <span>✦</span>
+    <span>Betaald op resultaat</span>
+    <span>✦</span>
+    <span>D2C & e-commerce</span>
+    <span>✦</span>
+    <span>Media Buying</span>
+    <span>✦</span>
+    <span>Meta Ads</span>
+    <span>✦</span>
+    <span>Google Ads</span>
+    <span>✦</span>
+    <span>Betaald op resultaat</span>
+    <span>✦</span>
+    <span>D2C & e-commerce</span>
+    <span>✦</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">line <em>&</em> thread</a>
+  <ul class="nav-links">
+    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#aanpak">Aanpak</a></li>
+    <li><a href="#over">Over</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">Media buying bureau — Amsterdam</div>
+  <h1 class="hero-title">
+    Advertentiebudget<br>
+    dat <em>werkt.</em>
+  </h1>
+  <div class="hero-bottom">
+    <p class="hero-sub">
+      Geen agency overhead. Geen accountmanagers. Eén specialist die het account kent, de marge begrijpt en verantwoording neemt over resultaat.
+    </p>
+    <a href="#contact" class="hero-cta">
+      Maak kennis
+      <span class="hero-cta-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DIENSTEN -->
+<section id="diensten">
+  <div class="services">
+    <div class="services-intro reveal">
+      <div class="section-label">Wat ik doe</div>
+      <h2>Betaalde media,<br><em>scherp ingericht.</em></h2>
+      <p>
+        Van strategie tot dagelijks beheer. Ik werk met merken die serieus willen groeien — en weten dat goede resultaten beginnen bij de juiste inrichting, niet bij meer budget.
+      </p>
+    </div>
+    <div class="services-list reveal">
+      <div class="service-item">
+        <div class="service-num">01</div>
+        <div class="service-content">
+          <h3>Meta Ads</h3>
+          <p>Campagnestrategie, creatieve structuur, bidding en schaallogica voor Facebook en Instagram. Gericht op winstgevende groei, niet op oppervlakkige ROAS.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">02</div>
+        <div class="service-content">
+          <h3>Google Ads</h3>
+          <p>Search, Shopping en Performance Max. Budget naar de producten en categorieën die onderaan de streep iets opleveren.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">03</div>
+        <div class="service-content">
+          <h3>Strategie & analyse</h3>
+          <p>Periodieke accountanalyse, margedoorkijk en bijstuuradvies. Beslissingen op cijfers die kloppen, niet op dashboards die er goed uitzien.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">04</div>
+        <div class="service-content">
+          <h3>Creatieve begeleiding</h3>
+          <p>Briefing en feedback op advertentiecreatives vanuit conversielogica. Zodat het visuele werk doet wat het moet doen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AANPAK -->
+<section class="aanpak" id="aanpak">
+  <div class="section-label">Hoe ik werk</div>
+  <h2 reveal>Geen onboarding van zes weken.<br><em>Snel scherp, dan doorpakken.</em></h2>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <h3>Intake & analyse</h3>
+      <p>We kijken samen naar het account, de marges, de doelen en wat er tot nu toe gewerkt heeft. Geen aannames, wel een eerlijk beeld.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <h3>Inrichting & strategie</h3>
+      <p>Campagnestructuur, budgetverdeling en creatieve aanpak worden vastgelegd. Daarna start de uitvoering — zonder onnodige vertraging.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <h3>Bijsturen per 30 dagen</h3>
+      <p>Maandelijks strategiegesprek met concrete cijfers. Wat werkt blijft, wat niet werkt verandert. Altijd transparant over waarom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OVER -->
+<section id="over">
+  <div class="over">
+    <div class="over-text reveal">
+      <div class="section-label">Over line & thread</div>
+      <h2>Merk-denken<br><em>& cijferlogica.</em></h2>
+      <p>
+        line & thread is de freelance media buying praktijk van Arthur — oprichter van D2C kledingmerk Tête de Mule en zelfgeleerd in alles van productie tot betaalde media.
+      </p>
+      <p>
+        Ik begrijp hoe merken denken, hoe klanten kopen en hoe je een advertentieaccount inricht dat dat snijpunt bedient. Geen bureau-laag ertussen — directe samenwerking, volledige verantwoording.
+      </p>
+      <a href="#contact" class="hero-cta">Neem contact op <span class="hero-cta-arrow">→</span></a>
+    </div>
+    <div class="over-visual reveal">
+      <div class="over-card">
+        <div class="over-card-num">3,4×</div>
+        <div class="over-card-label">Blended ROAS eigen merk<br>over de afgelopen 12 maanden</div>
+      </div>
+      <div class="over-card">
+        <div class="over-card-num">4+</div>
+        <div class="over-card-label">Jaar ervaring in betaalde media<br>& D2C merkgroei</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label" style="text-align:center">Contact</div>
+  <h2>Klaar om te kijken<br>of het <em>past?</em></h2>
+  <p>Stuur een bericht. Ik kom erop terug binnen één werkdag.</p>
+  <div class="contact-form reveal">
+    <div class="form-row">
+      <label>Naam</label>
+      <input type="text" placeholder="Jouw naam">
+    </div>
+    <div class="form-row">
+      <label>Bedrijf</label>
+      <input type="text" placeholder="Merknaam of bedrijf">
+    </div>
+    <div class="form-row">
+      <label>E-mail</label>
+      <input type="email" placeholder="jouw@email.nl">
+    </div>
+    <div class="form-row">
+      <label>Bericht</label>
+      <textarea rows="4" placeholder="Vertel kort wat je doet en wat je zoekt"></textarea>
+    </div>
+    <button class="form-submit">Verstuur bericht</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">line <em>&</em> thread</div>
+  <div class="footer-copy">KvK 86398547 — Amsterdam</div>
+  <ul class="footer-links">
+    <li><a href="#">LinkedIn</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Form submit (placeholder)
+  document.querySelector('.form-submit').addEventListener('click', function(e) {
+    e.preventDefault();
+    this.textContent = 'Verstuurd ✓';
+    this.style.background = 'var(--sage)';
+    this.style.color = 'white';
+  });
+</script>
+
+</body>
+</html>

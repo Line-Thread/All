@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/arthurheusdens/.claude/projects/-Users-arthurheusdens-Documents-Documents--02---Business-06--Line---Thread-08---Website/memory/\")",
+      "Bash(gh --version)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git fetch *)",
+      "Bash(md5)",
+      "Bash(md5 index.html)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)"
+    ]
+  }
+}
