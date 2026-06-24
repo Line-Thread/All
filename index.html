@@ -734,75 +734,6 @@
     opacity: 0.65;
   }
 
-  /* MACBOOK MOCKUP */
-  .macbook-wrap {
-    max-width: 860px;
-    margin: 64px auto 0;
-  }
-  .macbook {
-    background: #d0d0d0;
-    border-radius: 12px 12px 0 0;
-    padding: 10px 10px 0;
-    box-shadow: 0 12px 48px rgba(13,14,28,0.15), inset 0 1px 0 rgba(255,255,255,0.45);
-    position: relative;
-  }
-  .macbook::before {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5px;
-    height: 5px;
-    background: #a8a8a8;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .macbook-screen {
-    background: #111;
-    border-radius: 6px 6px 0 0;
-    overflow: hidden;
-    padding-top: 14px;
-  }
-  .macbook-screen img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-  }
-  .macbook-hinge {
-    height: 5px;
-    background: linear-gradient(to bottom, #b0b0b0, #c0c0c0);
-    margin: 0 -10px;
-  }
-  .macbook-foot {
-    height: 16px;
-    background: linear-gradient(to bottom, #c4c4c4, #acacac);
-    border-radius: 0 0 6px 6px;
-    margin: 0 -10px;
-    position: relative;
-  }
-  .macbook-foot::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 28%;
-    height: 3px;
-    background: rgba(0,0,0,0.08);
-    border-radius: 0 0 4px 4px;
-  }
-  .macbook-caption {
-    margin-top: 18px;
-    font-size: 11px;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    opacity: 0.35;
-    font-weight: 300;
-    text-align: center;
-  }
-
   /* CASES */
   .cases-section h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -1247,7 +1178,6 @@
     .steps { grid-template-columns: 1fr; }
     .over { grid-template-columns: 1fr; gap: 60px; }
     .over-visual { display: none; }
-    .macbook-wrap { margin-top: 40px; }
     .over-stats-mobile {
       display: flex;
       margin-bottom: 36px;
@@ -1652,16 +1582,6 @@
     </div>
   </div>
 
-  <div class="macbook-wrap reveal">
-    <div class="macbook">
-      <div class="macbook-screen">
-        <img src="meta-ads-dashboard.png" alt="Meta Ads Manager campagne-overzicht — Tête de Mule" loading="lazy" width="1200" height="573">
-      </div>
-      <div class="macbook-hinge"></div>
-      <div class="macbook-foot"></div>
-    </div>
-    <p class="macbook-caption">Meta Ads Manager · Tête de Mule account · ROAS 3,69–6,10 over actieve campagnes</p>
-  </div>
 </section>
 
 <div class="divider"></div>
