@@ -280,16 +280,18 @@
   .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(196,168,130,0.12);
-    border: 1px solid rgba(196,168,130,0.12);
+    gap: 16px;
+    background: transparent;
   }
   .step {
-    background: var(--navy);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
     padding: 48px 40px;
-    transition: background 0.25s;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 20px rgba(0,0,0,0.18);
+    transition: background 0.25s, box-shadow 0.25s;
   }
-  .step:hover { background: var(--navy-soft); }
+  .step:hover { background: rgba(255,255,255,0.08); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 8px 28px rgba(0,0,0,0.22); }
   .step-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 48px;

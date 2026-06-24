@@ -149,15 +149,17 @@
   .tiers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px;
+    gap: 3px;
     background: rgba(196,168,130,0.25);
-    border: 1px solid rgba(196,168,130,0.25);
+    border-radius: 14px;
     margin: 32px 0;
   }
   .tier {
     background: var(--cream);
     padding: 32px 28px;
   }
+  .tier:nth-child(1) { border-radius: 14px 0 0 14px; }
+  .tier:nth-child(3) { border-radius: 0 14px 14px 0; }
   .tier--featured {
     background: var(--navy);
     color: var(--cream);
@@ -216,6 +218,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 0;
     border: 1px solid rgba(196,168,130,0.25);
+    border-radius: 14px;
+    overflow: hidden;
     margin: 24px 0;
   }
   .included-item {
