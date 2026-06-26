@@ -79,6 +79,37 @@
   .related-text strong { font-weight: 500; }
   .related-links { display: flex; gap: 20px; flex-wrap: wrap; }
   .related a { font-size: 11px; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--tan); padding-bottom: 4px; white-space: nowrap; }
+
+  /* ROAS CALCULATOR */
+  .calc-box { background: var(--cream-dark); border-radius: 14px; padding: 28px 26px; margin: 32px 0; }
+  .calc-label { font-size: 10px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tan); margin-bottom: 16px; }
+  .calc-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .calc-row:last-child { margin-bottom: 0; }
+  .calc-row label { font-size: 12px; color: var(--navy); opacity: 0.75; min-width: 150px; flex-shrink: 0; }
+  .calc-row input[type=range] { flex: 1; height: 4px; accent-color: var(--tan); cursor: pointer; }
+  .calc-row .calc-val { font-size: 12px; font-weight: 500; min-width: 58px; text-align: right; color: var(--navy); }
+  .calc-divider { height: 1px; background: rgba(196,168,130,0.3); margin: 20px 0; }
+  .calc-breakdown .calc-line { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; opacity: 0.8; }
+  .calc-breakdown .calc-line.calc-total { font-weight: 500; opacity: 1; border-top: 1px solid rgba(196,168,130,0.3); margin-top: 6px; padding-top: 10px; }
+  .calc-hero { background: var(--navy); color: var(--cream); border-radius: 12px; padding: 22px 24px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .calc-hero .calc-hero-lbl { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; margin-bottom: 6px; }
+  .calc-hero .calc-hero-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--tan); line-height: 1; }
+  .calc-hero .calc-hero-note { font-size: 11px; opacity: 0.5; margin-top: 4px; }
+  .calc-gate { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(196,168,130,0.3); }
+  .calc-gate p { font-size: 13px; opacity: 0.75; margin-bottom: 14px; }
+  .calc-gate-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .calc-gate input[type=email] { flex: 1; min-width: 200px; padding: 12px 16px; border: 1px solid rgba(196,168,130,0.4); border-radius: 50px; background: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--navy); }
+  .calc-gate input[type=email]:focus { outline: 2px solid var(--tan); outline-offset: 1px; }
+  .calc-gate-btn { background: var(--navy); color: var(--cream); border: none; padding: 12px 26px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 50px; cursor: pointer; box-shadow: inset 0 -3px 6px rgba(0,0,0,0.35), inset 0 1px 2px rgba(255,255,255,0.08), 0 6px 20px rgba(13,14,28,0.22); transition: background 0.2s; white-space: nowrap; }
+  .calc-gate-btn:hover { background: #1e2035; }
+  .calc-gate-btn:disabled { opacity: 0.6; cursor: wait; }
+  .calc-gate-success { font-size: 13px; color: var(--navy); }
+  .calc-gate-success strong { font-weight: 500; }
+  @media (max-width: 480px) {
+    .calc-row { flex-wrap: wrap; }
+    .calc-row label { min-width: 100%; }
+    .calc-hero { flex-direction: column; align-items: flex-start; }
+  }
   .cta-block { background: var(--navy); color: var(--cream); padding: 48px 40px; margin-top: 56px; text-align: center; }
   .cta-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 4vw, 34px); font-weight: 300; margin-bottom: 14px; }
   .cta-block h2 em { font-style: italic; color: var(--tan); }
@@ -145,6 +176,70 @@
     </div>
     <p>Alles boven die 2,5 is winst. Alles eronder is verlies. Dat is het getal waar je campagnes op stuurt — niet een willekeurige benchmark uit een artikel.</p>
 
+    <h2>Reken je eigen break-even ROAS uit</h2>
+    <p>Vul je eigen verkoopprijs en kosten in en zie direct wat jouw break-even ROAS is — inclusief en exclusief btw, zoals je het in Meta Ads Manager afleest.</p>
+
+    <div class="calc-box">
+      <div class="calc-label">Kostenstructuur per eenheid</div>
+      <div class="calc-row">
+        <label>Verkoopprijs (€)</label>
+        <input type="range" id="calc-price" min="10" max="300" step="1" value="50">
+        <span class="calc-val" id="calc-out-price">€50</span>
+      </div>
+      <div class="calc-row">
+        <label>Inkoop incl. verzending (€)</label>
+        <input type="range" id="calc-inkoop" min="1" max="150" step="0.5" value="15">
+        <span class="calc-val" id="calc-out-inkoop">€15,00</span>
+      </div>
+      <div class="calc-row">
+        <label>Fulfillment (€)</label>
+        <input type="range" id="calc-ful" min="0" max="20" step="0.5" value="5">
+        <span class="calc-val" id="calc-out-ful">€5,00</span>
+      </div>
+      <div class="calc-row">
+        <label>Retourpercentage</label>
+        <input type="range" id="calc-ret" min="0" max="40" step="0.5" value="10">
+        <span class="calc-val" id="calc-out-ret">10,0%</span>
+      </div>
+      <div class="calc-row">
+        <label>Transactiekosten</label>
+        <input type="range" id="calc-tx" min="0" max="4" step="0.1" value="1.5">
+        <span class="calc-val" id="calc-out-tx">1,5%</span>
+      </div>
+
+      <div class="calc-divider"></div>
+
+      <div class="calc-breakdown">
+        <div class="calc-line"><span>Verkoopprijs excl. btw</span><span id="calc-r-priceExcl">€41,32</span></div>
+        <div class="calc-line"><span>− Inkoop + verzending</span><span id="calc-r-inkoop">€15,00</span></div>
+        <div class="calc-line"><span>− Fulfillment</span><span id="calc-r-ful">€5,00</span></div>
+        <div class="calc-line"><span>− Retourrisico</span><span id="calc-r-retour">€4,63</span></div>
+        <div class="calc-line"><span>− Transactiekosten</span><span id="calc-r-trans">€0,62</span></div>
+        <div class="calc-line calc-total"><span>Beschikbaar voor adspend</span><span id="calc-r-cm">€16,07</span></div>
+      </div>
+
+      <div class="calc-hero">
+        <div>
+          <div class="calc-hero-lbl">Break-even ROAS (excl. btw)</div>
+          <div class="calc-hero-num" id="calc-h-roas-excl">2,57×</div>
+          <div class="calc-hero-note">intern rekengetal</div>
+        </div>
+        <div>
+          <div class="calc-hero-lbl">Break-even ROAS (incl. btw — Meta)</div>
+          <div class="calc-hero-num" id="calc-h-roas-incl">3,11×</div>
+          <div class="calc-hero-note">wat je op Meta afleest</div>
+        </div>
+      </div>
+
+      <div class="calc-gate" id="calc-gate">
+        <p>Wil je deze berekening, met een korte toelichting op wat dit voor je campagnes betekent, per mail? Laat je e-mailadres achter.</p>
+        <form class="calc-gate-row" id="calc-gate-form">
+          <input type="email" id="calc-gate-email" name="email" placeholder="jouw@email.nl" required>
+          <button type="submit" class="calc-gate-btn">Stuur me deze berekening</button>
+        </form>
+      </div>
+    </div>
+
     <h2>Welke metric is beter dan ROAS?</h2>
     <p>In de praktijk werken twee alternatieven beter:</p>
     <ul>
@@ -197,5 +292,85 @@
     </ul>
   </div>
 </footer>
+<script>
+function calcF(n, dec) { return n.toFixed(dec).replace('.', ','); }
+
+function calcUpdate() {
+  const price  = parseFloat(document.getElementById('calc-price').value);
+  const inkoop = parseFloat(document.getElementById('calc-inkoop').value);
+  const ful    = parseFloat(document.getElementById('calc-ful').value);
+  const retPct = parseFloat(document.getElementById('calc-ret').value) / 100;
+  const txPct  = parseFloat(document.getElementById('calc-tx').value) / 100;
+
+  document.getElementById('calc-out-price').textContent  = '€' + Math.round(price);
+  document.getElementById('calc-out-inkoop').textContent = '€' + calcF(inkoop, 2);
+  document.getElementById('calc-out-ful').textContent    = '€' + calcF(ful, 2);
+  document.getElementById('calc-out-ret').textContent    = calcF(retPct * 100, 1) + '%';
+  document.getElementById('calc-out-tx').textContent     = calcF(txPct * 100, 1) + '%';
+
+  const priceExcl  = price / 1.21;
+  const retourKost = retPct * (priceExcl + ful);
+  const txKost     = txPct * priceExcl;
+  const cm         = priceExcl - inkoop - ful - retourKost - txKost;
+  const roasExcl   = cm > 0 ? priceExcl / cm : Infinity;
+  const roasIncl   = roasExcl * 1.21;
+
+  document.getElementById('calc-r-priceExcl').textContent = '€' + calcF(priceExcl, 2);
+  document.getElementById('calc-r-inkoop').textContent    = '€' + calcF(inkoop, 2);
+  document.getElementById('calc-r-ful').textContent       = '€' + calcF(ful, 2);
+  document.getElementById('calc-r-retour').textContent    = '€' + calcF(retourKost, 2);
+  document.getElementById('calc-r-trans').textContent     = '€' + calcF(txKost, 2);
+  document.getElementById('calc-r-cm').textContent        = '€' + calcF(Math.max(0, cm), 2);
+
+  if (cm <= 0) {
+    document.getElementById('calc-h-roas-excl').textContent = '∞';
+    document.getElementById('calc-h-roas-incl').textContent = '∞';
+  } else {
+    document.getElementById('calc-h-roas-excl').textContent = calcF(roasExcl, 2) + '×';
+    document.getElementById('calc-h-roas-incl').textContent = calcF(roasIncl, 2) + '×';
+  }
+}
+
+['calc-price','calc-inkoop','calc-ful','calc-ret','calc-tx'].forEach(function(id) {
+  document.getElementById(id).addEventListener('input', calcUpdate);
+});
+calcUpdate();
+
+// Zachte lead-gate: berekening per mail, geen verplichte gate op de tool zelf
+const calcGateForm = document.getElementById('calc-gate-form');
+calcGateForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = calcGateForm.querySelector('.calc-gate-btn');
+  const btnText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Versturen…';
+  const email = document.getElementById('calc-gate-email').value;
+  const snapshot = 'Verkoopprijs €' + document.getElementById('calc-price').value
+    + ' | Inkoop €' + document.getElementById('calc-inkoop').value
+    + ' | Fulfillment €' + document.getElementById('calc-ful').value
+    + ' | Retour ' + document.getElementById('calc-ret').value + '%'
+    + ' | Tx ' + document.getElementById('calc-tx').value + '%'
+    + ' | Break-even ROAS excl. ' + document.getElementById('calc-h-roas-excl').textContent
+    + ' incl. ' + document.getElementById('calc-h-roas-incl').textContent;
+  const formData = new FormData();
+  formData.append('email', email);
+  formData.append('_subject', 'ROAS-calculator lead — wat-is-een-goede-roas');
+  formData.append('berekening', snapshot);
+  try {
+    const res = await fetch('https://formspree.io/f/xpqedoyo', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) throw new Error();
+    gtag('event', 'generate_lead', { event_category: 'calculator', event_label: 'roas_calculator_email' });
+    document.getElementById('calc-gate').innerHTML = '<p class="calc-gate-success"><strong>Verstuurd!</strong> Je ontvangt de berekening en een korte toelichting binnen één werkdag.</p>';
+  } catch {
+    btn.disabled = false;
+    btn.textContent = btnText;
+    alert('Er ging iets mis bij het versturen. Mail je vraag naar arthur@line-thread.com.');
+  }
+});
+</script>
 </body>
 </html>
