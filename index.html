@@ -564,8 +564,13 @@
   }
 
   /* SHOWCASE / MOCKUP */
-  .showcase { text-align: center; }
-  .showcase-intro { max-width: 580px; margin: 0 auto 56px; }
+  .showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .showcase-intro { max-width: 440px; }
   .showcase-intro h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(32px, 4vw, 48px);
@@ -581,11 +586,11 @@
     line-height: 1.75;
     opacity: 0.7;
   }
-  .showcase-img-wrap { max-width: 880px; margin: 0 auto; }
+  .showcase-img-wrap { max-width: 100%; }
   .showcase-img-wrap img {
     width: 100%;
     display: block;
-    filter: drop-shadow(0 40px 60px rgba(13,14,28,0.16));
+    filter: drop-shadow(0 30px 50px rgba(13,14,28,0.14));
   }
 
   /* DIVIDER */
@@ -1405,6 +1410,8 @@
     .steps { grid-template-columns: 1fr; }
     .over { grid-template-columns: 1fr; gap: 60px; }
     .over-visual { display: none; }
+    .showcase { grid-template-columns: 1fr; gap: 36px; }
+    .showcase-intro { max-width: 100%; text-align: center; margin: 0 auto; }
     .over-stats-mobile {
       display: flex;
       margin-bottom: 36px;
@@ -1662,11 +1669,11 @@
 <section class="showcase" id="showcase">
   <div class="showcase-intro reveal">
     <div class="section-label">In de praktijk</div>
-    <h2>Eén overzicht.<br><em>Geen ruis.</em></h2>
-    <p>Geen dashboards die er goed uitzien, maar onduidelijk blijven. Eén heldere weergave van wat campagnes echt opleveren — gestuurd op marge, niet op vanity-cijfers.</p>
+    <h2>Goed bijgehouden.<br><em>Alles onder controle.</em></h2>
+    <p>Dagelijks gemonitord, wekelijks teruggekoppeld. Geen losse eindjes, geen verrassingen achteraf — je weet altijd waar je account staat en waarom.</p>
   </div>
   <div class="showcase-img-wrap reveal">
-    <img src="macbook-mockup-web.png" alt="Meta Ads Manager dashboard op een MacBook, beheerd door Line & Thread" width="1800" height="1200" loading="lazy">
+    <img src="macbook-mockup-2-web.png" alt="Meta Ads Manager dashboard op een MacBook, beheerd door Line & Thread" width="1200" height="923" loading="lazy">
   </div>
 </section>
 
