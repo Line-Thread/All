@@ -563,6 +563,31 @@
     margin-top: 4px;
   }
 
+  /* SHOWCASE / MOCKUP */
+  .showcase { text-align: center; }
+  .showcase-intro { max-width: 580px; margin: 0 auto 56px; }
+  .showcase-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+  .showcase-intro h2 em { font-style: italic; color: var(--tan); }
+  .showcase-intro p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    opacity: 0.7;
+  }
+  .showcase-img-wrap { max-width: 880px; margin: 0 auto; }
+  .showcase-img-wrap img {
+    width: 100%;
+    display: block;
+    filter: drop-shadow(0 40px 60px rgba(13,14,28,0.16));
+  }
+
   /* DIVIDER */
   .divider {
     height: 1px;
@@ -1628,6 +1653,20 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SHOWCASE -->
+<section class="showcase" id="showcase">
+  <div class="showcase-intro reveal">
+    <div class="section-label">In de praktijk</div>
+    <h2>Eén overzicht.<br><em>Geen ruis.</em></h2>
+    <p>Geen dashboards die er goed uitzien, maar onduidelijk blijven. Eén heldere weergave van wat campagnes echt opleveren — gestuurd op marge, niet op vanity-cijfers.</p>
+  </div>
+  <div class="showcase-img-wrap reveal">
+    <img src="macbook-mockup-web.png" alt="Meta Ads Manager dashboard op een MacBook, beheerd door Line & Thread" width="1800" height="1200" loading="lazy">
   </div>
 </section>
 
