@@ -565,15 +565,16 @@
 
   /* SHOWCASE / MOCKUP */
   .showcase {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 80px;
-    align-items: center;
     position: relative;
     z-index: 2;
     padding-bottom: 40px;
+    min-height: 480px;
   }
-  .showcase-intro { max-width: 440px; }
+  .showcase-intro {
+    max-width: 440px;
+    position: relative;
+    z-index: 3;
+  }
   .showcase-intro h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(32px, 4vw, 48px);
@@ -590,14 +591,17 @@
     opacity: 0.7;
   }
   .showcase-img-wrap {
-    max-width: 100%;
-    position: relative;
-    margin-bottom: -140px;
+    position: absolute;
+    top: 260px;
+    right: 0;
+    width: 50%;
+    max-width: 620px;
   }
   .showcase-img-wrap img {
     width: 100%;
     height: auto;
     display: block;
+    will-change: transform;
     filter: drop-shadow(0 50px 70px rgba(13,14,28,0.4)) drop-shadow(0 15px 25px rgba(13,14,28,0.25));
   }
 
@@ -695,8 +699,8 @@
     color: var(--cream);
     position: relative;
     z-index: 1;
-    margin-top: -140px;
-    padding-top: 220px;
+    margin-top: -80px;
+    padding-top: 130px;
   }
   .voorwie h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -1428,9 +1432,9 @@
     .steps { grid-template-columns: 1fr; }
     .over { grid-template-columns: 1fr; gap: 60px; }
     .over-visual { display: none; }
-    .showcase { grid-template-columns: 1fr; gap: 36px; padding-bottom: 80px; }
+    .showcase { min-height: 0; padding-bottom: 36px; }
     .showcase-intro { max-width: 100%; text-align: center; margin: 0 auto; }
-    .showcase-img-wrap { margin-bottom: 0; }
+    .showcase-img-wrap { position: relative; top: auto; right: auto; width: 100%; max-width: 100%; margin-top: 36px; transform: none !important; }
     .voorwie { margin-top: 0; padding-top: 60px; }
     .over-stats-mobile {
       display: flex;
@@ -2101,6 +2105,26 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // Subtiele parallax op de showcase-afbeelding tijdens scrollen
+  const showcaseImg = document.querySelector('.showcase-img-wrap');
+  if (showcaseImg && window.matchMedia('(min-width: 769px)').matches) {
+    let ticking = false;
+    const updateParallax = () => {
+      const rect = showcaseImg.parentElement.getBoundingClientRect();
+      const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      const offset = Math.max(-40, Math.min(40, (progress - 0.5) * 80));
+      showcaseImg.style.transform = `translateY(${offset}px)`;
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateParallax();
+  }
 
   // Formulier: AJAX-verzending met nette bevestiging in huisstijl
   const contactForm = document.getElementById('contactForm');
