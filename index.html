@@ -67,7 +67,7 @@
     {
       "@type": "Question",
       "name": "Wat is een vrijblijvende accountanalyse?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ik kijk mee in je advertentieaccount en je krijgt concrete verbeterpunten: wat goed staat, waar geld weglekt en waar de kansen zitten. Daarna beslis je zelf of je er iets mee doet — de analyse kost niets en verplicht tot niets." }
+      "acceptedAnswer": { "@type": "Answer", "text": "We kijken mee in je advertentieaccount en je krijgt concrete verbeterpunten: wat goed staat, waar geld weglekt en waar de kansen zitten. Daarna beslis je zelf of je er iets mee doet — de analyse kost niets en verplicht tot niets." }
     },
     {
       "@type": "Question",
@@ -625,7 +625,7 @@
     margin-bottom: 40px;
   }
 
-  /* WAT IK DOE */
+  /* WAT WIJ DOEN */
   .services {
     display: block;
   }
@@ -984,7 +984,7 @@
   .cases-section h2 em { font-style: italic; color: var(--tan); }
   .cases-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3px;
     background: rgba(196,168,130,0.2);
     border-radius: 16px;
@@ -999,9 +999,15 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
   }
-  .case-card:nth-child(1) { border: 1px solid rgba(196,168,130,0.45); border-radius: 14px 0 0 14px; }
-  .case-card:nth-child(2) { background: var(--navy); color: var(--cream); border-radius: 0; }
-  .case-card:nth-child(3) { background: var(--cream-dark); border-radius: 0 14px 14px 0; }
+  .case-card:nth-child(1) { background: var(--navy); color: var(--cream); border-radius: 14px 0 0 14px; }
+  .case-card:nth-child(2) { background: var(--cream-dark); border-radius: 0 14px 14px 0; }
+  .case-photo {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
   .case-header {
     display: flex;
     justify-content: space-between;
@@ -1657,10 +1663,10 @@
 <section id="diensten">
   <div class="services">
     <div class="services-intro reveal">
-      <div class="section-label">Wat ik doe</div>
+      <div class="section-label">Wat wij doen</div>
       <h2>Betaalde media,<br><em>scherp ingericht.</em></h2>
       <p>
-        Van strategie tot dagelijks beheer. Ik werk met merken die serieus willen groeien — en weten dat goede resultaten beginnen bij de juiste inrichting, niet bij meer budget.
+        Van strategie tot dagelijks beheer. We werken met merken die serieus willen groeien — en weten dat goede resultaten beginnen bij de juiste inrichting, niet bij meer budget.
       </p>
     </div>
     <div class="services-list reveal">
@@ -1763,38 +1769,10 @@
 
     <div class="case-card">
       <div class="case-header">
-        <span class="case-sector">Fashion / Luxe</span>
-        <span class="case-duration">36 maanden</span>
-      </div>
-      <p class="case-story">Luxemerk wilde schalen, maar elke budgetverhoging drukte de ROAS.</p>
-      <div class="case-numbers">
-        <div>
-          <div class="case-num">+170%</div>
-          <div class="case-num-label">ROAS</div>
-        </div>
-        <div>
-          <div class="case-num">-41%</div>
-          <div class="case-num-label">CPA</div>
-        </div>
-      </div>
-      <div class="case-divider"></div>
-      <div class="case-details">
-        <div>
-          <div class="case-detail-label">Budget</div>
-          <div class="case-detail-value">€25.000 / mnd</div>
-        </div>
-        <div>
-          <div class="case-detail-label">Aanpak</div>
-          <div class="case-detail-value">Creative concepts per product/persona</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-header">
         <span class="case-sector">Recruitment</span>
         <span class="case-duration">8 maanden</span>
       </div>
+      <img src="case-recruitment-farmfrites-web.jpg" alt="Recruitmentcampagne voor Farm Frites, klant van Line & Thread" class="case-photo" width="900" height="600" loading="lazy">
       <p class="case-story">Vacatures stonden maandenlang open; jobboards leverden te weinig op.</p>
       <div class="case-numbers">
         <div>
@@ -1824,6 +1802,7 @@
         <span class="case-sector">Interieur</span>
         <span class="case-duration">8 maanden</span>
       </div>
+      <img src="case-interieur-shutters-web.webp" alt="Interieurproject met shutters, klant van Line & Thread" class="case-photo" width="800" height="534" loading="lazy">
       <p class="case-story">Losse campagnes beconcurreerden elkaar op dezelfde doelgroep.</p>
       <div class="case-numbers">
         <div>
@@ -1955,7 +1934,7 @@
     </details>
     <details class="faq-item">
       <summary>Wat heb je van mij nodig om te starten?</summary>
-      <p>Toegang tot je advertentieaccount(s), inzicht in je marges en doelen, en iemand die beslissingen kan nemen. De rest regel ik — geen lange onboardingstrajecten.</p>
+      <p>Toegang tot je advertentieaccount(s), inzicht in je marges en doelen, en iemand die beslissingen kan nemen. De rest regelen wij — geen lange onboardingstrajecten.</p>
     </details>
   </div>
 </section>
@@ -1966,7 +1945,7 @@
 <section class="contact" id="contact">
   <div class="section-label">Contact</div>
   <h2>Klaar om te kijken<br>of het <em>past?</em></h2>
-  <p>Plan een vrijblijvende accountanalyse (t.w.v. €250) of stel je vraag — ik kom er binnen één werkdag op terug.</p>
+  <p>Plan een vrijblijvende accountanalyse (t.w.v. €250) of stel je vraag — we komen er binnen één werkdag op terug.</p>
   <div class="contact-meta">
     <div class="arthur-card">
       <img src="foto-arthur-1x1-web.png" alt="Arthur Heusdens, media buyer en eigenaar van Line & Thread" class="arthur-card-photo" width="56" height="56" loading="lazy">
@@ -2175,7 +2154,7 @@
       });
       if (!res.ok) throw new Error();
       gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'homepage_form' });
-      contactForm.innerHTML = '<div class="form-success"><div class="form-success-title">Bedankt voor je aanvraag!</div><p>Ik kom er binnen één werkdag op terug.<br>Liever direct schakelen? Bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p></div>';
+      contactForm.innerHTML = '<div class="form-success"><div class="form-success-title">Bedankt voor je aanvraag!</div><p>We komen er binnen één werkdag op terug.<br>Liever direct schakelen? Bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p></div>';
     } catch {
       btn.disabled = false;
       btn.textContent = btnText;
