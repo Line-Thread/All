@@ -2122,6 +2122,29 @@
       }
     }, { passive: true });
     updateParallax();
+
+    // Overlap berekenen op basis van de werkelijk gerenderde afbeeldingshoogte,
+    // i.p.v. vaste pixelwaarden die niet schalen op elke vensterbreedte/browser.
+    const voorwieSection = document.querySelector('.voorwie');
+    const imgEl = showcaseImg.querySelector('img');
+    const updateOverlap = () => {
+      if (!window.matchMedia('(min-width: 769px)').matches) {
+        voorwieSection.style.marginTop = '';
+        return;
+      }
+      // offsetTop/offsetHeight zijn layout-waarden: immuun voor de scroll-parallax
+      // transform en voor de margin die we hier zelf instellen.
+      const showcaseEl = showcaseImg.offsetParent;
+      const imgBottomRelative = showcaseImg.offsetTop + showcaseImg.offsetHeight;
+      const naturalOverlap = imgBottomRelative - showcaseEl.offsetHeight;
+      const targetOverlap = showcaseImg.offsetHeight * 0.32;
+      const additionalMargin = targetOverlap - naturalOverlap;
+      voorwieSection.style.marginTop = `${-additionalMargin}px`;
+    };
+    if (imgEl.complete) updateOverlap();
+    else imgEl.addEventListener('load', updateOverlap);
+    window.addEventListener('load', () => setTimeout(updateOverlap, 50));
+    window.addEventListener('resize', updateOverlap);
   }
 
   // Formulier: AJAX-verzending met nette bevestiging in huisstijl
