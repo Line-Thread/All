@@ -592,7 +592,7 @@
   }
   .showcase-img-wrap {
     position: absolute;
-    top: 150px;
+    top: 120px;
     right: 0;
     width: 50%;
     max-width: 620px;
@@ -2104,7 +2104,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Subtiele parallax op de showcase-afbeelding tijdens scrollen
+  // Subtiele parallax op de showcase-afbeelding tijdens scrollen (desktop only)
   const showcaseImg = document.querySelector('.showcase-img-wrap');
   if (showcaseImg && window.matchMedia('(min-width: 769px)').matches) {
     let ticking = false;
@@ -2122,18 +2122,17 @@
       }
     }, { passive: true });
     updateParallax();
+  }
 
-    // Overlap berekenen op basis van de werkelijk gerenderde afbeeldingshoogte,
-    // i.p.v. vaste pixelwaarden die niet schalen op elke vensterbreedte/browser.
+  // Overlap berekenen op basis van de werkelijk gerenderde afbeeldingshoogte,
+  // i.p.v. vaste pixelwaarden die niet schalen op elke vensterbreedte/browser.
+  // Werkt op desktop (absoluut gepositioneerd) en mobile (normale flow) —
+  // in beide gevallen geeft offsetTop/offsetHeight een betrouwbare, transform-
+  // immune basis om de overlap mee te berekenen.
+  if (showcaseImg) {
     const voorwieSection = document.querySelector('.voorwie');
     const imgEl = showcaseImg.querySelector('img');
     const updateOverlap = () => {
-      if (!window.matchMedia('(min-width: 769px)').matches) {
-        voorwieSection.style.marginTop = '';
-        return;
-      }
-      // offsetTop/offsetHeight zijn layout-waarden: immuun voor de scroll-parallax
-      // transform en voor de margin die we hier zelf instellen.
       const showcaseEl = showcaseImg.offsetParent;
       const imgBottomRelative = showcaseImg.offsetTop + showcaseImg.offsetHeight;
       const naturalOverlap = imgBottomRelative - showcaseEl.offsetHeight;
