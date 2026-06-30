@@ -127,6 +127,9 @@
     overflow-x: hidden;
   }
 
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
   /* TICKER */
   .ticker-wrap {
     position: sticky;
@@ -327,6 +330,7 @@
   /* HERO */
   .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -628,7 +632,7 @@
   }
 
   /* SECTION BASE */
-  section { padding: 80px 60px; }
+  section { padding: 80px clamp(60px, (100vw - 1320px) / 2, 500px); }
 
   .section-label {
     font-size: 10px;
@@ -686,6 +690,11 @@
   }
   .service-item:nth-child(1) { border-radius: 16px 0 0 16px; }
   .service-item:nth-child(4) { border-radius: 0 16px 16px 0; }
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
   .service-content h3 {
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
@@ -1400,7 +1409,8 @@
   /* SERVICE MEER-LINK */
   .service-more {
     display: inline-block;
-    margin-top: 4px;
+    margin-top: auto;
+    padding-top: 16px;
     font-size: 10px;
     font-weight: 400;
     letter-spacing: 0.14em;
@@ -1443,6 +1453,24 @@
   select:focus-visible, textarea:focus-visible, summary:focus-visible {
     outline: 2px solid var(--tan);
     outline-offset: 3px;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    z-index: 200;
+    background: var(--navy);
+    color: var(--cream);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    transition: top 0.2s var(--ease-out);
+  }
+  .skip-link:focus-visible {
+    top: 16px;
   }
 
   /* SCROLL REVEAL */
@@ -1542,6 +1570,8 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Direct naar inhoud</a>
+
 <!-- TICKER -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track">
@@ -1613,7 +1643,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <video class="hero-video" autoplay muted loop playsinline poster="hero-video-poster.jpg">
     <source src="hero-video.mp4" type="video/mp4">
   </video>
@@ -2206,7 +2236,7 @@
       });
       if (!res.ok) throw new Error();
       gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'homepage_form' });
-      contactForm.innerHTML = '<div class="form-success"><div class="form-success-title">Bedankt voor je aanvraag!</div><p>We komen er binnen één werkdag op terug.<br>Liever direct schakelen? Bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p></div>';
+      contactForm.innerHTML = '<div class="form-success"><div class="form-success-title">Bedankt voor je aanvraag.</div><p>We komen er binnen één werkdag op terug.<br>Liever direct schakelen? Bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p></div>';
     } catch {
       btn.disabled = false;
       btn.textContent = btnText;
