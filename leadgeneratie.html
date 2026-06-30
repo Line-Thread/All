@@ -77,6 +77,8 @@
     --tan: #C4A882;
     --cream-dark: #E0D9C8;
     --navy-soft: #1a1b2e;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -257,9 +259,10 @@
     text-transform: uppercase;
     border-radius: 50px;
     box-shadow: inset 0 -3px 6px rgba(0,0,0,0.15), inset 0 1px 2px rgba(255,255,255,0.25), 0 6px 20px rgba(13,14,28,0.18);
-    transition: opacity 0.2s, box-shadow 0.2s;
+    transition: opacity 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), transform 0.16s var(--ease-out);
   }
   .cta-btn:hover { opacity: 0.9; box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2), inset 0 1px 2px rgba(255,255,255,0.25), 0 10px 28px rgba(13,14,28,0.22); }
+  .cta-btn:active { transform: scale(0.97); }
   .cta-phone {
     display: block;
     margin-top: 20px;
