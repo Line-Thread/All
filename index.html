@@ -109,6 +109,7 @@
     --sage: #7AA592;
     --cream-dark: #E0D9C8;
     --navy-soft: #1a1b2e;
+    --tan-text: #7d5f38;
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
     --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   }
@@ -359,10 +360,8 @@
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px) saturate(1.4);
-    -webkit-backdrop-filter: blur(12px) saturate(1.4);
-    border: 1px solid rgba(255,255,255,0.18);
+    background: var(--navy-soft);
+    border: 1px solid rgba(196,168,130,0.25);
     border-radius: 100px;
     padding: 8px 22px;
     font-size: 11px;
@@ -371,7 +370,7 @@
     text-transform: uppercase;
     color: var(--tan);
     margin-bottom: 36px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 12px rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 20px rgba(0,0,0,0.18);
     opacity: 0;
     animation: fadeUp 0.8s 0.2s forwards;
   }
@@ -457,13 +456,11 @@
     justify-content: center;
     gap: 0;
     margin-top: 48px;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(16px) saturate(1.5);
-    -webkit-backdrop-filter: blur(16px) saturate(1.5);
-    border: 1px solid rgba(255,255,255,0.18);
+    background: var(--navy-soft);
+    border: 1px solid rgba(196,168,130,0.25);
     border-radius: 50px;
     padding: 16px 0;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 20px rgba(0,0,0,0.18);
     opacity: 0;
     animation: fadeUpMuted 0.8s 1.2s forwards;
   }
@@ -506,7 +503,7 @@
     font-weight: 400;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: var(--tan-text);
     margin-bottom: 48px;
   }
   .client-gallery {
@@ -600,7 +597,7 @@
     letter-spacing: -0.01em;
     margin-bottom: 18px;
   }
-  .showcase-intro h2 em { font-style: italic; color: var(--tan); }
+  .showcase-intro h2 em { font-style: italic; color: var(--tan-text); }
   .showcase-intro p {
     font-size: 15px;
     font-weight: 300;
@@ -638,7 +635,7 @@
     font-weight: 400;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: var(--tan-text);
     margin-bottom: 40px;
   }
 
@@ -658,7 +655,7 @@
     letter-spacing: -0.01em;
     margin-bottom: 28px;
   }
-  .services-intro h2 em { font-style: italic; color: var(--tan); }
+  .services-intro h2 em { font-style: italic; color: var(--tan-text); }
   .services-intro p {
     font-size: 15px;
     font-weight: 300;
@@ -689,14 +686,6 @@
   }
   .service-item:nth-child(1) { border-radius: 16px 0 0 16px; }
   .service-item:nth-child(4) { border-radius: 0 16px 16px 0; }
-  .service-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--tan);
-    letter-spacing: 0.04em;
-    line-height: 1;
-  }
   .service-content h3 {
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
@@ -829,7 +818,7 @@
     letter-spacing: -0.01em;
     margin-bottom: 28px;
   }
-  .over-text h2 em { font-style: italic; color: var(--tan); }
+  .over-text h2 em { font-style: italic; color: var(--tan-text); }
   .over-text p {
     font-size: 15px;
     font-weight: 300;
@@ -879,7 +868,7 @@
     font-weight: 400;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: var(--tan-text);
   }
   .arthur-card-text { text-align: left; }
   .contact-meta {
@@ -1002,7 +991,7 @@
     max-width: 600px;
     margin-bottom: 64px;
   }
-  .cases-section h2 em { font-style: italic; color: var(--tan); }
+  .cases-section h2 em { font-style: italic; color: var(--tan-text); }
   .cases-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1033,8 +1022,9 @@
     font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: var(--tan-text);
   }
+  .case-card:nth-child(2) .case-sector { color: var(--tan); }
   .case-story {
     font-size: 12px;
     font-weight: 300;
@@ -1085,9 +1075,10 @@
     font-weight: 400;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: var(--tan-text);
     margin-bottom: 6px;
   }
+  .case-card:nth-child(2) .case-detail-label { color: var(--tan); }
   .case-detail-value {
     font-size: 13px;
     font-weight: 300;
@@ -1114,7 +1105,7 @@
     font-weight: 400;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--tan);
+    color: var(--tan-text);
   }
   .cases-cta-row {
     display: flex;
@@ -1138,7 +1129,7 @@
     max-width: 600px;
     margin-bottom: 56px;
   }
-  .faq-section h2 em { font-style: italic; color: var(--tan); }
+  .faq-section h2 em { font-style: italic; color: var(--tan-text); }
   .faq {
     max-width: 760px;
   }
@@ -1163,7 +1154,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 26px;
     font-weight: 300;
-    color: var(--tan);
+    color: var(--tan-text);
     line-height: 1;
     flex-shrink: 0;
     transition: transform 0.25s;
@@ -1184,7 +1175,7 @@
     color: var(--cream);
     text-align: center;
   }
-  .contact .section-label { text-align: center; }
+  .contact .section-label { color: var(--tan); text-align: center; }
   .contact h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(40px, 5vw, 72px);
@@ -1209,6 +1200,7 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
   }
   .contact .arthur-card-name { color: var(--cream); }
+  .contact .arthur-card-role { color: var(--tan); }
   .contact .contact-phone { color: var(--cream); }
   .contact-form {
     max-width: 480px;
@@ -1317,6 +1309,30 @@
     margin-bottom: 0;
   }
   .form-success a { color: var(--tan); }
+  .form-error {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.3s var(--ease-out), opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+  }
+  .form-error.show {
+    max-height: 160px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.3s var(--ease-out), opacity 0.25s var(--ease-out) 0.05s, transform 0.25s var(--ease-out) 0.05s;
+  }
+  .form-error-inner-pad {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(196,168,130,0.35);
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--cream);
+  }
+  .form-error a { color: var(--tan); text-decoration: underline; text-underline-offset: 2px; }
 
   /* FOOTER */
   footer {
@@ -1455,6 +1471,7 @@
     .hero-stats-strip { gap: 0; margin-top: 40px; }
     .hero-stat { padding: 0 18px; }
     .hero-stat-num { font-size: 22px; }
+    .hero-cta { padding: 15px 22px; font-size: 10px; letter-spacing: 0.1em; gap: 8px; white-space: nowrap; }
     .nav-cta { display: none; }
     .services-intro { margin-bottom: 36px; }
     .services-list { grid-template-columns: 1fr 1fr; }
@@ -1495,7 +1512,7 @@
       font-size: 8px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--tan);
+      color: var(--tan-text);
       line-height: 1.3;
     }
     .cases-grid { grid-template-columns: 1fr; }
@@ -1509,7 +1526,6 @@
     .footer-links { flex-wrap: wrap; justify-content: center; }
     .hero { padding: 120px 24px 260px; }
     .hero-title { font-size: clamp(36px, 9vw, 60px); }
-    .hero-sub br { display: none; }
     .hero-badge { font-size: 8px; padding: 6px 16px; }
   }
 
@@ -1520,6 +1536,7 @@
     .hero-sub, .hero-proof { animation: none; opacity: 0.65; }
     .reveal { opacity: 1; transform: none; transition: none; }
     .mobile-cta { transition: none; }
+    .form-error { transition: none; }
   }
 </style>
 </head>
@@ -1606,7 +1623,7 @@
     Zonder strategie is elk<br>advertentiebudget <em>te groot.</em>
   </h1>
   <p class="hero-sub">
-    Korte lijntjes, directe aanpak en campagnes<br>die sturen op resultaat — niet op platform-cijfers.
+    Korte lijntjes, directe aanpak en campagnes die sturen op resultaat, niet op platform-cijfers.
   </p>
   <a href="#contact" class="hero-cta">
     Plan een vrijblijvende accountanalyse
@@ -1676,12 +1693,11 @@
       <div class="section-label">Wat wij doen</div>
       <h2>Betaalde media,<br><em>scherp ingericht.</em></h2>
       <p>
-        Van strategie tot dagelijks beheer. We werken met merken die serieus willen groeien — en weten dat goede resultaten beginnen bij de juiste inrichting, niet bij meer budget.
+        Van strategie tot dagelijks beheer. We werken met merken die serieus willen groeien, en weten dat goede resultaten beginnen bij de juiste inrichting, niet bij meer budget.
       </p>
     </div>
     <div class="services-list reveal">
       <div class="service-item">
-        <div class="service-num">01</div>
         <div class="service-content">
           <h3>Meta Ads</h3>
           <p>Campagnestrategie, creatieve structuur, bidding en schaallogica voor Facebook en Instagram. Gericht op winstgevende groei, niet op oppervlakkige ROAS.</p>
@@ -1689,7 +1705,6 @@
         </div>
       </div>
       <div class="service-item">
-        <div class="service-num">02</div>
         <div class="service-content">
           <h3>Google Ads</h3>
           <p>Search, Shopping en Performance Max. Budget naar de producten en categorieën die onderaan de streep iets opleveren.</p>
@@ -1697,14 +1712,12 @@
         </div>
       </div>
       <div class="service-item">
-        <div class="service-num">03</div>
         <div class="service-content">
           <h3>Strategie & analyse</h3>
           <p>Periodieke accountanalyse, margedoorkijk en bijstuuradvies. Beslissingen op cijfers die kloppen, niet op dashboards die er goed uitzien.</p>
         </div>
       </div>
       <div class="service-item">
-        <div class="service-num">04</div>
         <div class="service-content">
           <h3>Creatieve begeleiding</h3>
           <p>Briefing en feedback op advertentiecreatives vanuit conversielogica. Zodat het visuele werk doet wat het moet doen.</p>
@@ -1719,9 +1732,8 @@
 <!-- SHOWCASE -->
 <section class="showcase" id="showcase">
   <div class="showcase-intro reveal">
-    <div class="section-label">In de praktijk</div>
     <h2>Goed bijgehouden.<br><em>Alles onder controle.</em></h2>
-    <p>Dagelijks gemonitord, wekelijks teruggekoppeld. Geen losse eindjes, geen verrassingen achteraf — je weet altijd waar je account staat en waarom.</p>
+    <p>Dagelijks gemonitord, wekelijks teruggekoppeld. Geen losse eindjes, geen verrassingen achteraf: je weet altijd waar je account staat en waarom.</p>
   </div>
   <div class="showcase-img-wrap reveal">
     <img src="macbook-mockup-2-web.png" alt="Meta Ads Manager dashboard op een MacBook, beheerd door Line & Thread" width="1200" height="923" loading="lazy">
@@ -1730,7 +1742,6 @@
 
 <!-- VOOR WIE -->
 <section class="voorwie" id="voor-wie">
-  <div class="section-label">Voor wie</div>
   <h2 class="reveal">Drie soorten klanten,<br><em>één manier van werken.</em></h2>
   <div class="voorwie-grid">
     <div class="voorwie-item reveal">
@@ -1743,7 +1754,7 @@
     </div>
     <div class="voorwie-item reveal">
       <h3>Recruitment</h3>
-      <p>Organisaties met vacatures die via jobboards niet vervuld raken. Doelgroepgericht adverteren op de plekken waar kandidaten écht zitten — met bewezen resultaat.</p>
+      <p>Organisaties met vacatures die via jobboards niet vervuld raken. Doelgroepgericht adverteren op de plekken waar kandidaten écht zitten, met bewezen resultaat.</p>
     </div>
   </div>
 </section>
@@ -1761,7 +1772,7 @@
     <div class="step reveal">
       <div class="step-num">02</div>
       <h3>Inrichting & strategie</h3>
-      <p>Campagnestructuur, budgetverdeling en creatieve aanpak worden vastgelegd. Daarna start de uitvoering — zonder onnodige vertraging.</p>
+      <p>Campagnestructuur, budgetverdeling en creatieve aanpak worden vastgelegd. Daarna start de uitvoering, zonder onnodige vertraging.</p>
     </div>
     <div class="step reveal">
       <div class="step-num">03</div>
@@ -1946,12 +1957,11 @@
 
 <!-- FAQ -->
 <section class="faq-section" id="faq">
-  <div class="section-label">Veelgestelde vragen</div>
   <h2 class="reveal">Eerst nog wat vragen?<br><em>Heel logisch.</em></h2>
   <div class="faq">
     <details class="faq-item">
       <summary>Wat is een vrijblijvende accountanalyse?</summary>
-      <p>We kijken mee in je advertentieaccount (of je huidige situatie als je nog niet adverteert) en je krijgt concrete verbeterpunten: wat goed staat, waar geld weglekt en waar de kansen zitten. Daarna beslis je zelf of je er iets mee doet — de analyse kost niets en verplicht tot niets.</p>
+      <p>We kijken mee in je advertentieaccount (of je huidige situatie als je nog niet adverteert) en je krijgt concrete verbeterpunten: wat goed staat, waar geld weglekt en waar de kansen zitten. Daarna beslis je zelf of je er iets mee doet. De analyse kost niets en verplicht tot niets.</p>
     </details>
     <details class="faq-item">
       <summary>Zit ik vast aan een lang contract?</summary>
@@ -1971,7 +1981,7 @@
     </details>
     <details class="faq-item">
       <summary>Wat heb je van mij nodig om te starten?</summary>
-      <p>Toegang tot je advertentieaccount(s), inzicht in je marges en doelen, en iemand die beslissingen kan nemen. De rest regelen wij — geen lange onboardingstrajecten.</p>
+      <p>Toegang tot je advertentieaccount(s), inzicht in je marges en doelen, en iemand die beslissingen kan nemen. De rest regelen wij: geen lange onboardingstrajecten.</p>
     </details>
   </div>
 </section>
@@ -1982,7 +1992,7 @@
 <section class="contact" id="contact">
   <div class="section-label">Contact</div>
   <h2>Klaar om te kijken<br>of het <em>past?</em></h2>
-  <p>Plan een vrijblijvende accountanalyse (t.w.v. €250) of stel je vraag — we komen er binnen één werkdag op terug.</p>
+  <p>Plan een vrijblijvende accountanalyse (t.w.v. €250) of stel je vraag. We komen er binnen één werkdag op terug.</p>
   <div class="contact-meta">
     <div class="arthur-card">
       <img src="foto-arthur-1x1-web.png" alt="Arthur Heusdens, media buyer en eigenaar van Line & Thread" class="arthur-card-photo" width="56" height="56" loading="lazy">
@@ -2032,6 +2042,9 @@
       <textarea rows="4" id="bericht" name="bericht" placeholder="Vertel kort wat je doet en wat je zoekt" required></textarea>
     </div>
     <button type="submit" class="form-submit">Vraag vrijblijvende analyse aan</button>
+    <div class="form-error" id="formError" role="alert">
+      <p class="form-error-inner-pad">Er ging iets mis bij het versturen. Mail je bericht naar <a href="mailto:arthur@line-thread.com">arthur@line-thread.com</a> of bel <a href="tel:+31646194022">06 46 19 40 22</a>.</p>
+    </div>
   </form>
 </section>
 
@@ -2177,12 +2190,14 @@
 
   // Formulier: AJAX-verzending met nette bevestiging in huisstijl
   const contactForm = document.getElementById('contactForm');
+  const formError = document.getElementById('formError');
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('.form-submit');
     const btnText = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Versturen…';
+    formError.classList.remove('show');
     try {
       const res = await fetch(contactForm.action, {
         method: 'POST',
@@ -2195,7 +2210,7 @@
     } catch {
       btn.disabled = false;
       btn.textContent = btnText;
-      alert('Er ging iets mis bij het versturen. Mail je bericht naar arthur@line-thread.com of bel 06 46 19 40 22.');
+      formError.classList.add('show');
     }
   });
 

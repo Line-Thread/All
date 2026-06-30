@@ -1,1 +1,10 @@
 .gstack/
+
+# Local design-tooling context (impeccable skill) — internal strategy/design
+# docs, not site content. Vercel serves the whole repo as static files, so
+# these must stay untracked to avoid being publicly deployed.
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.claude/skills/
+
