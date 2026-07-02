@@ -1,3 +1,11 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "momenti.agency" }],
+      "destination": "https://www.momenti.agency/$1",
+      "permanent": true
+    }
+  ]
 }
