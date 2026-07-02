@@ -938,6 +938,24 @@
   }
   .over-cta-row .arthur-card { margin-bottom: 0; }
 
+  .over-visual-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .over-photo-card {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 340px;
+    box-shadow: 0 8px 32px rgba(13,14,28,0.18);
+  }
+  .over-photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+  }
   .over-visual {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1507,8 +1525,10 @@
     .service-item:nth-child(3) { border-radius: 0 0 0 16px; }
     .service-item:nth-child(4) { border-radius: 0 0 16px 0; }
     .steps { grid-template-columns: 1fr; }
-    .over { grid-template-columns: 1fr; gap: 60px; }
+    .over { grid-template-columns: 1fr; gap: 32px; }
     .over-visual { display: none; }
+    .over-visual-col { order: -1; }
+    .over-photo-card { height: 260px; }
     .showcase { min-height: 0; padding-bottom: 36px; }
     .showcase-intro { max-width: 100%; text-align: center; margin: 0 auto; }
     .showcase-img-wrap { position: relative; top: auto; right: auto; width: 100%; max-width: 100%; margin-top: 36px; transform: none !important; }
@@ -1960,22 +1980,27 @@
         <a href="#contact" class="hero-cta">Plan een vrijblijvende accountanalyse <span class="hero-cta-arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div class="over-visual reveal">
-      <div class="over-card">
-        <div class="over-card-num">360%</div>
-        <div class="over-card-label">Blended ROAS eigen merk over de afgelopen 12 maanden</div>
+    <div class="over-visual-col">
+      <div class="over-photo-card reveal">
+        <img src="foto-arthur-large-web.jpg" alt="Arthur Heusdens, media buyer en eigenaar van Momenti" width="675" height="900" loading="lazy">
       </div>
-      <div class="over-card">
-        <div class="over-card-num">4+</div>
-        <div class="over-card-label">Jaar ervaring in Paid Media (B2B+B2C, Branding & Growth Marketing)</div>
-      </div>
-      <div class="over-card">
-        <div class="over-card-num">€350k+</div>
-        <div class="over-card-label">Advertentiebudget succesvol beheerd</div>
-      </div>
-      <div class="over-card">
-        <div class="over-card-num over-card-num--sm">Flexibel</div>
-        <div class="over-card-label">Van kleine startups tot grote corporates</div>
+      <div class="over-visual reveal">
+        <div class="over-card">
+          <div class="over-card-num">360%</div>
+          <div class="over-card-label">Blended ROAS eigen merk over de afgelopen 12 maanden</div>
+        </div>
+        <div class="over-card">
+          <div class="over-card-num">4+</div>
+          <div class="over-card-label">Jaar ervaring in Paid Media (B2B+B2C, Branding & Growth Marketing)</div>
+        </div>
+        <div class="over-card">
+          <div class="over-card-num">€350k+</div>
+          <div class="over-card-label">Advertentiebudget succesvol beheerd</div>
+        </div>
+        <div class="over-card">
+          <div class="over-card-num over-card-num--sm">Flexibel</div>
+          <div class="over-card-label">Van kleine startups tot grote corporates</div>
+        </div>
       </div>
     </div>
   </div>
