@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.momenti.media/sitemap.xml
+Sitemap: https://www.momenti.agency/sitemap.xml

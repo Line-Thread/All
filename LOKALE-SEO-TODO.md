@@ -12,7 +12,7 @@ Volgorde van impact: 1 → 5.
   - 06 46 19 40 22
 - Verifieer het profiel (per video/post/telefoon — Google bepaalt de methode).
 - Servicegebied: zet desgewenst "regio Amersfoort / Utrecht / heel Nederland".
-- Voeg de websitelink toe: https://www.momenti.media
+- Voeg de websitelink toe: https://www.momenti.agency
 
 ## 2. NAW-consistentie (NAP) bewaken
 "NAP" = Name, Address, Phone. Google vertrouwt je lokaal méér als deze **overal identiek** zijn.
@@ -33,7 +33,7 @@ Volgorde van impact: 1 → 5.
 - Consistentie > kwantiteit.
 
 ## 5. Search Console
-- Na het toevoegen van nieuwe pagina's: dien `https://www.momenti.media/sitemap.xml` opnieuw in
+- Na het toevoegen van nieuwe pagina's: dien `https://www.momenti.agency/sitemap.xml` opnieuw in
   (of laat Google hem automatisch herlezen) en vraag indexering aan voor:
   - /media-buying-amersfoort
   - /blog en /blog/wat-kost-een-meta-ads-specialist
