@@ -1,4 +1,4 @@
-# Line & Thread — TODOS
+# Momenti — TODOS
 
 Items deferred from CEO review (2026-06-23, Approach C: Hybrid positioning + SEO).
 
@@ -31,7 +31,7 @@ Items deferred from CEO review (2026-06-23, Approach C: Hybrid positioning + SEO
 ## P3 — Do when ready (manual actions)
 
 ### Google Business Profile setup + review collection
-**What:** Create and verify a Google Business Profile for Line & Thread. Then collect Google reviews from existing clients.
+**What:** Create and verify a Google Business Profile for Momenti. Then collect Google reviews from existing clients.
 **Why:** (1) Local SEO — GBP is the highest-leverage local SEO action, outperforming any on-page SEO for "media buying amersfoort" searches. (2) Review collection turns "100% klanttevredenheid" from an unsubstantiated claim into verifiable social proof.
 **Pros:** Appears in Google Maps; star ratings appear in search results; enables Google reviews as trust signal.
 **Cons:** Arthur must do this manually (Claude Code cannot access external accounts). Takes 1-2 weeks to verify.

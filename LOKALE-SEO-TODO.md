@@ -4,15 +4,15 @@ Deze acties kun ik niet voor je doen; ze vragen toegang tot externe accounts.
 Volgorde van impact: 1 → 5.
 
 ## 1. Google Bedrijfsprofiel aanmaken & verifiëren
-- Ga naar https://business.google.com en maak een profiel aan voor **Line & Thread**.
+- Ga naar https://business.google.com en maak een profiel aan voor **Momenti**.
 - Categorie: kies primair **"Reclamebureau"** (of "Marketingbureau"); eventueel secundair "Internetmarketingdienst".
 - Bedrijfsnaam, adres en telefoon **exact** zoals op de site:
-  - Line & Thread
+  - Momenti
   - Havenweg 21T, Amersfoort
   - 06 46 19 40 22
 - Verifieer het profiel (per video/post/telefoon — Google bepaalt de methode).
 - Servicegebied: zet desgewenst "regio Amersfoort / Utrecht / heel Nederland".
-- Voeg de websitelink toe: https://www.line-thread.com
+- Voeg de websitelink toe: https://www.momenti.media
 
 ## 2. NAW-consistentie (NAP) bewaken
 "NAP" = Name, Address, Phone. Google vertrouwt je lokaal méér als deze **overal identiek** zijn.
@@ -28,12 +28,12 @@ Volgorde van impact: 1 → 5.
 - Reageer op reviews (ook dat is een lokaal signaal).
 
 ## 4. Lokale vermeldingen (citations)
-- Zet Line & Thread op een paar relevante NL-bedrijvengidsen met dezelfde NAP
+- Zet Momenti op een paar relevante NL-bedrijvengidsen met dezelfde NAP
   (bijv. KvK-handelsregister-vermelding, LinkedIn-bedrijfspagina, eventueel branchegidsen).
 - Consistentie > kwantiteit.
 
 ## 5. Search Console
-- Na het toevoegen van nieuwe pagina's: dien `https://www.line-thread.com/sitemap.xml` opnieuw in
+- Na het toevoegen van nieuwe pagina's: dien `https://www.momenti.media/sitemap.xml` opnieuw in
   (of laat Google hem automatisch herlezen) en vraag indexering aan voor:
   - /media-buying-amersfoort
   - /blog en /blog/wat-kost-een-meta-ads-specialist
