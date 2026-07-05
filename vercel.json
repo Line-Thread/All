@@ -6,6 +6,11 @@
       "has": [{ "type": "host", "value": "momenti.agency" }],
       "destination": "https://www.momenti.agency/$1",
       "permanent": true
+    },
+    {
+      "source": "/media-buying-amersfoort",
+      "destination": "/advertentiebeheer-amersfoort",
+      "permanent": true
     }
   ]
 }

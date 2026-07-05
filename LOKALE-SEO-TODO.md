@@ -24,7 +24,7 @@ Volgorde van impact: 1 → 5.
 
 ## 3. Reviews verzamelen
 - Vraag tevreden klanten om een Google-review via je Bedrijfsprofiel (Google geeft je een deellink).
-- Dit vervangt op termijn de huidige claim "100% klanttevredenheid" door écht bewijs.
+- Dit maakt het mogelijk om de hero-tekst "Tevreden klanten, stuk voor stuk" op termijn te vervangen door een concreet, geverifieerd sterrenaantal.
 - Reageer op reviews (ook dat is een lokaal signaal).
 
 ## 4. Lokale vermeldingen (citations)
@@ -35,13 +35,13 @@ Volgorde van impact: 1 → 5.
 ## 5. Search Console
 - Na het toevoegen van nieuwe pagina's: dien `https://www.momenti.agency/sitemap.xml` opnieuw in
   (of laat Google hem automatisch herlezen) en vraag indexering aan voor:
-  - /media-buying-amersfoort
+  - /advertentiebeheer-amersfoort
   - /blog en /blog/wat-kost-een-meta-ads-specialist
 
 ---
 
 ## In-code al geregeld (ter info)
 - ProfessionalService-schema met adres, telefoon en areaServed staat op de homepage.
-- Lokale landingspagina `/media-buying-amersfoort` aangemaakt met LocalBusiness-schema
-  (areaServed Amersfoort + Utrecht) — bevat nog **PLACEHOLDER-tekst** die jij invult.
+- Lokale landingspagina `/advertentiebeheer-amersfoort` (voorheen `/media-buying-amersfoort`,
+  met 301-redirect vanaf de oude URL) met LocalBusiness-schema (areaServed Amersfoort + Utrecht).
 - "Vanuit Amersfoort" in de Over-sectie linkt nu naar die lokale pagina.
