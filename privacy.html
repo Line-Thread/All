@@ -153,12 +153,17 @@
   footer {
     background: var(--navy);
     color: var(--cream);
-    padding: 48px 60px;
+    padding: 56px 60px 44px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 40px;
   }
-  .footer-logo { display: flex; flex-direction: column; align-items: center; }
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .footer-logo img { height: 28px; width: auto; display: block; margin-top: -6px; }
   .footer-badges { display: flex; align-items: center; gap: 20px; margin-top: 14px; }
   .footer-logo img.footer-meta-badge { height: 30px; opacity: 0.8; }
@@ -166,13 +171,17 @@
   .footer-copy {
     font-size: 11px;
     font-weight: 300;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     opacity: 0.3;
-    text-align: center;
+    text-align: left;
+    max-width: 230px;
+    line-height: 1.7;
+    margin-top: 18px;
   }
   .footer-links {
     display: flex;
-    gap: 28px;
+    flex-direction: column;
+    gap: 12px;
     list-style: none;
   }
   .footer-links a {
@@ -186,17 +195,29 @@
     transition: opacity 0.2s;
   }
   .footer-links a:hover { opacity: 1; }
-  .footer-nav { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
+  .footer-nav {
+    display: flex;
+    gap: 64px;
+  }
+  .footer-col-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tan);
+    opacity: 0.55;
+    margin-bottom: 16px;
+  }
   @media (max-width: 760px) {
-    .footer-nav { align-items: center; }
-    .footer-links { flex-wrap: wrap; justify-content: center; }
+    .footer-nav { flex-direction: column; align-items: center; gap: 28px; }
+    .footer-links { align-items: center; }
   }
 
   @media (max-width: 760px) {
     .page-header { padding: 24px 24px; }
     .page-header img { height: 26px; }
     .content-wrap { padding: 52px 24px 80px; }
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 24px; }
+    footer { flex-direction: column; align-items: center; gap: 32px; text-align: center; padding: 40px 24px; }
   }
 </style>
 </head>
@@ -296,27 +317,36 @@
 </div>
 
 <footer>
-  <div class="footer-logo">
-    <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Momenti" width="139" height="28" loading="lazy">
-    <div class="footer-badges">
-      <img src="Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge" width="88" height="30" loading="lazy">
-      <img src="Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
+  <div class="footer-brand">
+    <div class="footer-logo">
+      <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Momenti" width="139" height="28" loading="lazy">
+      <div class="footer-badges">
+        <img src="Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge" width="88" height="30" loading="lazy">
+        <img src="Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
+      </div>
     </div>
+    <div class="footer-copy">Momenti - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
   </div>
-  <div class="footer-copy">Momenti - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
   <div class="footer-nav">
-    <ul class="footer-links">
-      <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
-      <li><a href="/google-ads">Google Ads specialist</a></li>
-      <li><a href="/threads-ads">Threads Ads specialist</a></li>
-      <li><a href="/leadgeneratie">Leadgeneratie & CPL</a></li>
-      <li><a href="/pricing">Tarieven</a></li>
-    </ul>
-    <ul class="footer-links">
-      <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="/privacy" aria-current="page" style="opacity:1;">Privacy</a></li>
-      <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
-    </ul>
+    <div class="footer-col">
+      <div class="footer-col-label">Diensten</div>
+      <ul class="footer-links">
+        <li><a href="/advertentiebeheer">Advertentiebeheer</a></li>
+        <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
+        <li><a href="/google-ads">Google Ads specialist</a></li>
+        <li><a href="/threads-ads">Threads Ads specialist</a></li>
+        <li><a href="/leadgeneratie">Leadgeneratie &amp; CPL</a></li>
+        <li><a href="/pricing">Tarieven</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-label">Bedrijf</div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="/privacy" aria-current="page" style="opacity:1;">Privacy</a></li>
+        <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 
