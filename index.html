@@ -365,8 +365,10 @@
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    background: var(--navy-soft);
-    border: 1px solid rgba(196,168,130,0.25);
+    background: rgba(196,168,130,0.14);
+    backdrop-filter: blur(16px) saturate(1.6);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+    border: 1px solid rgba(196,168,130,0.35);
     border-radius: 100px;
     padding: 8px 22px;
     font-size: 11px;
@@ -375,7 +377,7 @@
     text-transform: uppercase;
     color: var(--tan);
     margin-bottom: 36px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 20px rgba(0,0,0,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 4px 20px rgba(0,0,0,0.18);
     opacity: 0;
     animation: fadeUp 0.8s 0.2s forwards;
   }
@@ -1206,6 +1208,8 @@
   /* Gedeelde classes (ook gebruikt op crème secties) - hier scoped naar navy */
   .contact .arthur-card {
     background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px) saturate(1.4);
+    -webkit-backdrop-filter: blur(12px) saturate(1.4);
     border: 1px solid rgba(255,255,255,0.15);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
   }
@@ -1437,7 +1441,7 @@
   }
   .service-more:hover { opacity: 0.7; }
 
-  /* MOBIELE STICKY CTA */
+  /* MOBIELE STICKY CTA - liquid glass */
   .mobile-cta {
     display: none;
     position: fixed;
@@ -1445,7 +1449,11 @@
     left: 0;
     right: 0;
     z-index: 150;
-    background: var(--navy);
+    background: rgba(13,14,28,0.72);
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    border-top: 1px solid rgba(196,168,130,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 -4px 24px rgba(0,0,0,0.2);
     color: var(--cream);
     justify-content: center;
     align-items: center;
