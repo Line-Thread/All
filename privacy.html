@@ -3,14 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WL128RHD9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7WL128RHD9');
-</script>
+<!-- Analytics laadt pas na cookietoestemming - zie /consent.js -->
+<script src="/consent.js" defer></script>
 <title>Privacybeleid - Momenti</title>
 <meta name="description" content="Privacybeleid van Momenti: welke gegevens we verzamelen via het contactformulier, waarom, en hoe we daarmee omgaan.">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -169,6 +163,16 @@
   .footer-badges { display: flex; align-items: center; gap: 20px; margin-top: 14px; }
   .footer-logo img.footer-meta-badge { height: 30px; opacity: 0.8; }
   .footer-logo img.footer-google-badge { height: 36px; opacity: 0.8; }
+  .footer-classifier {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    opacity: 0.55;
+    text-align: left;
+    max-width: 260px;
+    line-height: 1.65;
+    margin-top: 20px;
+  }
   .footer-copy {
     font-size: 11px;
     font-weight: 300;
@@ -244,7 +248,8 @@
     <p>
       <strong>Momenti</strong> - handelsnaam van Heusdens Services<br>
       Arthur Heusdens<br>
-      Parnaskruid 80, Amersfoort<br>
+      Vestigingsadres: Parnaskruid 80, Amersfoort<br>
+      Bezoekadres: Havenweg 21T, Amersfoort<br>
       KvK 86398547<br>
       <a href="mailto:arthur@momenti.agency" class="inline-link">arthur@momenti.agency</a>
     </p>
@@ -313,7 +318,7 @@
   </div>
 
   <div class="version-note">
-    Momenti - handelsnaam van Heusdens Services &nbsp;·&nbsp; Parnaskruid 80, Amersfoort &nbsp;·&nbsp; KvK 86398547 &nbsp;·&nbsp; Versie juni 2026
+    Momenti - handelsnaam van Heusdens Services &nbsp;·&nbsp; Vestigingsadres: Parnaskruid 80, Amersfoort &nbsp;·&nbsp; KvK 86398547 &nbsp;·&nbsp; Versie juni 2026
   </div>
 
 </div>
@@ -327,18 +332,21 @@
         <img src="Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
       </div>
     </div>
-    <div class="footer-copy">Momenti - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
+    <div class="footer-classifier">Growth agency voor merken &eacute;n bedrijven. Wij runnen zelf het D2C-merk T&ecirc;te de Mule &mdash; maximaal 8 klanten tegelijk.</div>
+    <div class="footer-copy">Momenti - Bezoekadres Havenweg 21T, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
   </div>
   <div class="footer-nav">
     <div class="footer-col">
       <div class="footer-col-label">Diensten</div>
       <ul class="footer-links">
         <li><a href="/advertentiebeheer">Advertentiebeheer</a></li>
+        <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
+        <li><a href="/b2b">B2B</a></li>
         <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
         <li><a href="/google-ads">Google Ads specialist</a></li>
         <li><a href="/threads-ads">Threads Ads specialist</a></li>
         <li><a href="/leadgeneratie">Leadgeneratie &amp; CPL</a></li>
-        <li><a href="/pricing">Tarieven</a></li>
+        <li><a href="/aanbod">Tarieven</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -347,6 +355,7 @@
         <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="/privacy" aria-current="page" style="opacity:1;">Privacy</a></li>
         <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
+        <li><a href="#" data-consent-reopen>Cookievoorkeuren</a></li>
       </ul>
     </div>
   </div>
