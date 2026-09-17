@@ -120,9 +120,30 @@
   .s-cream { background: var(--cream); color: var(--navy); }
   .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 10px; font-weight: 500;
     letter-spacing: .22em; text-transform: uppercase; color: var(--tan); margin: 0 0 24px; }
-  .s-cream .eyebrow, section:not(.hero):not(.aanpak):not(.eigen-merk-nieuw) .eyebrow { color: var(--tan-text); }
-  .hero .eyebrow, .aanpak .eyebrow { color: var(--tan); }
+  .s-cream .eyebrow { color: var(--tan-text); }
   .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; flex: 0 0 24px; }
+  #aanbod-kort h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 24px;
+    color: var(--navy);
+  }
+  #aanbod-kort h2 em { font-style: italic; color: var(--tan-text); }
+  .cta-final h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 20px;
+    color: var(--cream);
+  }
+  .cta-final h2 em { font-style: italic; color: var(--tan); }
   .mosaic { display: grid; gap: 3px; border-radius: 16px; overflow: hidden; margin-top: 40px; }
   .mosaic.on-cream { background: var(--seam-light); }
   .mosaic.on-cream > * { background: var(--cream); }
