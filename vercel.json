@@ -9,7 +9,22 @@
     },
     {
       "source": "/media-buying-amersfoort",
-      "destination": "/advertentiebeheer-amersfoort",
+      "destination": "/meta-advertenties-amersfoort",
+      "permanent": true
+    },
+    {
+      "source": "/advertentiebeheer-amersfoort",
+      "destination": "/meta-advertenties-amersfoort",
+      "permanent": true
+    },
+    {
+      "source": "/advertentiebeheer-utrecht",
+      "destination": "/meta-advertenties-utrecht",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/aanbod",
       "permanent": true
     }
   ]
