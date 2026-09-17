@@ -379,8 +379,8 @@
 
   /* HERO */
   .hero {
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: clamp(600px, 100vh, 900px);
+    min-height: clamp(600px, 100dvh, 900px);
     display: flex;
     flex-direction: column;
     justify-content: center;
