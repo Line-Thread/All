@@ -3,14 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WL128RHD9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7WL128RHD9');
-</script>
+<!-- Analytics laadt pas na cookietoestemming - zie /consent.js -->
+<script src="/consent.js" defer></script>
 <title>Pagina niet gevonden - Momenti</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
@@ -152,6 +146,16 @@
     justify-content: space-between;
     align-items: center;
   }
+  .footer-classifier {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    opacity: 0.55;
+    text-align: left;
+    max-width: 260px;
+    line-height: 1.65;
+    margin-top: 20px;
+  }
   .footer-copy { font-size: 11px; font-weight: 300; letter-spacing: 0.08em; opacity: 0.3; text-align: center; }
   .footer-links { display: flex; gap: 28px; list-style: none; }
   .footer-links a {
@@ -192,18 +196,20 @@
   <p>De link is mogelijk verouderd of verkeerd getypt. Geen zorgen - hieronder vind je snel je weg terug.</p>
   <div class="nf-links">
     <a href="/" class="nf-cta">Naar de homepage <span>→</span></a>
-    <a href="/#contact" class="nf-cta">Plan een accountanalyse <span>→</span></a>
+    <a href="/contact" class="nf-cta">Plan een accountanalyse <span>→</span></a>
   </div>
 </main>
 
 <footer>
-  <div class="footer-copy">Momenti - Havenweg 21T, Amersfoort - KvK 86398547 - Alle rechten voorbehouden.</div>
+  <div class="footer-classifier">Growth agency voor merken &eacute;n bedrijven. Wij runnen zelf het D2C-merk T&ecirc;te de Mule &mdash; maximaal 8 klanten tegelijk.</div>
+    <div class="footer-copy">Momenti - Bezoekadres Havenweg 21T, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
   <ul class="footer-links">
     <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
     <li><a href="/google-ads">Google Ads specialist</a></li>
     <li><a href="/threads-ads">Threads Ads specialist</a></li>
     <li><a href="/leadgeneratie">Leadgeneratie & CPL</a></li>
-    <li><a href="/pricing">Tarieven</a></li>
+    <li><a href="/aanbod">Tarieven</a></li>
+    <li><a href="#" data-consent-reopen>Cookievoorkeuren</a></li>
   </ul>
 </footer>
 
