@@ -1761,6 +1761,7 @@
     .ticker-track { animation: none; }
     .hero-badge, .hero-title, .hero-cta { animation: none; opacity: 1; }
     .hero-sub, .hero-proof { animation: none; opacity: 0.65; }
+    .hero-stats-strip { animation: none; opacity: 1; }
     .reveal { opacity: 1; transform: none; transition: none; }
     .mobile-cta { transition: none; }
     .form-error { transition: none; }
@@ -1864,15 +1865,15 @@
   </div>
   <div class="hero-stats-strip">
     <div class="hero-stat">
-      <span class="hero-stat-num">360%</span>
+      <span class="hero-stat-num" data-count-to="360" data-suffix="%">360%</span>
       <span class="hero-stat-label">Blended ROAS eigen merk, 12 maanden</span>
     </div>
     <div class="hero-stat">
-      <span class="hero-stat-num">€450k+</span>
+      <span class="hero-stat-num" data-count-to="450" data-prefix="&euro;" data-suffix="k+">&euro;450k+</span>
       <span class="hero-stat-label">Beheerd budget</span>
     </div>
     <div class="hero-stat">
-      <span class="hero-stat-num">Max. 8</span>
+      <span class="hero-stat-num" data-count-to="8" data-prefix="Max. ">Max. 8</span>
       <span class="hero-stat-label">Klanten tegelijk</span>
     </div>
   </div>
@@ -2148,6 +2149,29 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // Oplopende teller op de hero-statistiekenbalk
+  const countEls = document.querySelectorAll('.hero-stat-num[data-count-to]');
+  if (countEls.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    countEls.forEach(el => {
+      const target = parseInt(el.dataset.countTo, 10);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400;
+      el.textContent = prefix + '0' + suffix;
+      setTimeout(() => {
+        const start = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const value = Math.round(target * easeOutCubic(progress));
+          el.textContent = prefix + value + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }, 2100);
+    });
+  }
 
 </script>
 
