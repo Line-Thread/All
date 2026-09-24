@@ -145,6 +145,18 @@
   }
   .cta-final h2 em { font-style: italic; color: var(--tan); }
   .cta-final p:not(.eyebrow) { max-width: 600px; margin-bottom: 32px; }
+  .cta-final .over-cta-row { margin-bottom: 0; }
+  .cta-final .arthur-card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px) saturate(1.4);
+    -webkit-backdrop-filter: blur(12px) saturate(1.4);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    padding: 10px 28px 10px 10px;
+  }
+  .cta-final .arthur-card-photo { width: 72px; height: 72px; }
+  .cta-final .arthur-card-name { color: var(--cream); }
+  .cta-final .arthur-card-role { color: var(--tan); }
   .mosaic { display: grid; gap: 3px; border-radius: 16px; overflow: hidden; margin-top: 40px; }
   .mosaic.on-cream { background: var(--seam-light); }
   .mosaic.on-cream > * { background: var(--cream); }
@@ -2013,7 +2025,16 @@
   <p class="eyebrow reveal">Volgende stap</p>
   <h2 class="reveal">Klaar om te kijken<br>of het <em>past?</em></h2>
   <p class="reveal" style="max-width:600px;color:var(--text-muted-inverse)">Je krijgt eerst de accountanalyse (t.w.v. €250): wat er goed staat, waar geld weglekt en waar de kansen liggen &mdash; op papier, vóórdat er iets getekend wordt. Binnen één werkdag persoonlijk antwoord.</p>
-  <a href="/contact" class="hero-cta reveal">Vraag je accountanalyse aan <span class="hero-cta-arrow" aria-hidden="true">→</span></a>
+  <div class="over-cta-row reveal">
+    <div class="arthur-card">
+      <img src="/foto-arthur-1x1-web.png" alt="Arthur Heusdens, oprichter van Momenti" class="arthur-card-photo" width="72" height="72" loading="lazy">
+      <div class="arthur-card-text">
+        <div class="arthur-card-name">Arthur Heusdens</div>
+        <div class="arthur-card-role">Founder Tête de Mule &amp; Momenti</div>
+      </div>
+    </div>
+    <a href="/contact" class="hero-cta">Vraag je accountanalyse aan <span class="hero-cta-arrow" aria-hidden="true">→</span></a>
+  </div>
 </section>
 
 <!-- FOOTER -->
