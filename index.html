@@ -627,11 +627,47 @@
     opacity: 0.6;
     max-width: 22ch;
   }
+  .ownbrand-sectors {
+    max-width: 1160px;
+    margin: 56px auto 0;
+    padding-top: 40px;
+    border-top: 1px solid rgba(13,14,28,0.1);
+  }
+  .ownbrand-sectors-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tan-text);
+    margin-bottom: 18px;
+  }
+  .ownbrand-sectors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ownbrand-sector-tag {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--navy);
+    opacity: 0.75;
+    padding: 8px 18px;
+    border: 1px solid rgba(196,168,130,0.35);
+    border-radius: 100px;
+    background: var(--cream-dark);
+    white-space: nowrap;
+  }
   @media (max-width: 900px) {
     .ownbrand { padding: 72px 24px 48px; }
     .ownbrand-inner { grid-template-columns: 1fr; gap: 32px; }
     .ownbrand-body p { max-width: 100%; }
     .ownbrand-num { font-size: 44px; }
+    .ownbrand-sectors { margin-top: 40px; padding-top: 32px; }
+    .ownbrand-sectors-list { justify-content: center; }
+    .ownbrand-sector-tag { white-space: normal; }
   }
 
   .client-gallery-section {
@@ -1900,6 +1936,17 @@
       </div>
       <p style="margin-top:24px"><a href="/cases/tete-de-mule" style="color:var(--tan);border-bottom:1px solid rgba(196,168,130,0.35)">Lees de volledige case →</a></p>
     </div>
+  </div>
+  <div class="ownbrand-sectors">
+    <div class="ownbrand-sectors-label">12+ tevreden klanten in deze sectoren</div>
+    <ul class="ownbrand-sectors-list">
+      <li class="ownbrand-sector-tag">Interieur</li>
+      <li class="ownbrand-sector-tag">Recruitment &amp; Werving</li>
+      <li class="ownbrand-sector-tag">Dienstverlening (B2B + B2C)</li>
+      <li class="ownbrand-sector-tag">Fashion</li>
+      <li class="ownbrand-sector-tag">ANBI&rsquo;s</li>
+      <li class="ownbrand-sector-tag">Educatie</li>
+    </ul>
   </div>
 </section>
 
