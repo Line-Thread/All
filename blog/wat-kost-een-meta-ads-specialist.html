@@ -105,6 +105,45 @@
     color: var(--cream); text-decoration: none; opacity: 0.6; transition: opacity 0.2s;
   }
   .nav-lang:hover { opacity: 1; }
+  .nav-lang-switch { position: relative; }
+  .nav-lang { appearance: none; -webkit-appearance: none; background: transparent; font-family: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .nav-lang-switch.open .nav-lang { opacity: 1 !important; border-color: currentColor; }
+  .nav-lang-chevron { flex: 0 0 auto; transition: transform 0.25s cubic-bezier(0.23,1,0.32,1); }
+  .nav-lang-switch.open .nav-lang-chevron { transform: rotate(180deg); }
+  .nav-lang-menu {
+    position: absolute; top: calc(100% + 10px); right: 0; min-width: 148px;
+    background: rgba(13,14,28,0.72);
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    border: 1px solid rgba(196,168,130,0.18);
+    border-radius: 14px;
+    padding: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 12px 32px rgba(13,14,28,0.28);
+    display: flex; flex-direction: column; gap: 2px;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transform: translateY(-8px) scale(0.94);
+    transform-origin: top right;
+    transition: opacity 0.22s cubic-bezier(0.23,1,0.32,1), transform 0.22s cubic-bezier(0.23,1,0.32,1), visibility 0.22s;
+    z-index: 80;
+  }
+  .nav-lang-switch.open .nav-lang-menu { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1); }
+  .nav-lang-menu a, .nav-lang-menu .nav-lang-current {
+    display: block; padding: 9px 16px; border-radius: 9px;
+    font-size: 12px; font-weight: 400; letter-spacing: 0.02em; text-transform: none;
+    color: #fff; text-decoration: none; opacity: 0.7;
+    transition: opacity 0.15s, background 0.15s;
+  }
+  .nav-lang-menu a:hover { opacity: 1; background: rgba(255,255,255,0.1); }
+  .nav-lang-menu .nav-lang-current { opacity: 1; color: var(--tan); cursor: default; }
+  @media (prefers-reduced-motion: reduce) {
+    .nav-lang-menu { transition: opacity 0.12s; }
+    .nav-lang-switch.open .nav-lang-menu { transform: none; }
+    .nav-lang-chevron { transition: none; }
+  }
+  @media (prefers-contrast: more) {
+    .nav-lang-menu { background: var(--navy); backdrop-filter: none; -webkit-backdrop-filter: none; border: 2px solid var(--cream); }
+    .nav-lang-menu a, .nav-lang-menu .nav-lang-current { opacity: 1; }
+  }
 
   .article-wrap { max-width: 720px; margin: 0 auto; padding: 72px 40px 100px; }
   .crumbs { font-size: 11px; letter-spacing: 0.06em; opacity: 0.5; margin-bottom: 28px; }
@@ -237,7 +276,13 @@
     <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" width="159" height="32">
   </a>
   <div class="header-right">
-    <a href="/en/blog/cost-of-a-meta-ads-specialist" class="nav-lang" hreflang="en" lang="en">EN</a>
+    <div class="nav-lang-switch">
+      <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">NL<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-lang-menu" role="menu">
+      <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
+      <a href="/en/blog/cost-of-a-meta-ads-specialist" hreflang="en" lang="en" role="menuitem">English</a>
+    </div>
+    </div>
     <a href="/blog" class="back-link">← Naar de blog</a>
   </div>
 </header>
@@ -328,6 +373,33 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+  function toggleLangMenu(btn) {
+    var wrap = btn.closest('.nav-lang-switch');
+    var isOpen = wrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('.nav-lang-switch.open').forEach(function (w) {
+      if (!w.contains(e.target)) {
+        w.classList.remove('open');
+        var b = w.querySelector('.nav-lang');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-lang-switch.open').forEach(function (w) {
+        w.classList.remove('open');
+        var b = w.querySelector('.nav-lang');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
