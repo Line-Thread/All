@@ -12,7 +12,21 @@
 
   var GA_ID = 'G-7WL128RHD9';
   var KEY = 'momenti-consent';
-  var PRIVACY_URL = '/privacy';
+  var IS_EN = window.location.pathname === '/en' || window.location.pathname.indexOf('/en/') === 0;
+  var PRIVACY_URL = IS_EN ? '/en/privacy-policy' : '/privacy';
+  var T = IS_EN ? {
+    title: 'Cookies',
+    body: 'We only use analytical cookies to see how the site is used. Nothing is loaded until you’ve made a choice. More about this in our ',
+    linkText: 'privacy policy',
+    accept: 'Accept',
+    deny: 'Necessary only'
+  } : {
+    title: 'Cookies',
+    body: 'We gebruiken alleen analytische cookies om te zien hoe de site gebruikt wordt. Er wordt niets geladen zolang je geen keuze hebt gemaakt. Meer hierover in ons ',
+    linkText: 'privacybeleid',
+    accept: 'Accepteren',
+    deny: 'Alleen noodzakelijk'
+  };
 
   function readChoice() {
     try { return window.localStorage.getItem(KEY); } catch (e) { return null; }
@@ -86,18 +100,15 @@
 
     var h = document.createElement('h2');
     h.id = 'mc-title';
-    h.textContent = 'Cookies';
+    h.textContent = T.title;
 
     var p = document.createElement('p');
     p.id = 'mc-desc';
-    p.appendChild(document.createTextNode(
-      'We gebruiken alleen analytische cookies om te zien hoe de site gebruikt wordt. ' +
-      'Er wordt niets geladen zolang je geen keuze hebt gemaakt. Meer hierover in ons '
-    ));
+    p.appendChild(document.createTextNode(T.body));
     var a = document.createElement('a');
     a.className = 'mc-link';
     a.href = PRIVACY_URL;
-    a.textContent = 'privacybeleid';
+    a.textContent = T.linkText;
     p.appendChild(a);
     p.appendChild(document.createTextNode('.'));
 
@@ -107,7 +118,7 @@
     var accept = document.createElement('button');
     accept.type = 'button';
     accept.className = 'mc-btn mc-accept';
-    accept.textContent = 'Accepteren';
+    accept.textContent = T.accept;
     accept.addEventListener('click', function () {
       saveChoice('granted');
       removeBanner();
@@ -117,7 +128,7 @@
     var deny = document.createElement('button');
     deny.type = 'button';
     deny.className = 'mc-btn mc-deny';
-    deny.textContent = 'Alleen noodzakelijk';
+    deny.textContent = T.deny;
     deny.addEventListener('click', function () {
       saveChoice('denied');
       removeBanner();
