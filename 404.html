@@ -183,35 +183,84 @@
 <body>
 
 <header class="page-header">
-  <a href="/" class="logo-link">
+  <a href="/" class="logo-link" id="nf-logo-link">
     <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" width="159" height="32">
   </a>
-  <a href="/" class="back-link">← Terug naar home</a>
+  <a href="/" class="back-link" id="nf-back-link">← Terug naar home</a>
 </header>
 
 <main class="nf">
-  <div class="nf-label">Pagina niet gevonden</div>
+  <div class="nf-label" id="nf-label">Pagina niet gevonden</div>
   <div class="nf-code">4<em>0</em>4</div>
-  <h1>Deze pagina hebben we<br>niet kunnen vinden.</h1>
-  <p>De link is mogelijk verouderd of verkeerd getypt. Geen zorgen - hieronder vind je snel je weg terug.</p>
+  <h1 id="nf-h1">Deze pagina hebben we<br>niet kunnen vinden.</h1>
+  <p id="nf-p">De link is mogelijk verouderd of verkeerd getypt. Geen zorgen - hieronder vind je snel je weg terug.</p>
   <div class="nf-links">
-    <a href="/" class="nf-cta">Naar de homepage <span>→</span></a>
-    <a href="/contact" class="nf-cta">Plan een accountanalyse <span>→</span></a>
+    <a href="/" class="nf-cta" id="nf-cta-home">Naar de homepage <span>→</span></a>
+    <a href="/contact" class="nf-cta" id="nf-cta-contact">Plan een accountanalyse <span>→</span></a>
   </div>
 </main>
 
 <footer>
-  <div class="footer-classifier">Growth agency voor merken &eacute;n bedrijven. Wij runnen zelf het D2C-merk T&ecirc;te de Mule &mdash; maximaal 8 klanten tegelijk.</div>
-    <div class="footer-copy">Momenti - Bezoekadres Havenweg 21T, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
-  <ul class="footer-links">
+  <div class="footer-classifier" id="nf-footer-classifier">Growth agency voor merken &eacute;n bedrijven. Wij runnen zelf het D2C-merk T&ecirc;te de Mule &mdash; maximaal 8 klanten tegelijk.</div>
+    <div class="footer-copy" id="nf-footer-copy">Momenti - Bezoekadres Havenweg 21T, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
+  <ul class="footer-links" id="nf-footer-links">
     <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
     <li><a href="/google-ads">Google Ads specialist</a></li>
     <li><a href="/threads-ads">Threads Ads specialist</a></li>
-    <li><a href="/leadgeneratie">Leadgeneratie & CPL</a></li>
+    <li><a href="/leadgeneratie">Leadgeneratie &amp; CPL</a></li>
     <li><a href="/aanbod">Tarieven</a></li>
     <li><a href="#" data-consent-reopen>Cookievoorkeuren</a></li>
   </ul>
 </footer>
+
+<script>
+  // Eén gedeeld 404-bestand voor NL en EN: detecteert /en/ via het pad, zelfde patroon als consent.js
+  (function () {
+    var IS_EN = location.pathname === '/en' || location.pathname.indexOf('/en/') === 0;
+    if (!IS_EN) return;
+
+    document.documentElement.lang = 'en';
+    document.title = 'Page not found - Momenti';
+
+    document.getElementById('nf-logo-link').href = '/en/';
+    var backLink = document.getElementById('nf-back-link');
+    backLink.href = '/en/';
+    backLink.textContent = '← Back to home';
+
+    document.getElementById('nf-label').textContent = 'Page not found';
+    document.getElementById('nf-h1').innerHTML = "We couldn't find<br>this page.";
+    document.getElementById('nf-p').textContent = "The link may be outdated or mistyped. No worries - you'll find your way back quickly below.";
+
+    var ctaHome = document.getElementById('nf-cta-home');
+    ctaHome.href = '/en/';
+    ctaHome.innerHTML = 'To the homepage <span>→</span>';
+    var ctaContact = document.getElementById('nf-cta-contact');
+    ctaContact.href = '/en/contact';
+    ctaContact.innerHTML = 'Book an account analysis <span>→</span>';
+
+    document.getElementById('nf-footer-classifier').innerHTML = 'Growth agency for brands and businesses alike. We run our own D2C brand T&ecirc;te de Mule &mdash; a maximum of 8 clients at a time.';
+    document.getElementById('nf-footer-copy').textContent = 'Momenti - Visiting address Havenweg 21T, Amersfoort, Netherlands - KvK 86398547 - VAT NL004080780B66 - All rights reserved.';
+
+    var footerLinks = document.getElementById('nf-footer-links').getElementsByTagName('a');
+    var map = {
+      '/meta-ads': ['/en/meta-ads', 'Outsource Meta Ads'],
+      '/google-ads': ['/en/google-ads', 'Google Ads specialist'],
+      '/threads-ads': ['/en/threads-ads', 'Threads Ads specialist'],
+      '/leadgeneratie': ['/en/lead-generation', 'Lead generation & CPL'],
+      '/aanbod': ['/en/services', 'Pricing']
+    };
+    for (var i = 0; i < footerLinks.length; i++) {
+      var a = footerLinks[i];
+      var key = a.getAttribute('href');
+      if (map[key]) {
+        a.href = map[key][0];
+        a.textContent = map[key][1];
+      } else if (a.hasAttribute('data-consent-reopen')) {
+        a.textContent = 'Cookie preferences';
+      }
+    }
+  })();
+</script>
 
 </body>
 </html>
