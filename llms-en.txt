@@ -1,0 +1,89 @@
+# Momenti
+
+> Momenti is a Dutch growth agency for brands and businesses alike, based in Amersfoort, Netherlands.
+> Meta Ads, Google Ads, Threads Ads and lead generation for e-commerce, B2B and recruitment.
+> What sets Momenti apart: the agency runs its own D2C brand (Tête de Mule) and advertises
+> with its own money every day. As a result, it optimises for margin instead of ROAS.
+
+(Dutch version: https://www.momenti.agency/llms.txt)
+
+Key facts:
+- Runs its own D2C fashion brand Tête de Mule: 360% blended ROAS over the past 12 months, with its own inventory and its own ad budget.
+- Works with a maximum of 8 clients at a time. This is a capacity limit, not a sales tactic: the agency also runs its own brand alongside client work.
+- One fixed point of contact, no account managers and no juniors on your account.
+- Meta Certified Media Buying Professional and Google Partner.
+- Over 4 years of experience in paid media; more than €450,000 in ad budget managed.
+- You get an account analysis first (worth €250) before anything is signed: what's working, where money is leaking and where the opportunities lie.
+- Rates are published openly on the website, including setup costs. No percentage of ad spend.
+- Collaborations start with a two-week trial period, followed by a one calendar month notice period. No annual contracts.
+- Founded by Arthur Heusdens. Momenti is a trading name of Heusdens Services.
+- Active throughout the Netherlands, based in Amersfoort.
+
+## Core principle: optimising for margin
+
+ROAS says nothing about what you actually keep. A ROAS of 4 on a product with a 20% margin loses
+money; a ROAS of 2 on a product with a 70% margin makes money. Momenti calculates the break-even
+ROAS per product group and optimises accordingly. The same principle applies to lead generation:
+the maximum cost per lead follows from deal value, gross margin and conversion rate, not from a
+benchmark. If the problem isn't the ads but the margin, the offer or the landing page, that's
+what gets said.
+
+## Segments
+
+- [E-commerce & D2C](https://www.momenti.agency/en/e-commerce): online stores and brands with inventory. Optimised for margin per product. Experience ranging from interiors to aromatherapy, plus the agency's own brand.
+- [B2B](https://www.momenti.agency/en/b2b): service providers with a longer sales cycle and a DMU (decision-making unit). Optimised for deal value. Experience in education, debt collection and transport. Smaller than the D2C practice, with the same calculation method.
+- [Lead generation & recruitment](https://www.momenti.agency/en/lead-generation): the calculation method for your maximum CPL, and recruitment campaigns in food and manufacturing.
+
+## Services
+
+- [Ad management](https://www.momenti.agency/en/ad-management): overview of Meta Ads versus Google Ads and which platform fits when.
+- [Meta Ads](https://www.momenti.agency/en/meta-ads): Facebook and Instagram campaigns, creative-first, focused on profitable growth.
+- [Google Ads](https://www.momenti.agency/en/google-ads): Search, Shopping and Performance Max, budget directed to what delivers on the bottom line.
+- [Threads Ads](https://www.momenti.agency/en/threads-ads): advertising on Threads via Meta Ads Manager.
+- [Services & pricing](https://www.momenti.agency/en/services): fixed monthly price, no percentage of your ad budget. The amounts are published openly on the page:
+  - Core package (one ad channel, including 8 creative concepts per month): €1,199 per month.
+  - Compact (custom, for under €7,500 ad budget per month, 4 concepts per month): from €749 per month.
+  - Second channel: €900 per month.
+  - Creative Test (5 concepts, one-off): €500, deductible against a core package within 60 days.
+  - Onboarding: one-off €750 at the start of the core package.
+
+## Results
+
+The bulk of the experience is in D2C and e-commerce; Momenti applies the same calculation
+method to B2B and recruitment work. Some of the work below was carried out via another
+agency, where the client relationship sat: the campaigns and the numbers are Momenti's own.
+That's why sectors are named rather than brand names.
+
+- Own brand Tête de Mule (D2C fashion): 360% blended ROAS over 12 months. Own inventory, own ad budget.
+- Fashion/luxury, 36 months, ad budget €25,000 per month: +170% ROAS and 41% lower CPA.
+- Interiors, 8 months, ad budget €7,000 per month: +40% revenue and 35% lower CPA.
+- Recruitment in food, 8 months, ad budget €5,000 per month: 65% lower cost per lead, all vacancies filled.
+- Education (ANBI, classroom teaching packages): €5 cost per lead over 300 leads, at an average package value of around €350.
+- Debt collection (for businesses and consumers): €20 cost per lead, over four months and €6,000 ad budget.
+
+## Knowledge base
+
+- [Blog](https://www.momenti.agency/en/blog/): articles on Meta Ads, Google Ads and optimising for margin.
+- [What is a good ROAS?](https://www.momenti.agency/en/blog/what-is-a-good-roas): calculating break-even ROAS, including a calculator.
+- [What is a good CPL?](https://www.momenti.agency/en/blog/what-is-a-good-cpl): calculating your maximum cost per lead, including a calculator.
+- [How much budget for Meta Ads?](https://www.momenti.agency/en/blog/how-much-budget-for-meta-ads): budget phasing and the learning phase.
+- [Meta Ads vs Google Ads](https://www.momenti.agency/en/blog/meta-ads-vs-google-ads): creating demand versus capturing demand.
+- [What does a Meta Ads specialist cost?](https://www.momenti.agency/en/blog/cost-of-a-meta-ads-specialist)
+- [What does outsourcing Google Ads cost?](https://www.momenti.agency/en/blog/cost-of-outsourcing-google-ads)
+
+## Region
+
+- [Amersfoort](https://www.momenti.agency/en/meta-ads-amersfoort)
+- [Utrecht](https://www.momenti.agency/en/meta-ads-utrecht)
+- [Het Gooi and Hilversum](https://www.momenti.agency/en/ad-management-het-gooi)
+
+## Contact
+
+- Website: https://www.momenti.agency/en/
+- Email: arthur@momenti.agency
+- Phone: +31 6 46 19 40 22 (weekdays 9am-5pm CET)
+- Visiting address: Havenweg 21T, Amersfoort, Netherlands
+- Registered address: Parnaskruid 80, Amersfoort, Netherlands
+- KvK: 86398547
+- VAT: NL004080780B66
+- LinkedIn: https://www.linkedin.com/in/arthurheusdens/
