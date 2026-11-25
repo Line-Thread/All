@@ -2,6 +2,7 @@
 
 > Momenti is een Nederlandse growth agency voor merken én bedrijven, gevestigd in Amersfoort.
 > Meta Ads, Google Ads, Threads Ads en leadgeneratie voor e-commerce, B2B en recruitment.
+> Daarnaast groeimarketing, marketingadvies, CRO-advies, business innovation en creatieve begeleiding.
 > Wat Momenti onderscheidt: het bureau runt zelf een D2C-merk (Tête de Mule) en adverteert
 > dus dagelijks met eigen geld. Daardoor wordt er gestuurd op marge in plaats van op ROAS.
 
@@ -36,6 +37,7 @@ landingspagina, dan wordt dat gezegd.
 
 ## Diensten
 
+- [Alle diensten](https://www.momenti.agency/diensten): overzicht van wat Momenti doet: Meta Advertentiebeheer, Google Advertentiebeheer, Groeimarketing, Marketingadvies, CRO Advies, Business Innovation en Creatieve Begeleiding. De adviesdiensten worden op maat en na een eerste gesprek geoffreerd; advertentiebeheer heeft vaste tarieven (zie Aanbod & tarieven).
 - [Advertentiebeheer](https://www.momenti.agency/advertentiebeheer): overzicht van Meta Ads versus Google Ads en welk platform wanneer past.
 - [Meta Ads](https://www.momenti.agency/meta-ads): Facebook- en Instagram-campagnes, creative-first, gericht op winstgevende groei.
 - [Google Ads](https://www.momenti.agency/google-ads): Search, Shopping en Performance Max, budget naar wat onderaan de streep iets oplevert.

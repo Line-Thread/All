@@ -2,6 +2,7 @@
 
 > Momenti is a Dutch growth agency for brands and businesses alike, based in Amersfoort, Netherlands.
 > Meta Ads, Google Ads, Threads Ads and lead generation for e-commerce, B2B and recruitment.
+> Also growth marketing, marketing advice, CRO advice, business innovation and creative direction.
 > What sets Momenti apart: the agency runs its own D2C brand (Tête de Mule) and advertises
 > with its own money every day. As a result, it optimises for margin instead of ROAS.
 
@@ -36,11 +37,12 @@ what gets said.
 
 ## Services
 
+- [All services](https://www.momenti.agency/en/our-services): overview of what Momenti does: Meta Ads Management, Google Ads Management, Growth Marketing, Marketing Advice, CRO Advice, Business Innovation and Creative Direction. The advisory services are quoted tailored, after an initial conversation; ad management has fixed prices (see Pricing).
 - [Ad management](https://www.momenti.agency/en/ad-management): overview of Meta Ads versus Google Ads and which platform fits when.
 - [Meta Ads](https://www.momenti.agency/en/meta-ads): Facebook and Instagram campaigns, creative-first, focused on profitable growth.
 - [Google Ads](https://www.momenti.agency/en/google-ads): Search, Shopping and Performance Max, budget directed to what delivers on the bottom line.
 - [Threads Ads](https://www.momenti.agency/en/threads-ads): advertising on Threads via Meta Ads Manager.
-- [Services & pricing](https://www.momenti.agency/en/services): fixed monthly price, no percentage of your ad budget. The amounts are published openly on the page:
+- [Pricing](https://www.momenti.agency/en/services): fixed monthly price, no percentage of your ad budget. The amounts are published openly on the page:
   - Core package (one ad channel, including 8 creative concepts per month): €1,199 per month.
   - Compact (custom, for under €7,500 ad budget per month, 4 concepts per month): from €749 per month.
   - Second channel: €900 per month.

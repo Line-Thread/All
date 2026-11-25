@@ -977,6 +977,79 @@
     opacity: 0.6;
   }
 
+  /* DIENSTEN */
+  .diensten h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+  .diensten h2 em { font-style: italic; color: var(--tan); }
+  .diensten-list {
+    list-style: none;
+    margin: 48px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(40px, 6vw, 96px);
+  }
+  .diensten-list li { border-top: 1px solid rgba(255,255,255,0.1); }
+  .diensten-list li:nth-last-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .diensten-list a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 24px;
+    padding: 24px 0;
+    color: var(--cream);
+    text-decoration: none;
+  }
+  .d-name {
+    grid-column: 1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.15;
+    transition: color 0.2s var(--ease-out);
+  }
+  .d-desc {
+    grid-column: 1;
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-muted-inverse);
+  }
+  .d-arrow {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    color: var(--tan);
+    font-size: 16px;
+    opacity: 0.45;
+    transition: transform 0.25s var(--ease-out), opacity 0.2s var(--ease-out);
+  }
+  .diensten-list .d-all .d-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tan);
+  }
+  .diensten-list a:focus-visible { outline: 2px solid var(--tan); outline-offset: 4px; }
+  @media (hover: hover) and (pointer: fine) {
+    .diensten-list a:hover .d-name { color: var(--tan); }
+    .diensten-list a:hover .d-arrow { opacity: 1; transform: translateX(4px); }
+  }
+  @media (max-width: 760px) {
+    .diensten-list { grid-template-columns: 1fr; }
+    .diensten-list li:nth-last-child(-n+2) { border-bottom: 0; }
+    .diensten-list li:last-child { border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .d-name { font-size: 24px; }
+  }
+
   /* VOOR WIE */
   .voorwie {
     background: var(--cream);
@@ -1908,6 +1981,7 @@
     .mobile-cta { transition: none; }
     .form-error { transition: none; }
   }
+@media (max-width:1180px){.nav-links{display:none}.nav-hamburger{display:flex}}
 </style>
 </head>
 <body>
@@ -1960,6 +2034,7 @@
     </div>
   </div>
   <button class="overlay-close" onclick="closeMenu()" aria-label="Menu sluiten">&#x2715;</button>
+  <a href="/diensten" onclick="closeMenu()">Diensten</a>
   <a href="/aanbod" onclick="closeMenu()">Aanbod</a>
   <a href="#aanpak" onclick="closeMenu()">Werkwijze</a>
   <a href="/cases/tete-de-mule" onclick="closeMenu()">Cases</a>
@@ -1978,6 +2053,7 @@
     <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" class="logo-light" width="119" height="24">
   </a>
   <ul class="nav-links">
+    <li><a href="/diensten">Diensten</a></li>
     <li><a href="/aanbod">Aanbod</a></li>
     <li><a href="#aanpak">Werkwijze</a></li>
     <li><a href="/cases/tete-de-mule">Cases</a></li>
@@ -2080,6 +2156,22 @@
       </ul>
     </div>
   </div>
+</section>
+
+<!-- DIENSTEN -->
+<section class="diensten s-navy" id="diensten">
+  <p class="eyebrow reveal">Diensten</p>
+  <h2 class="reveal">Waar we je mee <em>helpen.</em></h2>
+  <ul class="diensten-list reveal">
+    <li><a href="/diensten#meta-advertentiebeheer"><span class="d-name">Meta Advertentiebeheer</span><span class="d-desc">Facebook, Instagram en Threads, gestuurd op marge.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="/diensten#google-advertentiebeheer"><span class="d-name">Google Advertentiebeheer</span><span class="d-desc">Search, Shopping en Performance Max.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="/diensten#groeimarketing"><span class="d-name">Groeimarketing</span><span class="d-desc">Waar de volgende euro het meeste doet.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="/diensten#marketingadvies"><span class="d-name">Marketingadvies</span><span class="d-desc">Een senior blik op je marketing, zonder vaste kracht.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="/diensten#cro-advies"><span class="d-name">CRO Advies</span><span class="d-desc">Meer aanvragen en verkopen uit je bestaande verkeer.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="/diensten#business-innovation"><span class="d-name">Business Innovation</span><span class="d-desc">Sparren over groei buiten je huidige aanbod.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="/diensten#creatieve-begeleiding"><span class="d-name">Creatieve Begeleiding</span><span class="d-desc">Het idee achter de advertentie.</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+    <li class="d-all"><a href="/diensten"><span class="d-name">Alle diensten</span><span class="d-arrow" aria-hidden="true">→</span></a></li>
+  </ul>
 </section>
 
 <!-- VOOR WIE -->
@@ -2235,6 +2327,7 @@
     <div class="footer-col">
       <div class="footer-col-label">Diensten</div>
       <ul class="footer-links">
+        <li><a href="/diensten">Alle diensten</a></li>
         <li><a href="/aanbod">Aanbod &amp; tarieven</a></li>
         <li><a href="/advertentiebeheer">Advertentiebeheer</a></li>
         <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
@@ -2290,7 +2383,7 @@
 
   // Nav kleur op donkere secties
   const nav = document.querySelector('nav');
-  const darkSections = document.querySelectorAll('.hero, .aanpak, .cta-final, footer');
+  const darkSections = document.querySelectorAll('.hero, .diensten, .aanpak, .cta-final, footer');
 
   function updateNavColor() {
     const navY = 120;
