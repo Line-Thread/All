@@ -241,6 +241,17 @@ td .sub{display:block;font-size:12px;color:var(--text-muted);line-height:1.4;mar
 
 /* DIENSTEN */
 [id]{scroll-margin-top:150px}
+/* foto naast de intro van Advertenties */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,min(520px,45%));gap:var(--s16);align-items:center}
+.split figure{margin:0}
+.split img{display:block;width:100%;height:auto;border-radius:var(--radius-lg);
+  box-shadow:0 4px 24px rgba(13,14,28,.06),0 24px 60px rgba(13,14,28,.12)}
+@media (max-width:900px){.split{grid-template-columns:minmax(0,1fr);gap:var(--s6)}}
+/* sfeerbeeld links bij Groei en advies (Unsplash, Bryony Elena) */
+.split.split--flip{grid-template-columns:minmax(0,min(380px,38%)) minmax(0,1fr)}
+.split--flip figure{order:-1}
+.s-navy .split img{box-shadow:0 4px 20px rgba(0,0,0,.18);outline:1px solid rgba(255,255,255,.08);outline-offset:-1px}
+@media (max-width:900px){.split.split--flip{grid-template-columns:minmax(0,1fr)}.split--flip figure{order:0;max-width:420px}}
 .tile h3{margin-bottom:var(--s3)}
 .tile .more{margin:var(--s6) 0 0}
 .more a{color:var(--tan-text);border-bottom:1px solid var(--border-accent);text-decoration:none;font-size:11px;font-weight:500;
@@ -468,9 +479,16 @@ footer{background:var(--navy);color:var(--cream);padding:56px 60px 44px;display:
 
 <section class="s-cream reveal" id="advertenties">
   <div class="inner">
-    <p class="eyebrow">Advertenties</p>
-    <h2>Beheer van je <em class="hl">advertentiekanalen</em></h2>
-    <p class="lede">Het kernpakket: volledig beheer van één kanaal, inclusief 8 nieuwe creative-concepten per maand. Een vast maandbedrag, geen percentage van je budget.</p>
+    <div class="split">
+      <div>
+        <p class="eyebrow">Advertenties</p>
+        <h2>Beheer van je <em class="hl">advertentiekanalen</em></h2>
+        <p class="lede">Het kernpakket: volledig beheer van één kanaal, inclusief 8 nieuwe creative-concepten per maand. Een vast maandbedrag, geen percentage van je budget.</p>
+      </div>
+      <figure>
+        <img src="/foto-arthur-werk-web.jpg" srcset="/foto-arthur-werk-web-640.jpg 640w, /foto-arthur-werk-web.jpg 1200w" sizes="(max-width:620px) calc(100vw - 40px), (max-width:900px) calc(100vw - 120px), 520px" alt="Arthur Heusdens maakt aantekeningen, met Meta Advertentiebeheer open op het scherm" width="1200" height="900" loading="lazy">
+      </figure>
+    </div>
 
     <div class="mosaic m2">
       <div class="tile" id="meta-advertentiebeheer">
@@ -502,9 +520,16 @@ footer{background:var(--navy);color:var(--cream);padding:56px 60px 44px;display:
 
 <section class="s-navy reveal" id="groei-en-advies">
   <div class="inner">
-    <p class="eyebrow">Groei en advies</p>
-    <h2>Als advertenties niet <em class="hl">het enige</em> zijn</h2>
-    <p class="lede">Advertenties zijn één hefboom. Voor de rest van je groei werken we op afspraak en op maat, na een eerste gesprek.</p>
+    <div class="split split--flip">
+      <div>
+        <p class="eyebrow">Groei en advies</p>
+        <h2>Als advertenties niet <em class="hl">het enige</em> zijn</h2>
+        <p class="lede">Advertenties zijn één hefboom. Voor de rest van je groei werken we op afspraak en op maat, na een eerste gesprek.</p>
+      </div>
+      <figure>
+        <img src="/sfeer-bankierslamp-web.jpg" srcset="/sfeer-bankierslamp-web-600.jpg 600w, /sfeer-bankierslamp-web.jpg 900w" sizes="(max-width:620px) min(420px, calc(100vw - 40px)), (max-width:900px) 420px, 380px" alt="" width="900" height="1125" loading="lazy">
+      </figure>
+    </div>
 
     <div class="mosaic m2">
       <div class="tile" id="groeimarketing">

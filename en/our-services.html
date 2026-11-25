@@ -241,6 +241,17 @@ td .sub{display:block;font-size:12px;color:var(--text-muted);line-height:1.4;mar
 
 /* DIENSTEN */
 [id]{scroll-margin-top:150px}
+/* photo next to the Advertising intro */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,min(520px,45%));gap:var(--s16);align-items:center}
+.split figure{margin:0}
+.split img{display:block;width:100%;height:auto;border-radius:var(--radius-lg);
+  box-shadow:0 4px 24px rgba(13,14,28,.06),0 24px 60px rgba(13,14,28,.12)}
+@media (max-width:900px){.split{grid-template-columns:minmax(0,1fr);gap:var(--s6)}}
+/* atmosphere image on the left of Growth and advice (Unsplash, Bryony Elena) */
+.split.split--flip{grid-template-columns:minmax(0,min(380px,38%)) minmax(0,1fr)}
+.split--flip figure{order:-1}
+.s-navy .split img{box-shadow:0 4px 20px rgba(0,0,0,.18);outline:1px solid rgba(255,255,255,.08);outline-offset:-1px}
+@media (max-width:900px){.split.split--flip{grid-template-columns:minmax(0,1fr)}.split--flip figure{order:0;max-width:420px}}
 .tile h3{margin-bottom:var(--s3)}
 .tile .more{margin:var(--s6) 0 0}
 .more a{color:var(--tan-text);border-bottom:1px solid var(--border-accent);text-decoration:none;font-size:11px;font-weight:500;
@@ -468,9 +479,16 @@ footer{background:var(--navy);color:var(--cream);padding:56px 60px 44px;display:
 
 <section class="s-cream reveal" id="advertising">
   <div class="inner">
-    <p class="eyebrow">Advertising</p>
-    <h2>Managing your <em class="hl">ad channels</em></h2>
-    <p class="lede">The core package: full management of one ad channel, including 8 new creative concepts per month. A fixed monthly fee, not a percentage of your budget.</p>
+    <div class="split">
+      <div>
+        <p class="eyebrow">Advertising</p>
+        <h2>Managing your <em class="hl">ad channels</em></h2>
+        <p class="lede">The core package: full management of one ad channel, including 8 new creative concepts per month. A fixed monthly fee, not a percentage of your budget.</p>
+      </div>
+      <figure>
+        <img src="/foto-arthur-werk-web.jpg" srcset="/foto-arthur-werk-web-640.jpg 640w, /foto-arthur-werk-web.jpg 1200w" sizes="(max-width:620px) calc(100vw - 40px), (max-width:900px) calc(100vw - 120px), 520px" alt="Arthur Heusdens taking notes with Meta Ads Manager open on the screen" width="1200" height="900" loading="lazy">
+      </figure>
+    </div>
 
     <div class="mosaic m2">
       <div class="tile" id="meta-ads-management">
@@ -502,9 +520,16 @@ footer{background:var(--navy);color:var(--cream);padding:56px 60px 44px;display:
 
 <section class="s-navy reveal" id="growth-and-advice">
   <div class="inner">
-    <p class="eyebrow">Growth and advice</p>
-    <h2>When ads aren&rsquo;t <em class="hl">the only thing</em></h2>
-    <p class="lede">Ads are one lever. For the rest of your growth we work by appointment and tailored to you, after an initial conversation.</p>
+    <div class="split split--flip">
+      <div>
+        <p class="eyebrow">Growth and advice</p>
+        <h2>When ads aren&rsquo;t <em class="hl">the only thing</em></h2>
+        <p class="lede">Ads are one lever. For the rest of your growth we work by appointment and tailored to you, after an initial conversation.</p>
+      </div>
+      <figure>
+        <img src="/sfeer-bankierslamp-web.jpg" srcset="/sfeer-bankierslamp-web-600.jpg 600w, /sfeer-bankierslamp-web.jpg 900w" sizes="(max-width:620px) min(420px, calc(100vw - 40px)), (max-width:900px) 420px, 380px" alt="" width="900" height="1125" loading="lazy">
+      </figure>
+    </div>
 
     <div class="mosaic m2">
       <div class="tile" id="growth-marketing">
