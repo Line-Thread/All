@@ -233,6 +233,7 @@ td .sub{display:block;font-size:12px;color:var(--text-muted);line-height:1.4;mar
 .sign{font-family:var(--font-display);font-style:italic;font-size:24px;margin-top:var(--s10)}
 
 @media (max-width:900px){.m3,.m2{grid-template-columns:1fr}}
+@media (max-width:900px){body>section:first-of-type{padding-top:96px}}
 @media (max-width:620px){
   section{padding:var(--s16) 20px}
   .tile{padding:var(--s8)}
@@ -270,16 +271,18 @@ td .sub{display:block;font-size:12px;color:var(--text-muted);line-height:1.4;mar
 
 /* TICKER */
 .ticker-wrap{position:sticky;top:0;z-index:101;background:var(--navy);color:var(--tan);
-  padding:10px 0;overflow:hidden;white-space:nowrap}
+  height:46px;display:flex;align-items:center;overflow:hidden;white-space:nowrap}
 .ticker-track{display:inline-block;animation:ticker 48s linear infinite;font-family:var(--font-body);
   font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase}
 .ticker-track span{margin:0 40px}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* NAV */
-nav{position:fixed;top:58px;left:0;right:0;z-index:100;display:flex;justify-content:space-between;
+nav{position:fixed;top:46px;left:0;right:0;z-index:100;display:flex;justify-content:space-between;
   align-items:center;height:78px;padding:0 60px;
   transition:color .3s,background .4s,backdrop-filter .4s,box-shadow .4s,border-color .4s}
+@media (max-width:900px){nav{height:64px}}
+@media (max-width:620px){nav{padding:0 24px}}
 .nav-logo{text-decoration:none;display:inline-flex;align-items:center;position:relative}
 .nav-logo img{height:24px;width:auto;display:block;transition:opacity .4s ease}
 .nav-logo img.logo-light{position:absolute;left:0;top:50%;transform:translateY(-50%);opacity:0;pointer-events:none}

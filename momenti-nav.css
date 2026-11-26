@@ -1,11 +1,11 @@
 /* Hoofdmenu voor de service-, blog- en juridische pagina's.
    Zelfde menu als op de homepage, Diensten en Aanbod. Alles is gescoped
    zodat broodkruimels (<nav class="crumbs">) ongemoeid blijven. */
-.ticker-wrap{position:sticky;top:0;z-index:101;background:#0D0E1C;color:#C4A882;padding:10px 0;overflow:hidden;white-space:nowrap;line-height:1.7}
+.ticker-wrap{position:sticky;top:0;z-index:101;background:#0D0E1C;color:#C4A882;height:46px;display:flex;align-items:center;overflow:hidden;white-space:nowrap;line-height:1.7}
 .ticker-track{display:inline-block;animation:momentiTicker 48s linear infinite;font-family:'DM Sans','Helvetica Neue',Helvetica,sans-serif;font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase}
 .ticker-track span{margin:0 40px}
 @keyframes momentiTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-nav.site-nav{position:fixed;top:58px;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;height:78px;margin:0;padding:0 60px;max-width:none;
+nav.site-nav{position:fixed;top:46px;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;height:78px;margin:0;padding:0 60px;max-width:none;
   font-family:'DM Sans','Helvetica Neue',Helvetica,sans-serif;transition:color .3s,background .4s,backdrop-filter .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
 .site-nav .nav-logo{text-decoration:none;display:inline-flex;align-items:center;position:relative;border:0}
 .site-nav .nav-logo img{height:24px;width:auto;display:block;margin:0;transition:opacity .4s ease}
@@ -61,14 +61,18 @@ nav.site-nav{position:fixed;top:58px;left:0;right:0;z-index:100;display:flex;jus
 .nav-lang-menu a,.nav-lang-menu .nav-lang-current{display:block;padding:9px 16px;border-radius:9px;font-size:12px;font-weight:400;letter-spacing:.02em;text-transform:none;color:#fff;text-decoration:none;opacity:.7;line-height:1.5;transition:opacity .15s,background .15s}
 .nav-lang-menu a:hover{opacity:1;background:rgba(255,255,255,.1)}
 .nav-lang-menu .nav-lang-current{opacity:1;color:#C4A882;cursor:default}
-.site-nav-space{height:98px}
+.site-nav-space{height:86px}
 /* Zelfde accentkleur als op de hoofdpagina's: leesbaar op crème. */
 h1 em,.page-label,.article-label,.post-meta,.calc-label{color:#7D5F38}
+.post-card .read-more,.mini-case-sector,.nf-label{color:#7D5F38}
+.mini-case:nth-child(2) .mini-case-sector{color:#C4A882}
 a:where(:not([class]):not([style])){color:inherit}
 @media (max-width:1180px){.site-nav .nav-links{display:none}.site-nav .nav-hamburger{display:flex}}
 @media (max-width:900px){
+  nav.site-nav{height:64px;padding:0 40px}
   .ticker-track{font-size:8px;letter-spacing:.12em}
   .ticker-track span{margin:0 24px}
 }
-@media (max-width:620px){nav.site-nav{padding:0 24px}.site-nav .nav-logo img{height:26px}}
+@media (max-width:760px){nav.site-nav{padding:0 24px}}
+@media (max-width:620px){.site-nav .nav-logo img{height:26px}}
 @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}.nav-overlay,nav.site-nav{transition:none}}

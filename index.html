@@ -184,6 +184,8 @@
     line-height: 1; margin-top: 16px; display: block; }
   .price-tile .price small { font-family: 'DM Sans', sans-serif; font-size: 12px; letter-spacing: .04em;
     color: var(--text-muted); display: block; margin-top: 8px; font-weight: 400; }
+  @media (max-width: 900px) { .mosaic.m2, .mosaic.m3 { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .mosaic .tile { padding: 32px; } }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -208,7 +210,7 @@
     z-index: 101;
     background: var(--navy);
     color: var(--tan);
-    padding: 10px 0;
+    height: 46px; display: flex; align-items: center;
     overflow: hidden;
     white-space: nowrap;
   }
@@ -230,7 +232,7 @@
   /* NAV */
   nav {
     position: fixed;
-    top: 58px;
+    top: 46px;
     left: 0; right: 0;
     z-index: 100;
     display: flex;

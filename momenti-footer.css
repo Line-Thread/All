@@ -24,3 +24,6 @@ footer .footer-links a:hover,footer .footer-links a:focus-visible{opacity:1}
   footer .footer-nav{flex-direction:column;align-items:center;gap:28px}
   footer .footer-links{align-items:center}
 }
+
+/* Op alle pagina's: telefoonnummers niet halverwege afbreken. */
+a[href^="tel:"]{white-space:nowrap}
