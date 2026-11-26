@@ -1,0 +1,26 @@
+/* Eén footer voor de hele site (NL en EN). Wordt na de paginastijlen geladen. */
+footer{background:#0D0E1C;color:#EDE8DC;display:flex;flex-direction:row;justify-content:space-between;
+  align-items:flex-start;gap:40px;padding:56px 60px 44px;text-align:left;font-family:'DM Sans','Helvetica Neue',Helvetica,sans-serif;font-weight:300}
+footer .footer-brand{display:flex;flex-direction:column;align-items:flex-start;max-width:280px}
+footer .footer-logo{display:flex;flex-direction:column;align-items:flex-start}
+footer .footer-logo img{height:28px;width:auto;display:block;margin-top:-6px}
+footer .footer-badges{display:flex;align-items:center;gap:20px;margin-top:28px}
+footer .footer-badges img.footer-meta-badge{height:30px;width:auto;opacity:.8;margin-top:0}
+footer .footer-badges img.footer-google-badge{height:36px;width:auto;opacity:.8;margin-top:0}
+footer .footer-classifier{font-size:12px;line-height:1.6;opacity:.7;margin:18px 0 0}
+footer .footer-copy{font-size:11px;letter-spacing:.06em;line-height:1.7;opacity:.5;margin:14px 0 0;text-align:left}
+footer .footer-nav{display:flex;flex-direction:row;gap:56px}
+footer .footer-col-label{font-size:10px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#C4A882;opacity:.8;margin:0 0 16px}
+footer .footer-links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+footer .footer-links li{margin:0;padding:0}
+footer .footer-links a{color:#EDE8DC;font-size:13px;font-weight:300;letter-spacing:0;text-transform:none;line-height:1.5;text-decoration:none;opacity:.72;border:0;transition:opacity .2s}
+footer .footer-links a:hover,footer .footer-links a:focus-visible{opacity:1}
+@media (max-width:1180px){footer .footer-nav{gap:32px}footer{padding-left:40px;padding-right:40px}}
+@media (max-width:900px){
+  footer{flex-direction:column;align-items:center;gap:32px;text-align:center;padding:40px 24px 100px}
+  footer .footer-brand{align-items:center;max-width:360px}
+  footer .footer-logo{align-items:center}
+  footer .footer-copy{text-align:center}
+  footer .footer-nav{flex-direction:column;align-items:center;gap:28px}
+  footer .footer-links{align-items:center}
+}

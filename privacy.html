@@ -284,24 +284,59 @@
     footer { flex-direction: column; align-items: center; gap: 32px; text-align: center; padding: 40px 24px; }
   }
 </style>
+<link rel="stylesheet" href="/momenti-footer.css">
+<link rel="stylesheet" href="/momenti-nav.css">
 </head>
 <body>
 
-<header class="page-header">
-  <a href="/" class="logo-link">
-    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" width="159" height="32">
-  </a>
-  <div class="header-right">
-    <div class="nav-lang-switch">
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track"><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span></div>
+</div>
+
+<div class="nav-overlay" id="navOverlay">
+  <div class="nav-lang-switch">
       <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">NL<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-lang-menu" role="menu">
-      <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
-      <a href="/en/privacy-policy" hreflang="en" lang="en" role="menuitem">English</a>
-    </div>
-    </div>
-    <a href="/" class="back-link">← Terug naar home</a>
+        <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
+        <a href="/en/privacy-policy" onclick="closeMenu()" hreflang="en" lang="en" role="menuitem">English</a>
+      </div>
   </div>
-</header>
+  <button class="overlay-close" onclick="closeMenu()" aria-label="Menu sluiten">&#x2715;</button>
+  <a href="/diensten" onclick="closeMenu()">Diensten</a>
+  <a href="/aanbod" onclick="closeMenu()">Aanbod</a>
+  <a href="/#aanpak" onclick="closeMenu()">Werkwijze</a>
+  <a href="/cases/tete-de-mule" onclick="closeMenu()">Cases</a>
+  <a href="/over" onclick="closeMenu()">Over</a>
+  <a href="/blog" onclick="closeMenu()">Blog</a>
+  <a href="/contact" onclick="closeMenu()">Contact</a>
+  <a href="/" class="overlay-logo-link" aria-label="Terug naar home"><img src="/momenti-icoon-licht.png" alt="Momenti" class="nav-overlay-monogram" width="19" height="28"></a>
+</div>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">
+    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Momenti" class="logo-dark" width="119" height="24">
+    <img src="/momenti-logo-licht.png" alt="" class="logo-light" width="119" height="24">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/diensten">Diensten</a></li>
+    <li><a href="/aanbod">Aanbod</a></li>
+    <li><a href="/#aanpak">Werkwijze</a></li>
+    <li><a href="/cases/tete-de-mule">Cases</a></li>
+    <li><a href="/over">Over</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li class="nav-lang-switch">
+      <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">NL<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-lang-menu" role="menu">
+        <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
+        <a href="/en/privacy-policy" hreflang="en" lang="en" role="menuitem">English</a>
+      </div>
+    </li>
+    <li><a href="/contact" class="nav-cta">Analyse aanvragen →</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="navOverlay"><span></span><span></span><span></span></button>
+</nav>
+<div class="site-nav-space" aria-hidden="true"></div>
 
 <div class="content-wrap">
 
@@ -315,8 +350,7 @@
     <p>
       <strong>Momenti</strong> - handelsnaam van Heusdens Services<br>
       Arthur Heusdens<br>
-      Vestigingsadres: Parnaskruid 80, Amersfoort<br>
-      Bezoekadres: Havenweg 21T, Amersfoort<br>
+      Adres: Parnaskruid 80, Amersfoort<br>
       KvK 86398547<br>
       <a href="mailto:arthur@momenti.agency" class="inline-link">arthur@momenti.agency</a>
     </p>
@@ -332,16 +366,17 @@
       <li>Bericht</li>
     </ul>
     <p>Deze gegevens worden alleen verstrekt op het moment dat jij het formulier invult en verstuurt.</p>
+    <p>Geef je toestemming voor analytische cookies, dan meet Google Analytics 4 hoe de website wordt gebruikt, bijvoorbeeld welke pagina’s je bekijkt, hoe je op de site komt en welk apparaat en welke browser je gebruikt.</p>
   </div>
 
   <div class="article-block">
     <h2>3. Waarvoor gebruiken we je gegevens?</h2>
-    <p>De ingevulde gegevens worden uitsluitend gebruikt om jouw bericht te beantwoorden en eventueel een gesprek of samenwerking op te starten. We gebruiken je gegevens niet voor marketing, nieuwsbrieven of profilering zonder jouw expliciete toestemming.</p>
+    <p>De ingevulde gegevens worden uitsluitend gebruikt om jouw bericht te beantwoorden en eventueel een gesprek of samenwerking op te starten. We gebruiken je gegevens niet voor marketing, nieuwsbrieven of profilering zonder jouw expliciete toestemming. Met de statistieken uit Google Analytics verbeteren we de website.</p>
   </div>
 
   <div class="article-block">
     <h2>4. Rechtsgrond</h2>
-    <p>De verwerking van jouw gegevens vindt plaats op basis van <strong>gerechtvaardigd belang</strong> - het afhandelen van zakelijke contactaanvragen. We verwerken niet meer gegevens dan strikt noodzakelijk voor dit doel.</p>
+    <p>De verwerking van jouw gegevens vindt plaats op basis van <strong>gerechtvaardigd belang</strong> - het afhandelen van zakelijke contactaanvragen. We verwerken niet meer gegevens dan strikt noodzakelijk voor dit doel. Voor analytische cookies is jouw toestemming de rechtsgrond; die kun je altijd weer intrekken.</p>
   </div>
 
   <div class="article-block">
@@ -353,13 +388,15 @@
     <h2>6. Derden en verwerkers</h2>
     <p>Voor de verwerking van het contactformulier maken we gebruik van <strong>Formspree</strong> (formspree.io), een externe dienst die formulierberichten doorstuurt naar onze mailbox. Formspree verwerkt daartoe de ingevulde gegevens tijdelijk op hun servers. Zie het <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener" class="inline-link">privacybeleid van Formspree</a> voor meer informatie.</p>
     <p>De website maakt gebruik van <strong>Google Fonts</strong> - lettertypen die worden geladen via de servers van Google. Hierbij kan je IP-adres worden doorgegeven aan Google. Zie het <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">privacybeleid van Google</a> voor meer informatie.</p>
+    <p><strong>Google Analytics 4</strong> is een dienst van Google die de statistieken voor ons verwerkt. Het wordt pas geladen nadat je in de cookiemelding op Accepteren klikt, met IP-anonimisering ingeschakeld. Zie het <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">privacybeleid van Google</a> voor meer informatie.</p>
     <p id="google-maps">Op de contactpagina staat een kaart van <strong>Google Maps</strong>. Die wordt pas geladen nadat je zelf op Kaart laden klikt; tot die tijd gaat er geen verzoek naar Google. Na jouw klik ontvangt Google onder meer je IP-adres en browsergegevens en kan Google cookies of vergelijkbare technieken gebruiken. De rechtsgrond hiervoor is jouw toestemming. Dat je de kaart hebt aangezet bewaren we alleen in je eigen browser, en je kunt je toestemming op elk moment intrekken met Kaart uitschakelen op de kaart. Zie het <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">privacybeleid van Google</a> voor meer informatie.</p>
     <p>We delen je gegevens niet met andere derden, tenzij we daartoe wettelijk verplicht zijn.</p>
   </div>
 
   <div class="article-block">
     <h2>7. Cookies</h2>
-    <p>Deze website plaatst geen tracking- of analytische cookies. Formspree, Google Fonts en (na jouw klik) Google Maps kunnen technische cookies of vergelijkbare technieken gebruiken voor hun dienstverlening. Wij hebben hier geen directe controle over.</p>
+    <p>Analytische cookies van Google Analytics (zoals _ga) plaatsen we alleen als je daar toestemming voor geeft in de cookiemelding. Kies je voor Alleen noodzakelijk, dan wordt Google Analytics niet geladen. Je keuze bewaren we in je eigen browser en je past hem altijd aan via Cookievoorkeuren onderaan de pagina.</p>
+    <p>Formspree, Google Fonts en (na jouw klik) Google Maps kunnen technische cookies of vergelijkbare technieken gebruiken voor hun dienstverlening. Wij hebben hier geen directe controle over.</p>
   </div>
 
   <div class="article-block">
@@ -386,7 +423,7 @@
   </div>
 
   <div class="version-note">
-    Momenti - handelsnaam van Heusdens Services &nbsp;·&nbsp; Vestigingsadres: Parnaskruid 80, Amersfoort &nbsp;·&nbsp; KvK 86398547 &nbsp;·&nbsp; Versie juni 2026
+    Momenti - handelsnaam van Heusdens Services &nbsp;·&nbsp; Vestigingsadres: Parnaskruid 80, Amersfoort &nbsp;·&nbsp; KvK 86398547 &nbsp;·&nbsp; Versie november 2026
   </div>
 
 </div>
@@ -394,35 +431,51 @@
 <footer>
   <div class="footer-brand">
     <div class="footer-logo">
-      <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Momenti" width="139" height="28" loading="lazy">
+      <img src="/momenti-logo-licht.png" alt="Momenti" width="139" height="28" loading="lazy">
       <div class="footer-badges">
-        <img src="Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge" width="88" height="30" loading="lazy">
-        <img src="Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
+        <img src="/Meta-Business-Partner.png" alt="Meta Business Partner" class="footer-meta-badge" width="88" height="30" loading="lazy">
+        <img src="/Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
       </div>
     </div>
-    <div class="footer-classifier">Growth agency voor merken &eacute;n bedrijven. Wij runnen zelf het D2C-merk T&ecirc;te de Mule - maximaal 8 klanten tegelijk.</div>
-    <div class="footer-copy">Momenti - Bezoekadres Havenweg 21T, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
+    <div class="footer-classifier">Boutique growth agency in Amersfoort. Advertenties op Meta en Google, plus advies over groei. Je werkt met Arthur, maximaal 8 klanten tegelijk.</div>
+    <div class="footer-copy">Momenti - Parnaskruid 80, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
   </div>
   <div class="footer-nav">
     <div class="footer-col">
       <div class="footer-col-label">Diensten</div>
       <ul class="footer-links">
         <li><a href="/diensten">Alle diensten</a></li>
+        <li><a href="/diensten#meta-advertentiebeheer">Meta Advertentiebeheer</a></li>
+        <li><a href="/diensten#google-advertentiebeheer">Google Advertentiebeheer</a></li>
+        <li><a href="/diensten#groeimarketing">Groeimarketing</a></li>
+        <li><a href="/diensten#marketingadvies">Marketingadvies</a></li>
+        <li><a href="/diensten#cro-advies">CRO Advies</a></li>
+        <li><a href="/diensten#business-innovation">Business Innovation</a></li>
+        <li><a href="/diensten#creatieve-begeleiding">Creatieve begeleiding</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-label">Advertenties</div>
+      <ul class="footer-links">
+        <li><a href="/aanbod">Aanbod &amp; tarieven</a></li>
         <li><a href="/advertentiebeheer">Advertentiebeheer</a></li>
-        <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
-        <li><a href="/b2b">B2B</a></li>
         <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
         <li><a href="/google-ads">Google Ads specialist</a></li>
         <li><a href="/threads-ads">Threads Ads specialist</a></li>
         <li><a href="/leadgeneratie">Leadgeneratie &amp; CPL</a></li>
-        <li><a href="/aanbod">Tarieven</a></li>
+        <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
+        <li><a href="/b2b">B2B</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-label">Bedrijf</div>
       <ul class="footer-links">
+        <li><a href="/over">Over</a></li>
+        <li><a href="/cases/tete-de-mule">Cases</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
         <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="/privacy" aria-current="page" style="opacity:1;">Privacy</a></li>
+        <li><a href="/privacy">Privacy</a></li>
         <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
         <li><a href="#" data-consent-reopen>Cookievoorkeuren</a></li>
       </ul>
@@ -457,5 +510,6 @@
   });
 </script>
 
+<script src="/momenti-nav.js" defer></script>
 </body>
 </html>

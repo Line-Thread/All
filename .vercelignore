@@ -1,0 +1,8 @@
+# Niet publiceren: interne notities, instellingen en bronbestanden
+*.md
+.claude/
+.impeccable/
+graphify-out/
+*.docx
+*.psd
+*.ai

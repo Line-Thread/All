@@ -63,8 +63,8 @@
   "mainEntity": [
     { "@type": "Question", "name": "What exactly is ad management?", "acceptedAnswer": { "@type": "Answer", "text": "Ad management is the ongoing setup, execution and adjustment of paid campaigns on platforms like Meta Ads and Google Ads: campaign structure, bidding strategy, budget allocation, creative briefing and reporting. More than just 'switching an ad on' - it's the whole that determines whether budget turns into profit or disappears." } },
     { "@type": "Question", "name": "Do I have to choose between Meta Ads and Google Ads?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Meta Ads and Google Ads do fundamentally different things: Meta creates demand, Google captures demand that already exists. Many businesses end up combining both. In the account analysis we look at what order and split fits your situation." } },
-    { "@type": "Question", "name": "What does ad management cost?", "acceptedAnswer": { "@type": "Answer", "text": "A retainer typically starts around €750 per month, for accounts with a media budget up to €5,000 on one platform. With higher budgets or more complexity (Meta and Google combined, multiple product lines or campaign goals), rates are usually between €1,200 and €2,500 per month." } },
-    { "@type": "Question", "name": "Am I tied to a contract?", "acceptedAnswer": { "@type": "Answer", "text": "No. A two-week trial period in which either side can stop at no cost, then a one calendar month notice period. No annual contracts." } },
+    { "@type": "Question", "name": "What does ad management cost?", "acceptedAnswer": { "@type": "Answer", "text": "The core package is €1,199 per month for one ad channel, including 8 new creative concepts per month. Below €7,500 in monthly ad spend a compact version is possible, from €749 per month. A second channel is €900 per month. Onboarding at the start of the core package is a one-off €750. All amounts exclude VAT." } },
+    { "@type": "Question", "name": "Am I tied to a contract?", "acceptedAnswer": { "@type": "Answer", "text": "No. A two-week trial period in which either side can stop without giving a reason, then a one calendar month notice period. No annual contracts. For consistent results that don’t depend on the season, we do recommend at least three months." } },
     { "@type": "Question", "name": "How quickly will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "The first 30 days are about setup and learning. After that, we adjust every 30 days based on concrete numbers. Structural improvement is usually visible within two to three months." } }
   ]
 }
@@ -483,24 +483,59 @@
     .contact-card .cta-btn { width: 100%; text-align: center; }
   }
 </style>
+<link rel="stylesheet" href="/momenti-footer.css">
+<link rel="stylesheet" href="/momenti-nav.css">
 </head>
 <body>
 
-<header class="page-header">
-  <a href="/en/" class="logo-link">
-    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" width="159" height="32">
-  </a>
-  <div class="header-right">
-    <div class="nav-lang-switch">
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track"><span>Ad management</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Ad management</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Ad management</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Ad management</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Ad management</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Ad management</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span></div>
+</div>
+
+<div class="nav-overlay" id="navOverlay">
+  <div class="nav-lang-switch">
       <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">EN<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-lang-menu" role="menu">
-      <span class="nav-lang-current" role="menuitem" aria-current="true">English</span>
-      <a href="/advertentiebeheer" hreflang="nl" lang="nl" role="menuitem">Nederlands</a>
-    </div>
-    </div>
-    <a href="/en/" class="back-link">← Back to home</a>
+        <span class="nav-lang-current" role="menuitem" aria-current="true">English</span>
+        <a href="/advertentiebeheer" onclick="closeMenu()" hreflang="nl" lang="nl" role="menuitem">Nederlands</a>
+      </div>
   </div>
-</header>
+  <button class="overlay-close" onclick="closeMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="/en/our-services" onclick="closeMenu()">Services</a>
+  <a href="/en/services" onclick="closeMenu()">Pricing</a>
+  <a href="/en/#approach" onclick="closeMenu()">Approach</a>
+  <a href="/en/cases/tete-de-mule" onclick="closeMenu()">Cases</a>
+  <a href="/en/about" onclick="closeMenu()">About</a>
+  <a href="/en/blog/" onclick="closeMenu()">Blog</a>
+  <a href="/en/contact" onclick="closeMenu()">Contact</a>
+  <a href="/en/" class="overlay-logo-link" aria-label="Back to home"><img src="/momenti-icoon-licht.png" alt="Momenti" class="nav-overlay-monogram" width="19" height="28"></a>
+</div>
+
+<nav class="site-nav">
+  <a href="/en/" class="nav-logo">
+    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Momenti" class="logo-dark" width="119" height="24">
+    <img src="/momenti-logo-licht.png" alt="" class="logo-light" width="119" height="24">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/en/our-services">Services</a></li>
+    <li><a href="/en/services">Pricing</a></li>
+    <li><a href="/en/#approach">Approach</a></li>
+    <li><a href="/en/cases/tete-de-mule">Cases</a></li>
+    <li><a href="/en/about">About</a></li>
+    <li><a href="/en/blog/">Blog</a></li>
+    <li><a href="/en/contact">Contact</a></li>
+    <li class="nav-lang-switch">
+      <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">EN<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-lang-menu" role="menu">
+        <span class="nav-lang-current" role="menuitem" aria-current="true">English</span>
+        <a href="/advertentiebeheer" hreflang="nl" lang="nl" role="menuitem">Nederlands</a>
+      </div>
+    </li>
+    <li><a href="/en/contact" class="nav-cta">Request analysis →</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay"><span></span><span></span><span></span></button>
+</nav>
+<div class="site-nav-space" aria-hidden="true"></div>
 
 <div class="content-wrap">
   <nav class="crumbs"><a href="/en/">Home</a> · Ad Management</nav>
@@ -538,7 +573,7 @@
       <div class="card-body">
         <div class="card-name">Arthur Heusdens</div>
         <div class="card-meta">Meta Certified Media Buying Professional · Momenti</div>
-        <div class="card-meta">Havenweg 21T, Amersfoort · <a href="tel:+31646194022">+31 6 46 19 40 22</a></div>
+        <div class="card-meta">Parnaskruid 80, Amersfoort · <a href="tel:+31646194022">+31 6 46 19 40 22</a></div>
       </div>
       <a href="/en/contact" class="cta-btn">Request your account analysis</a>
     </div>
@@ -572,7 +607,7 @@
   </div>
 
   <h2>How we start</h2>
-  <p>No six-week onboarding. You'll first get the <strong>account analysis (worth €250)</strong>, before anything is signed: we look at your account(s) and give you concrete improvement points - what's working, where money is leaking and where the opportunities are. If the problem isn't the ads but, say, your margin or your offer, you'll hear that too. Then you decide for yourself. Collaborations start with a two-week trial period and are cancellable monthly after that.</p>
+  <p>No six-week onboarding. You'll first get the <strong>account analysis (worth €250)</strong>, before anything is signed: we look at your account(s) and give you concrete improvement points - what's working, where money is leaking and where the opportunities are. If the problem isn't the ads but, say, your margin or your offer, you'll hear that too. Then you decide for yourself. Collaborations start with a two-week trial period and are cancellable monthly after that. For consistent results that don’t depend on the season, we do recommend at least three months.</p>
 
   <h2>Frequently asked questions</h2>
   <details class="faq-item">
@@ -585,11 +620,11 @@
   </details>
   <details class="faq-item">
     <summary>What does ad management cost?</summary>
-    <p>A retainer typically starts around €750 per month, for accounts with a media budget up to €5,000 on one platform. With higher budgets or more complexity (Meta and Google combined, multiple product lines or campaign goals), rates are usually between €1,200 and €2,500 per month.</p>
+    <p>The core package is €1,199 per month for one ad channel, including 8 new creative concepts per month. Below €7,500 in monthly ad spend a compact version is possible, from €749 per month. A second channel is €900 per month. Onboarding at the start of the core package is a one-off €750. All amounts exclude VAT. <a href="/en/services" style="color:inherit;border-bottom:1px solid rgba(13,14,28,0.3)">See the full pricing →</a></p>
   </details>
   <details class="faq-item">
     <summary>Am I tied to a contract?</summary>
-    <p>No. A two-week trial period in which either side can stop at no cost, then a one calendar month notice period. No annual contracts.</p>
+    <p>No. A two-week trial period in which either side can stop without giving a reason, then a one calendar month notice period. No annual contracts. For consistent results that don’t depend on the season, we do recommend at least three months.</p>
   </details>
   <details class="faq-item">
     <summary>How quickly will I see results?</summary>
@@ -608,33 +643,49 @@
 <footer>
   <div class="footer-brand">
     <div class="footer-logo">
-      <img src="/Favicon%20(monogram)%20/Monogram%20Light.png" alt="Momenti" width="139" height="28" loading="lazy">
+      <img src="/momenti-logo-licht.png" alt="Momenti" width="139" height="28" loading="lazy">
       <div class="footer-badges">
-        <img src="/Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge" width="88" height="30" loading="lazy">
+        <img src="/Meta-Business-Partner.png" alt="Meta Business Partner" class="footer-meta-badge" width="88" height="30" loading="lazy">
         <img src="/Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
       </div>
     </div>
-    <div class="footer-classifier">Growth agency for brands and businesses alike. We run our own D2C brand T&ecirc;te de Mule - a maximum of 8 clients at a time.</div>
-    <div class="footer-copy">Momenti - Visiting address Havenweg 21T, Amersfoort, Netherlands - KvK 86398547 - VAT NL004080780B66 - All rights reserved.</div>
+    <div class="footer-classifier">Boutique growth agency in Amersfoort. Ads on Meta and Google, plus advice on growth. You work with Arthur, a maximum of 8 clients at a time.</div>
+    <div class="footer-copy">Momenti - Parnaskruid 80, Amersfoort, Netherlands - KvK 86398547 - VAT NL004080780B66 - All rights reserved.</div>
   </div>
   <div class="footer-nav">
     <div class="footer-col">
       <div class="footer-col-label">Services</div>
       <ul class="footer-links">
         <li><a href="/en/our-services">All services</a></li>
+        <li><a href="/en/our-services#meta-ads-management">Meta Ads Management</a></li>
+        <li><a href="/en/our-services#google-ads-management">Google Ads Management</a></li>
+        <li><a href="/en/our-services#growth-marketing">Growth Marketing</a></li>
+        <li><a href="/en/our-services#marketing-advice">Marketing Advice</a></li>
+        <li><a href="/en/our-services#cro-advice">CRO Advice</a></li>
+        <li><a href="/en/our-services#business-innovation">Business Innovation</a></li>
+        <li><a href="/en/our-services#creative-direction">Creative Direction</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-label">Advertising</div>
+      <ul class="footer-links">
+        <li><a href="/en/services">Pricing</a></li>
         <li><a href="/en/ad-management">Ad management</a></li>
-        <li><a href="/en/e-commerce">E-commerce &amp; D2C</a></li>
-        <li><a href="/en/b2b">B2B</a></li>
         <li><a href="/en/meta-ads">Outsource Meta Ads</a></li>
         <li><a href="/en/google-ads">Google Ads specialist</a></li>
         <li><a href="/en/threads-ads">Threads Ads specialist</a></li>
         <li><a href="/en/lead-generation">Lead generation &amp; CPL</a></li>
-        <li><a href="/en/services">Pricing</a></li>
+        <li><a href="/en/e-commerce">E-commerce &amp; D2C</a></li>
+        <li><a href="/en/b2b">B2B</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-label">Company</div>
       <ul class="footer-links">
+        <li><a href="/en/about">About</a></li>
+        <li><a href="/en/cases/tete-de-mule">Cases</a></li>
+        <li><a href="/en/blog/">Blog</a></li>
+        <li><a href="/en/contact">Contact</a></li>
         <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="/en/privacy-policy">Privacy policy</a></li>
         <li><a href="/en/terms-and-conditions">Terms &amp; conditions</a></li>
@@ -671,5 +722,6 @@
   });
 </script>
 
+<script src="/momenti-nav.js" defer></script>
 </body>
 </html>

@@ -284,24 +284,59 @@
     footer { flex-direction: column; align-items: center; gap: 32px; text-align: center; padding: 40px 24px; }
   }
 </style>
+<link rel="stylesheet" href="/momenti-footer.css">
+<link rel="stylesheet" href="/momenti-nav.css">
 </head>
 <body>
 
-<header class="page-header">
-  <a href="/en/" class="logo-link">
-    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" width="159" height="32">
-  </a>
-  <div class="header-right">
-    <div class="nav-lang-switch">
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track"><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Privacy</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Steering on margin</span><span>✦</span><span>Amersfoort</span><span>✦</span></div>
+</div>
+
+<div class="nav-overlay" id="navOverlay">
+  <div class="nav-lang-switch">
       <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">EN<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-lang-menu" role="menu">
-      <span class="nav-lang-current" role="menuitem" aria-current="true">English</span>
-      <a href="/privacy" hreflang="nl" lang="nl" role="menuitem">Nederlands</a>
-    </div>
-    </div>
-    <a href="/en/" class="back-link">← Back to home</a>
+        <span class="nav-lang-current" role="menuitem" aria-current="true">English</span>
+        <a href="/privacy" onclick="closeMenu()" hreflang="nl" lang="nl" role="menuitem">Nederlands</a>
+      </div>
   </div>
-</header>
+  <button class="overlay-close" onclick="closeMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="/en/our-services" onclick="closeMenu()">Services</a>
+  <a href="/en/services" onclick="closeMenu()">Pricing</a>
+  <a href="/en/#approach" onclick="closeMenu()">Approach</a>
+  <a href="/en/cases/tete-de-mule" onclick="closeMenu()">Cases</a>
+  <a href="/en/about" onclick="closeMenu()">About</a>
+  <a href="/en/blog/" onclick="closeMenu()">Blog</a>
+  <a href="/en/contact" onclick="closeMenu()">Contact</a>
+  <a href="/en/" class="overlay-logo-link" aria-label="Back to home"><img src="/momenti-icoon-licht.png" alt="Momenti" class="nav-overlay-monogram" width="19" height="28"></a>
+</div>
+
+<nav class="site-nav">
+  <a href="/en/" class="nav-logo">
+    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Momenti" class="logo-dark" width="119" height="24">
+    <img src="/momenti-logo-licht.png" alt="" class="logo-light" width="119" height="24">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/en/our-services">Services</a></li>
+    <li><a href="/en/services">Pricing</a></li>
+    <li><a href="/en/#approach">Approach</a></li>
+    <li><a href="/en/cases/tete-de-mule">Cases</a></li>
+    <li><a href="/en/about">About</a></li>
+    <li><a href="/en/blog/">Blog</a></li>
+    <li><a href="/en/contact">Contact</a></li>
+    <li class="nav-lang-switch">
+      <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">EN<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-lang-menu" role="menu">
+        <span class="nav-lang-current" role="menuitem" aria-current="true">English</span>
+        <a href="/privacy" hreflang="nl" lang="nl" role="menuitem">Nederlands</a>
+      </div>
+    </li>
+    <li><a href="/en/contact" class="nav-cta">Request analysis →</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay"><span></span><span></span><span></span></button>
+</nav>
+<div class="site-nav-space" aria-hidden="true"></div>
 
 <div class="content-wrap">
 
@@ -315,8 +350,7 @@
     <p>
       <strong>Momenti</strong> - trading name of Heusdens Services<br>
       Arthur Heusdens<br>
-      Registered address: Parnaskruid 80, Amersfoort, Netherlands<br>
-      Visiting address: Havenweg 21T, Amersfoort, Netherlands<br>
+      Address: Parnaskruid 80, Amersfoort, Netherlands<br>
       KvK (Dutch Chamber of Commerce) 86398547<br>
       <a href="mailto:arthur@momenti.agency" class="inline-link">arthur@momenti.agency</a>
     </p>
@@ -332,16 +366,17 @@
       <li>Message</li>
     </ul>
     <p>This data is only provided when you fill in and submit the form.</p>
+    <p>If you consent to analytics cookies, Google Analytics 4 measures how the website is used, for example which pages you view, how you arrive at the site and which device and browser you use.</p>
   </div>
 
   <div class="article-block">
     <h2>3. What do we use your data for?</h2>
-    <p>The submitted data is used solely to respond to your message and, where relevant, to start a conversation or collaboration. We do not use your data for marketing, newsletters or profiling without your explicit consent.</p>
+    <p>The submitted data is used solely to respond to your message and, where relevant, to start a conversation or collaboration. We do not use your data for marketing, newsletters or profiling without your explicit consent. We use the statistics from Google Analytics to improve the website.</p>
   </div>
 
   <div class="article-block">
     <h2>4. Legal basis</h2>
-    <p>The processing of your data is based on <strong>legitimate interest</strong> - handling business contact requests. We do not process more data than strictly necessary for this purpose.</p>
+    <p>The processing of your data is based on <strong>legitimate interest</strong> - handling business contact requests. We do not process more data than strictly necessary for this purpose. For analytics cookies, your consent is the legal basis; you can withdraw it at any time.</p>
   </div>
 
   <div class="article-block">
@@ -353,13 +388,15 @@
     <h2>6. Third parties and processors</h2>
     <p>To process the contact form, we use <strong>Formspree</strong> (formspree.io), a third-party service that forwards form submissions to our mailbox. For this purpose, Formspree temporarily processes the submitted data on its servers. See <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener" class="inline-link">Formspree's privacy policy</a> for more information.</p>
     <p>The website uses <strong>Google Fonts</strong> - fonts that are loaded from Google's servers. This may transmit your IP address to Google. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google's privacy policy</a> for more information.</p>
+    <p><strong>Google Analytics 4</strong> is a Google service that processes statistics for us. It is only loaded after you click Accept in the cookie notice, with IP anonymisation enabled. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google’s privacy policy</a> for more information.</p>
     <p id="google-maps">The contact page includes a map from <strong>Google Maps</strong>. It only loads after you click Load map yourself; until then, no request is sent to Google. After your click, Google receives, among other things, your IP address and browser details and may use cookies or similar technologies. The legal basis is your consent. We only remember in your own browser that you turned the map on, and you can withdraw your consent at any time with Turn off map on the map. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google's privacy policy</a> for more information.</p>
     <p>We do not share your data with other third parties, unless legally required to do so.</p>
   </div>
 
   <div class="article-block">
     <h2>7. Cookies</h2>
-    <p>This website does not place tracking or analytics cookies. Formspree, Google Fonts and (after your click) Google Maps may use technical cookies or similar technologies as part of their service. We have no direct control over this.</p>
+    <p>We only place Google Analytics cookies (such as _ga) if you consent in the cookie notice. If you choose Necessary only, Google Analytics is not loaded. Your choice is stored in your own browser and you can change it at any time via Cookie preferences at the bottom of the page.</p>
+    <p>Formspree, Google Fonts and (after your click) Google Maps may use technical cookies or similar technologies as part of their service. We have no direct control over this.</p>
   </div>
 
   <div class="article-block">
@@ -386,7 +423,7 @@
   </div>
 
   <div class="version-note">
-    Momenti - trading name of Heusdens Services &nbsp;·&nbsp; Registered address: Parnaskruid 80, Amersfoort, Netherlands &nbsp;·&nbsp; KvK 86398547 &nbsp;·&nbsp; Version June 2026
+    Momenti - trading name of Heusdens Services &nbsp;·&nbsp; Registered address: Parnaskruid 80, Amersfoort, Netherlands &nbsp;·&nbsp; KvK 86398547 &nbsp;·&nbsp; Version November 2026
   </div>
 
 </div>
@@ -394,35 +431,51 @@
 <footer>
   <div class="footer-brand">
     <div class="footer-logo">
-      <img src="/Favicon%20(monogram)%20/Monogram%20Light.png" alt="Momenti" width="139" height="28" loading="lazy">
+      <img src="/momenti-logo-licht.png" alt="Momenti" width="139" height="28" loading="lazy">
       <div class="footer-badges">
-        <img src="/Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge" width="88" height="30" loading="lazy">
+        <img src="/Meta-Business-Partner.png" alt="Meta Business Partner" class="footer-meta-badge" width="88" height="30" loading="lazy">
         <img src="/Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
       </div>
     </div>
-    <div class="footer-classifier">Growth agency for brands and businesses alike. We run our own D2C brand T&ecirc;te de Mule - a maximum of 8 clients at a time.</div>
-    <div class="footer-copy">Momenti - Visiting address Havenweg 21T, Amersfoort, Netherlands - KvK 86398547 - VAT NL004080780B66 - All rights reserved.</div>
+    <div class="footer-classifier">Boutique growth agency in Amersfoort. Ads on Meta and Google, plus advice on growth. You work with Arthur, a maximum of 8 clients at a time.</div>
+    <div class="footer-copy">Momenti - Parnaskruid 80, Amersfoort, Netherlands - KvK 86398547 - VAT NL004080780B66 - All rights reserved.</div>
   </div>
   <div class="footer-nav">
     <div class="footer-col">
       <div class="footer-col-label">Services</div>
       <ul class="footer-links">
         <li><a href="/en/our-services">All services</a></li>
+        <li><a href="/en/our-services#meta-ads-management">Meta Ads Management</a></li>
+        <li><a href="/en/our-services#google-ads-management">Google Ads Management</a></li>
+        <li><a href="/en/our-services#growth-marketing">Growth Marketing</a></li>
+        <li><a href="/en/our-services#marketing-advice">Marketing Advice</a></li>
+        <li><a href="/en/our-services#cro-advice">CRO Advice</a></li>
+        <li><a href="/en/our-services#business-innovation">Business Innovation</a></li>
+        <li><a href="/en/our-services#creative-direction">Creative Direction</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-label">Advertising</div>
+      <ul class="footer-links">
+        <li><a href="/en/services">Pricing</a></li>
         <li><a href="/en/ad-management">Ad management</a></li>
-        <li><a href="/en/e-commerce">E-commerce &amp; D2C</a></li>
-        <li><a href="/en/b2b">B2B</a></li>
         <li><a href="/en/meta-ads">Outsource Meta Ads</a></li>
         <li><a href="/en/google-ads">Google Ads specialist</a></li>
         <li><a href="/en/threads-ads">Threads Ads specialist</a></li>
         <li><a href="/en/lead-generation">Lead generation &amp; CPL</a></li>
-        <li><a href="/en/services">Pricing</a></li>
+        <li><a href="/en/e-commerce">E-commerce &amp; D2C</a></li>
+        <li><a href="/en/b2b">B2B</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-label">Company</div>
       <ul class="footer-links">
+        <li><a href="/en/about">About</a></li>
+        <li><a href="/en/cases/tete-de-mule">Cases</a></li>
+        <li><a href="/en/blog/">Blog</a></li>
+        <li><a href="/en/contact">Contact</a></li>
         <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="/en/privacy-policy" aria-current="page" style="opacity:1;">Privacy policy</a></li>
+        <li><a href="/en/privacy-policy">Privacy policy</a></li>
         <li><a href="/en/terms-and-conditions">Terms &amp; conditions</a></li>
         <li><a href="#" data-consent-reopen>Cookie preferences</a></li>
       </ul>
@@ -457,5 +510,6 @@
   });
 </script>
 
+<script src="/momenti-nav.js" defer></script>
 </body>
 </html>

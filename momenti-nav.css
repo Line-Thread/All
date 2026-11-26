@@ -1,0 +1,74 @@
+/* Hoofdmenu voor de service-, blog- en juridische pagina's.
+   Zelfde menu als op de homepage, Diensten en Aanbod. Alles is gescoped
+   zodat broodkruimels (<nav class="crumbs">) ongemoeid blijven. */
+.ticker-wrap{position:sticky;top:0;z-index:101;background:#0D0E1C;color:#C4A882;padding:10px 0;overflow:hidden;white-space:nowrap;line-height:1.7}
+.ticker-track{display:inline-block;animation:momentiTicker 48s linear infinite;font-family:'DM Sans','Helvetica Neue',Helvetica,sans-serif;font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase}
+.ticker-track span{margin:0 40px}
+@keyframes momentiTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+nav.site-nav{position:fixed;top:58px;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;height:78px;margin:0;padding:0 60px;max-width:none;
+  font-family:'DM Sans','Helvetica Neue',Helvetica,sans-serif;transition:color .3s,background .4s,backdrop-filter .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
+.site-nav .nav-logo{text-decoration:none;display:inline-flex;align-items:center;position:relative;border:0}
+.site-nav .nav-logo img{height:24px;width:auto;display:block;margin:0;transition:opacity .4s ease}
+.site-nav .nav-logo img.logo-light{position:absolute;left:0;top:50%;transform:translateY(-50%);opacity:0;pointer-events:none}
+.site-nav .nav-links{display:flex;align-items:center;gap:36px;list-style:none;margin:0;padding:0}
+.site-nav .nav-links li{margin:0;padding:0;line-height:1.7}
+.site-nav .nav-links li::before{content:none}
+.site-nav .nav-links a{font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#0D0E1C;text-decoration:none;opacity:.6;border:0;transition:opacity .2s}
+.site-nav .nav-links a:hover{opacity:1}
+.site-nav .nav-links a.nav-cta{background:#0D0E1C;color:#EDE8DC;opacity:1;padding:9px 18px;border-radius:8px;transition:background .2s cubic-bezier(.23,1,.32,1),transform .16s cubic-bezier(.23,1,.32,1)}
+.site-nav .nav-links a.nav-cta:hover{background:#1A1B2E}
+.site-nav .nav-links a.nav-cta:active{transform:scale(.96)}
+.site-nav .nav-lang{font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:#0D0E1C;border:1px solid rgba(13,14,28,.25);border-radius:100px;padding:5px 12px;opacity:.75}
+.site-nav .nav-lang:hover,.site-nav .nav-lang-switch.open .nav-lang{opacity:1;border-color:currentColor}
+.site-nav .nav-lang-menu a{color:#fff;font-size:12px;letter-spacing:.02em;text-transform:none;opacity:.7}
+.site-nav.nav--light .nav-links a{color:#EDE8DC}
+.site-nav.nav--light .nav-links a.nav-cta{background:#EDE8DC;color:#0D0E1C}
+.site-nav.nav--light .nav-lang{border-color:rgba(237,232,220,.4);color:#EDE8DC}
+.site-nav.nav--light .nav-logo img.logo-dark{opacity:0}
+.site-nav.nav--light .nav-logo img.logo-light{opacity:1;pointer-events:auto}
+.site-nav.nav--scrolled{background:rgba(237,232,220,.72);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border-bottom-color:rgba(196,168,130,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 24px rgba(13,14,28,.06)}
+.site-nav.nav--scrolled.nav--light{background:rgba(13,14,28,.62);border-bottom-color:rgba(196,168,130,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 4px 24px rgba(0,0,0,.2)}
+@media (prefers-contrast:more){
+  .site-nav.nav--scrolled{background:#EDE8DC;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:2px solid #0D0E1C}
+  .site-nav.nav--scrolled.nav--light{background:#0D0E1C;border-bottom:2px solid #EDE8DC}
+}
+.site-nav .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;z-index:201}
+.site-nav .nav-hamburger span{display:block;height:2px;background:#0D0E1C;transition:transform .3s,opacity .3s}
+.site-nav.nav--light .nav-hamburger span{background:#EDE8DC}
+.site-nav .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.site-nav .nav-hamburger.open span:nth-child(2){opacity:0}
+.site-nav .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;background:#0D0E1C;z-index:200;flex-direction:column;justify-content:center;align-items:center;gap:40px;padding-bottom:100px;opacity:0;transition:opacity .3s}
+.nav-overlay.open{opacity:1}
+.nav-overlay > a:not(.overlay-logo-link){font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:300;letter-spacing:.04em;color:#EDE8DC;text-decoration:none;opacity:.7;border:0;transition:opacity .2s}
+.nav-overlay > a:not(.overlay-logo-link):hover{opacity:1}
+.overlay-close{position:absolute;top:20px;right:24px;background:none;border:none;color:#EDE8DC;font-size:28px;line-height:1;cursor:pointer;opacity:.5;padding:8px;transition:opacity .2s}
+.overlay-close:hover{opacity:1}
+.overlay-logo-link{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);opacity:.5;transition:opacity .2s;font-size:0;line-height:0;border:0}
+.overlay-logo-link:hover{opacity:.9}
+.nav-overlay-monogram{height:28px;width:auto;display:block;margin:0 auto}
+.nav-overlay .nav-lang-switch{position:absolute;top:24px;left:24px}
+.nav-overlay .nav-lang{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(237,232,220,.3);border-radius:100px;padding:6px 14px;color:#EDE8DC;opacity:.7;background:transparent}
+.nav-overlay .nav-lang:hover{opacity:1}
+.nav-overlay .nav-lang-menu{top:calc(100% + 8px);left:0;right:auto;transform-origin:top left}
+/* Taalmenu (ook voor pagina's die deze stijlen zelf niet hebben, zoals 404) */
+.nav-lang-switch{position:relative}
+.nav-lang{appearance:none;-webkit-appearance:none;background:transparent;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.nav-lang-chevron{flex:0 0 auto;transition:transform .25s cubic-bezier(.23,1,.32,1)}
+.nav-lang-switch.open .nav-lang-chevron{transform:rotate(180deg)}
+.nav-lang-menu{position:absolute;top:calc(100% + 10px);right:0;min-width:148px;background:rgba(13,14,28,.72);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border:1px solid rgba(196,168,130,.18);border-radius:14px;padding:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 12px 32px rgba(13,14,28,.28);display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px) scale(.94);transform-origin:top right;transition:opacity .22s cubic-bezier(.23,1,.32,1),transform .22s cubic-bezier(.23,1,.32,1),visibility .22s;z-index:80}
+.nav-lang-switch.open .nav-lang-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0) scale(1)}
+.nav-lang-menu a,.nav-lang-menu .nav-lang-current{display:block;padding:9px 16px;border-radius:9px;font-size:12px;font-weight:400;letter-spacing:.02em;text-transform:none;color:#fff;text-decoration:none;opacity:.7;line-height:1.5;transition:opacity .15s,background .15s}
+.nav-lang-menu a:hover{opacity:1;background:rgba(255,255,255,.1)}
+.nav-lang-menu .nav-lang-current{opacity:1;color:#C4A882;cursor:default}
+.site-nav-space{height:98px}
+/* Zelfde accentkleur als op de hoofdpagina's: leesbaar op crème. */
+h1 em,.page-label,.article-label,.post-meta,.calc-label{color:#7D5F38}
+a:where(:not([class]):not([style])){color:inherit}
+@media (max-width:1180px){.site-nav .nav-links{display:none}.site-nav .nav-hamburger{display:flex}}
+@media (max-width:900px){
+  .ticker-track{font-size:8px;letter-spacing:.12em}
+  .ticker-track span{margin:0 24px}
+}
+@media (max-width:620px){nav.site-nav{padding:0 24px}.site-nav .nav-logo img{height:26px}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}.nav-overlay,nav.site-nav{transition:none}}

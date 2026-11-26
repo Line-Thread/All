@@ -62,7 +62,7 @@
     { "@type": "Question", "name": "Wat is een goede CPL voor leadgeneratie?", "acceptedAnswer": { "@type": "Answer", "text": "Dat hangt af van je dealwaarde, brutomarge en conversieratio van lead naar klant. Een CPL van €80 kan uitstekend zijn bij een dealwaarde van €5.000; een CPL van €15 kan verlies opleveren bij een dealwaarde van €200. Momenti rekent dit per klant door, in plaats van te sturen op een arbitraire benchmark." } },
     { "@type": "Question", "name": "Wat kost leadgeneratie uitbesteden?", "acceptedAnswer": { "@type": "Answer", "text": "Afhankelijk van de omvang van je account: een vast maandbedrag, afgestemd op de complexiteit van de campagnestructuur. In het eerste gesprek krijg je een eerlijke inschatting." } },
     { "@type": "Question", "name": "Werkt leadgeneratie ook voor recruitment?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Recruitment via Meta Ads en Google Ads is een specialisme: targeting op functietitel, persona en vacature-urgentie in plaats van brede demografische targeting. Momenti heeft hier aantoonbaar resultaat mee geboekt." } },
-    { "@type": "Question", "name": "Zit ik vast aan een contract?", "acceptedAnswer": { "@type": "Answer", "text": "Nee. Twee weken proeftijd waarin beide kanten kosteloos kunnen stoppen, daarna een opzegtermijn van één kalendermaand." } }
+    { "@type": "Question", "name": "Zit ik vast aan een contract?", "acceptedAnswer": { "@type": "Answer", "text": "Nee. Twee weken proeftijd waarin beide kanten zonder opgave van reden kunnen stoppen, daarna een opzegtermijn van één kalendermaand. Voor een stabiel resultaat dat niet van het seizoen afhangt, raden we wel minimaal drie maanden aan." } }
   ]
 }
 </script>
@@ -459,24 +459,59 @@
     .contact-card .cta-btn { width: 100%; text-align: center; }
   }
 </style>
+<link rel="stylesheet" href="/momenti-footer.css">
+<link rel="stylesheet" href="/momenti-nav.css">
 </head>
 <body>
 
-<header class="page-header">
-  <a href="/" class="logo-link">
-    <img src="Favicon%20(monogram)%20/Monoram%20Dark%20big_light.png" alt="Momenti" width="159" height="32">
-  </a>
-  <div class="header-right">
-    <div class="nav-lang-switch">
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track"><span>Leadgeneratie</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Leadgeneratie</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Leadgeneratie</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Leadgeneratie</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Leadgeneratie</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span><span>Leadgeneratie</span><span>✦</span><span>Boutique growth agency</span><span>✦</span><span>Sturen op marge</span><span>✦</span><span>Amersfoort</span><span>✦</span></div>
+</div>
+
+<div class="nav-overlay" id="navOverlay">
+  <div class="nav-lang-switch">
       <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">NL<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-lang-menu" role="menu">
-      <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
-      <a href="/en/lead-generation" hreflang="en" lang="en" role="menuitem">English</a>
-    </div>
-    </div>
-    <a href="/" class="back-link">← Terug naar home</a>
+        <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
+        <a href="/en/lead-generation" onclick="closeMenu()" hreflang="en" lang="en" role="menuitem">English</a>
+      </div>
   </div>
-</header>
+  <button class="overlay-close" onclick="closeMenu()" aria-label="Menu sluiten">&#x2715;</button>
+  <a href="/diensten" onclick="closeMenu()">Diensten</a>
+  <a href="/aanbod" onclick="closeMenu()">Aanbod</a>
+  <a href="/#aanpak" onclick="closeMenu()">Werkwijze</a>
+  <a href="/cases/tete-de-mule" onclick="closeMenu()">Cases</a>
+  <a href="/over" onclick="closeMenu()">Over</a>
+  <a href="/blog" onclick="closeMenu()">Blog</a>
+  <a href="/contact" onclick="closeMenu()">Contact</a>
+  <a href="/" class="overlay-logo-link" aria-label="Terug naar home"><img src="/momenti-icoon-licht.png" alt="Momenti" class="nav-overlay-monogram" width="19" height="28"></a>
+</div>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">
+    <img src="/Favicon%20(monogram)%20/Monoram%20Dark%20big_.png" alt="Momenti" class="logo-dark" width="119" height="24">
+    <img src="/momenti-logo-licht.png" alt="" class="logo-light" width="119" height="24">
+  </a>
+  <ul class="nav-links">
+    <li><a href="/diensten">Diensten</a></li>
+    <li><a href="/aanbod">Aanbod</a></li>
+    <li><a href="/#aanpak">Werkwijze</a></li>
+    <li><a href="/cases/tete-de-mule">Cases</a></li>
+    <li><a href="/over">Over</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li class="nav-lang-switch">
+      <button type="button" class="nav-lang" aria-haspopup="true" aria-expanded="false" onclick="toggleLangMenu(this)">NL<svg class="nav-lang-chevron" width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-lang-menu" role="menu">
+        <span class="nav-lang-current" role="menuitem" aria-current="true">Nederlands</span>
+        <a href="/en/lead-generation" hreflang="en" lang="en" role="menuitem">English</a>
+      </div>
+    </li>
+    <li><a href="/contact" class="nav-cta">Analyse aanvragen →</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="navOverlay"><span></span><span></span><span></span></button>
+</nav>
+<div class="site-nav-space" aria-hidden="true"></div>
 
 <div class="content-wrap">
   <nav class="crumbs"><a href="/">Home</a> · Leadgeneratie uitbesteden</nav>
@@ -504,7 +539,7 @@
       <div class="card-body">
         <div class="card-name">Arthur Heusdens</div>
         <div class="card-meta">Meta Certified Media Buying Professional · Momenti</div>
-        <div class="card-meta">Havenweg 21T, Amersfoort · <a href="tel:+31646194022">06 46 19 40 22</a></div>
+        <div class="card-meta">Parnaskruid 80, Amersfoort · <a href="tel:+31646194022">06 46 19 40 22</a></div>
       </div>
       <a href="/contact" class="cta-btn">Vraag je accountanalyse aan</a>
     </div>
@@ -538,7 +573,7 @@
   </div>
 
   <h2>Hoe we starten</h2>
-  <p>Geen onboarding van zes weken. Je krijgt eerst de <strong>accountanalyse (t.w.v. €250)</strong>, vóórdat er iets getekend wordt: we rekenen je dealwaarde, marge en conversieratio door en je krijgt direct te horen wat een realistische maximale CPL voor jouw situatie is. Ligt het probleem niet bij de advertenties maar bijvoorbeeld bij de marge of het aanbod, dan hoor je dat ook. Daarna beslis je zelf. Samenwerkingen starten met een proeftijd van twee weken en zijn daarna maandelijks opzegbaar.</p>
+  <p>Geen onboarding van zes weken. Je krijgt eerst de <strong>accountanalyse (t.w.v. €250)</strong>, vóórdat er iets getekend wordt: we rekenen je dealwaarde, marge en conversieratio door en je krijgt direct te horen wat een realistische maximale CPL voor jouw situatie is. Ligt het probleem niet bij de advertenties maar bijvoorbeeld bij de marge of het aanbod, dan hoor je dat ook. Daarna beslis je zelf. Samenwerkingen starten met een proeftijd van twee weken en zijn daarna maandelijks opzegbaar. Voor een stabiel resultaat dat niet van het seizoen afhangt, raden we wel minimaal drie maanden aan.</p>
 
   <h2>Veelgestelde vragen</h2>
   <details class="faq-item">
@@ -555,7 +590,7 @@
   </details>
   <details class="faq-item">
     <summary>Zit ik vast aan een contract?</summary>
-    <p>Nee. Twee weken proeftijd waarin beide kanten kosteloos kunnen stoppen, daarna een opzegtermijn van één kalendermaand. Geen jaarcontracten.</p>
+    <p>Nee. Twee weken proeftijd waarin beide kanten zonder opgave van reden kunnen stoppen, daarna een opzegtermijn van één kalendermaand. Geen jaarcontracten. Voor een stabiel resultaat dat niet van het seizoen afhangt, raden we wel minimaal drie maanden aan.</p>
   </details>
 
   <div class="cta-block">
@@ -570,33 +605,49 @@
 <footer>
   <div class="footer-brand">
     <div class="footer-logo">
-      <img src="Favicon%20(monogram)%20/Monogram%20Light.png" alt="Momenti" width="139" height="28" loading="lazy">
+      <img src="/momenti-logo-licht.png" alt="Momenti" width="139" height="28" loading="lazy">
       <div class="footer-badges">
-        <img src="Meta-Business-Partner.png" alt="Meta Certified Media Buying Professional" class="footer-meta-badge" width="88" height="30" loading="lazy">
-        <img src="Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
+        <img src="/Meta-Business-Partner.png" alt="Meta Business Partner" class="footer-meta-badge" width="88" height="30" loading="lazy">
+        <img src="/Google-Partner.png" alt="Google Partner" class="footer-google-badge" width="51" height="36" loading="lazy">
       </div>
     </div>
-    <div class="footer-classifier">Growth agency voor merken &eacute;n bedrijven. Wij runnen zelf het D2C-merk T&ecirc;te de Mule - maximaal 8 klanten tegelijk.</div>
-    <div class="footer-copy">Momenti - Bezoekadres Havenweg 21T, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
+    <div class="footer-classifier">Boutique growth agency in Amersfoort. Advertenties op Meta en Google, plus advies over groei. Je werkt met Arthur, maximaal 8 klanten tegelijk.</div>
+    <div class="footer-copy">Momenti - Parnaskruid 80, Amersfoort - KvK 86398547 - Btw NL004080780B66 - Alle rechten voorbehouden.</div>
   </div>
   <div class="footer-nav">
     <div class="footer-col">
       <div class="footer-col-label">Diensten</div>
       <ul class="footer-links">
         <li><a href="/diensten">Alle diensten</a></li>
+        <li><a href="/diensten#meta-advertentiebeheer">Meta Advertentiebeheer</a></li>
+        <li><a href="/diensten#google-advertentiebeheer">Google Advertentiebeheer</a></li>
+        <li><a href="/diensten#groeimarketing">Groeimarketing</a></li>
+        <li><a href="/diensten#marketingadvies">Marketingadvies</a></li>
+        <li><a href="/diensten#cro-advies">CRO Advies</a></li>
+        <li><a href="/diensten#business-innovation">Business Innovation</a></li>
+        <li><a href="/diensten#creatieve-begeleiding">Creatieve begeleiding</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-label">Advertenties</div>
+      <ul class="footer-links">
+        <li><a href="/aanbod">Aanbod &amp; tarieven</a></li>
         <li><a href="/advertentiebeheer">Advertentiebeheer</a></li>
-        <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
-        <li><a href="/b2b">B2B</a></li>
         <li><a href="/meta-ads">Meta Ads uitbesteden</a></li>
         <li><a href="/google-ads">Google Ads specialist</a></li>
         <li><a href="/threads-ads">Threads Ads specialist</a></li>
         <li><a href="/leadgeneratie">Leadgeneratie &amp; CPL</a></li>
-        <li><a href="/aanbod">Tarieven</a></li>
+        <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
+        <li><a href="/b2b">B2B</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-label">Bedrijf</div>
       <ul class="footer-links">
+        <li><a href="/over">Over</a></li>
+        <li><a href="/cases/tete-de-mule">Cases</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
         <li><a href="https://www.linkedin.com/in/arthurheusdens/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="/privacy">Privacy</a></li>
         <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
@@ -633,5 +684,6 @@
   });
 </script>
 
+<script src="/momenti-nav.js" defer></script>
 </body>
 </html>
