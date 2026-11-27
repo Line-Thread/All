@@ -316,7 +316,7 @@
     </div>
     <p>Alles boven die 2,5 is winst. Alles eronder is verlies. Dat is het getal waar je campagnes op stuurt, niet een willekeurige benchmark uit een artikel.</p>
 
-    <h2>Reken je eigen break-even ROAS uit</h2>
+    <h2 id="calculator">Reken je eigen break-even ROAS uit</h2>
     <p>Vul je eigen verkoopprijs en kosten in en zie direct wat jouw break-even ROAS is, inclusief en exclusief btw, zoals je het in Meta Ads Manager afleest.</p>
 
     <div class="calc-box">
@@ -446,6 +446,8 @@
         <li><a href="/leadgeneratie">Leadgeneratie &amp; CPL</a></li>
         <li><a href="/e-commerce">E-commerce &amp; D2C</a></li>
         <li><a href="/b2b">B2B</a></li>
+        <li><a href="/blog/wat-is-een-goede-roas#calculator">ROAS-calculator</a></li>
+        <li><a href="/blog/wat-is-een-goede-cpl#calculator">CPL-calculator</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -534,7 +536,7 @@ calcGateForm.addEventListener('submit', async function(e) {
       headers: { 'Accept': 'application/json' }
     });
     if (!res.ok) throw new Error();
-    gtag('event', 'generate_lead', { event_category: 'calculator', event_label: 'roas_calculator_email' });
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'calculator', event_label: 'roas_calculator_email' });
     document.getElementById('calc-gate').innerHTML = '<p class="calc-gate-success"><strong>Verstuurd!</strong> Je ontvangt de berekening en een korte toelichting binnen één werkdag.</p>';
   } catch {
     btn.disabled = false;
